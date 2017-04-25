@@ -1,0 +1,11 @@
+1492668292658	geckodriver	INFO	Listening on 127.0.0.1:59199
+1492668294712	mozprofile::profile	INFO	Using profile path C:\Users\LUCKYG~1\AppData\Local\Temp\rust_mozprofile.8DSAPvmlKic2
+1492668294717	geckodriver::marionette	INFO	Starting browser C:\Python27\\geckodriver.exe with args []
+1492668294796	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59209
+error: Found argument '--marionette' which wasn't expected, or isn't valid in this context
+	Did you mean --marionette-port?
+
+USAGE:
+    geckodriver.exe --marionette-port <PORT>
+
+For more information try --help
