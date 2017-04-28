@@ -6,9 +6,13 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.loader import ItemLoader
 
-
-class MycrawlerItem(scrapy.Item):
+class MyCrawlerItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    url = scrapy.Field()
+    content = scrapy.Field()
+
+# class MyCrawlerItem(ItemLoader):
+#     default_item_class = MyCrawlerItem()
+
