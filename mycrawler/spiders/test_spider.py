@@ -51,12 +51,13 @@ class test_spider(RedisSpider):
         urls = filter(self.url_cleaning2,urls)
         urls = map(self.url_cleaning,urls)
 
-        #DONE Item
+        #DONE Item处理
         item = MyCrawlerItem()
         item['url'] = response.url.decode('utf-8').encode('utf-8')
         item['content'] = body.encode('utf-8')
         # print body
-        return item
+        yield item
+        
         #DONE 将符合条件的链接加到待爬取队列中去
-        # for url in urls:
-        #     yield SplashRequest(url,args={'wait': 1,'images ':0})
+        for url in urls:
+            yield SplashRequest(url,args={'wait': 1,'images ':0})

@@ -123,7 +123,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
 
     # 'scrapy_redis.pipelines.RedisPipeline': 300,  # 将抓取项存在redis中等待方便进一步处理
-    'mycrawler.my_pipelines.page_content_piplines.PageContentPipeline':400
+    'mycrawler.my_pipelines.page_content_pipline.PageContentPipeline':100,
 }
 #------------------------------------------------------------------------------------------------
 
