@@ -9,7 +9,6 @@ import scrapy
 from scrapy.loader import ItemLoader
 
 class MyCrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
     url = scrapy.Field()
     content = scrapy.Field()
 

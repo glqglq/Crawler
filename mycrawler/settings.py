@@ -1,76 +1,142 @@
 # -*- coding: utf-8 -*-
 
+# 配置最大并发请求request量 (默认: 16)
+#CONCURRENT_REQUESTS = 32
+# 如果启用，当从相同的网站获取数据时，Scrapy将会等待一个随机的值 (0.5到1.5之间的一个随机值 * DOWNLOAD_DELAY)。
+# RANDOMIZE_DOWNLOAD_DELAY = True
+# 配置抓取同一个网站发出的request的延迟时间 (默认: 0)，支持小数
+# 该设定影响(默认启用的) RANDOMIZE_DOWNLOAD_DELAY 设定。 默认情况下，Scrapy在两个请求间不等待一个固定的值， 而是使用0.5到1.5之间的一个随机值 * DOWNLOAD_DELAY 的结果作为等待间隔。
+# DOWNLOAD_DELAY = 3
+# 对单个网站进行并发请求的最大值
+# CONCURRENT_REQUESTS_PER_DOMAIN = 16
+# 对单个IP进行并发请求的最大值。
+# 如果非0，则忽略CONCURRENT_REQUESTS_PER_DOMAIN，使用该设定，并发限制将针对IP，而不是网站。
+# 该设定也影响 DOWNLOAD_DELAY: 如果 CONCURRENT_REQUESTS_PER_IP 非0，下载延迟应用在IP而不是网站上。
+# CONCURRENT_REQUESTS_PER_IP = 16
+# 下载器超时时间(单位: 秒)。
+# DOWNLOAD_TIMEOUT = 180
+#response的最大值（默认1024MB），我设置为10MB，0是无限下载
+DOWNLOAD_MAXSIZE = 10737418
+# The response size (in bytes) that downloader will start to warn，我设置为5MB，0是无限
+DOWNLOAD_WARNSIZE = 5073741
+# 关闭cookies (默认开启)
+COOKIES_ENABLED = False
+# 如果启用，Scrapy将记录所有在request(Cookie 请求头)发送的cookies及response接收到的cookies(Set-Cookie 接收头)。
+# COOKIES_DEBUG = False
+# The maximum limit for Twisted Reactor thread pool size. This is common multi-purpose thread pool used by various Scrapy components. Threaded DNS Resolver, BlockingFeedStorage, S3FilesStore just to name a few. Increase this value if you’re experiencing problems with insufficient blocking IO.
+# REACTOR_THREADPOOL_MAXSIZE = 10
+# 定义request允许重定向的最大次数，超过该限制后该request直接返回获取到的结果。默认20
+REDIRECT_MAX_TIMES = 5
+# 是否启用Redirect中间件。
+# REDIRECT_ENABLED = True
+# 有些网站使用 meta-refresh 重定向到session超时页面， 因此我们限制自动重定向到最大延迟(秒)。 =>有点不肯定:
+# REDIRECT_MAX_METAREFRESH_DELAY = 100
+# 修改重定向请求相对于原始请求的优先级。 负数意味着更多优先级。
+# REDIRECT_PRIORITY_ADJUST = +2
+# 是否启用referer中间件。
+# REFERER_ENABLED = True
+# 关闭Telnet Console(默认开启)
+#TELNETCONSOLE_ENABLED = False
+# 是否收集下载器数据
+# DOWNLOADER_STATS = True
+# 用于crawl的downloader.
+# DOWNLOADER = 'scrapy.core.downloader.Downloader'
+# 是否收集详细的深度数据。如果启用，每个深度的请求数将会被收集在数据中。
+# DEPTH_STATS_VERBOSE = False
+# 是否收集最大深度数据。
+# DEPTH_STATS = True
+# 整数值。用于根据深度调整request优先级。如果为0，则不根据深度进行优先级调整。
+#  DEPTH_PRIORITY = 0
+# 启用AutoThrottle扩展。(disabled by default)
+# AUTOTHROTTLE_ENABLED = False
+# 初始下载延迟(单位:秒)。
+# AUTOTHROTTLE_START_DELAY = 5
+# 在高延迟情况下最大的下载延迟(单位秒)。
+# AUTOTHROTTLE_MAX_DELAY = 60
+# The average number of requests Scrapy should be sending in parallel to
+# each remote server
+# AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+# 起用AutoThrottle调试(debug)模式，展示每个接收到的response。 您可以通过此来查看限速参数是如何实时被调整的。
+# AUTOTHROTTLE_DEBUG = False
+# Meta Refresh中间件是否启用。
+# METAREFRESH_ENABLED = True
 
-#爬虫默认需要以下settings：
+
+# Enable and configure HTTP caching (disabled by default)
 #------------------------------------------------------------------------------------------------
-BOT_NAME = 'mycrawler'
-SPIDER_MODULES = ['mycrawler.spiders']
+# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+#HTTPCACHE_ENABLED = True
+#HTTPCACHE_EXPIRATION_SECS = 0
+# HTTPERROR_ALLOWED_CODES
+# HTTPERROR_ALLOW_ALL
+#HTTPCACHE_DIR = 'httpcache'
+#HTTPCACHE_IGNORE_HTTP_CODES = []
+#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# HTTPCACHE_IGNORE_MISSING = False
+# HTTPCACHE_ALWAYS_STORE = False
+# HTTPCACHE_IGNORE_SCHEMES = ['file']
+# HTTPCACHE_IGNORE_RESPONSE_CACHE_CONTROLS = []
+# HTTPCACHE_DBM_MODULE = 'anydbm' if six.PY2 else 'dbm'
+# HTTPCACHE_POLICY = 'scrapy.extensions.httpcache.DummyPolicy'
+# HTTPCACHE_GZIP = False
+#------------------------------------------------------------------------------------------------
+
+
+# 是否启用内存调试
+# MEMDEBUG_ENABLED = False
+# 如果该设置不为空，当启用内存调试时将会发送一份内存报告到指定的地址；否则该报告将写到log中。
+# MEMDEBUG_NOTIFY = []
+# 是否启用内存使用插件。当Scrapy进程占用的内存超出限制时，该插件将会关闭Scrapy进程， 同时发送email进行通知。
+# MEMUSAGE_ENABLED = False
+# 在关闭Scrapy之前所允许的最大内存数(单位: MB)(如果 MEMUSAGE_ENABLED为True)。 如果为0，将不做限制。
+# MEMUSAGE_LIMIT_MB = 0
+# 还有很多的内存监控setting，如果想用的话去看文档
+# The class that will be used for loading spiders, which must implement the SpiderLoader API.
+# SPIDER_LOADER_CLASS = 'scrapy.spiderloader.SpiderLoader'
+# 使用 startproject 命令创建项目时查找模板的目录。默认: scrapy模块内部的 templates
+# TEMPLATES_DIR
+# 收集数据的类。该类必须实现 状态收集器(Stats Collector) API.默认: 'scrapy.statscollectors.MemoryStatsCollector'
+# STATS_CLASS
+# 当spider结束时dump Scrapy状态数据 (到Scrapy log中)。
+# STATS_DUMP = True
+# spider完成爬取后发送Scrapy数据。更多内容请查看 StatsMailer 。
+# STATSMAILER_RCPTS = []
+
+# scrapy.extensions.closespider.CloseSpider控件参数，当某些状况发生，spider会自动关闭。每种情况使用指定的关闭原因。
+#------------------------------------------------------------------------------------------------
+# 一个整数值，单位为秒。如果一个spider在指定的秒数后仍在运行， 它将以 closespider_timeout 的原因被自动关闭。 如果值设置为0（或者没有设置），spiders不会因为超时而关闭。
+CLOSESPIDER_TIMEOUT = 0
+# 一个整数值，指定条目的个数。如果spider爬取条目数超过了指定的数， 并且这些条目通过item pipeline传递，spider将会以 closespider_itemcount 的原因被自动关闭。
+CLOSESPIDER_ITEMCOUNT = 0
+# 一个整数值，指定最大的抓取响应(reponses)数。 如果spider抓取数超过指定的值，则会以 closespider_pagecount 的原因自动关闭。 如果设置为0（或者未设置），spiders不会因为抓取的响应数而关闭。
+CLOSESPIDER_PAGECOUNT = 0
+# 一个整数值，指定spider可以接受的最大错误数。 如果spider生成多于该数目的错误，它将以 closespider_errorcount 的原因关闭。 如果设置为0（或者未设置），spiders不会因为发生错误过多而关闭。
+CLOSESPIDER_ERRORCOUNT = 0
+#------------------------------------------------------------------------------------------------
+# WEBSERVICE_ENABLED = True
+# WEBSERVICE_HOST
+# WEBSERVICE_LOGFILE
+# WEBSERVICE_PORT
+
+
+
+
+
+
+
+
+
+
+# 爬虫默认需要以下settings：
+#------------------------------------------------------------------------------------------------
+BOT_NAME = 'mycrawler'  #项目名
+SPIDER_MODULES = ['mycrawler.spiders'] #Scrapy搜索spider的模块列表。
 NEWSPIDER_MODULE = 'mycrawler.spiders'
 #------------------------------------------------------------------------------------------------
 
 
-#Scrapy-redis插件需要以下settings：
-#------------------------------------------------------------------------------------------------
-#启用Redis调度存储请求队列
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-
-#确保所有的爬虫通过Redis去重（默认的过滤器基于scrapy.utils.request.request_fingerprint函数生成的请求指纹）
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-
-# 默认对请求进行序列化的程序是pickle，但是我们可以通过loads和dumps函数将其改为类似模块。注意pickle在不同python版本间是不兼容的。
-# 注意：在python 3.x，序列化程序必须返回字符串键，并且支持字节作为值。由于这个原因，json或msgpack模块默认会不好用。在python2.x中没这个毛病，可以用json或msgpack来作为序列化程序。
-# SCHEDULER_SERIALIZER = "scrapy_redis.picklecompat"
-
-# 不清空redis队列，这样就可以暂停/恢复爬取
-SCHEDULER_PERSIST = True
-
-# 使用优先级调度请求队列 （默认使用）
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
-#SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
-#SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.LifoQueue'
-
-# 最大空闲时间，防止爬虫在分布式爬取时因为等待而自动关闭
-# 只有queue_class是SpiderQueue或SpiderStack时才有用
-# 可能在spider第一次开始爬取的同时也会阻塞（因为队列阻塞）
-#SCHEDULER_IDLE_BEFORE_CLOSE = 10
-
-# 序列化item pipeline并且作为redis key存储
-REDIS_ITEMS_KEY = 'mycrawler:items'
-# item序列化程序默认是ScrapyJSONEncoder。你也可以对任何可调用对象使用可导入路径。
-REDIS_ITEMS_SERIALIZER = 'json.dumps'
-# 如果设置此项，则此项优先级高于设置的REDIS_HOST 和 REDIS_PORT
-REDIS_URL = r'redis://admin:1@192.168.28.130:6379'
-
-# 自定义的redis客户端参数（连接超时之类的）
-#REDIS_PARAMS  = {}
-
-# 自定义redis客户端类
-#REDIS_PARAMS['redis_cls'] = 'myproject.RedisClient'
-
-# 如果为True，程序就会就用redis的 ``spop`` 操作。如果你想在start urls中避免起始网址列表重复，就用这个。开启此选项的话urls必须通过``sadd``操作实现添加，否则你会从redis得到一个type error
-#REDIS_START_URLS_AS_SET = False
-
-# RedisSpider and RedisCrawlSpider默认的start urls键.
-REDIS_START_URLS_KEY = 'mycrawler:start_urls'
-#------------------------------------------------------------------------------------------------
-
-
-# 配置最大并发请求request量 (默认: 16)
-#CONCURRENT_REQUESTS = 32
-# 配置抓取同一个网站发出的request的延迟时间 (默认: 0)
-#DOWNLOAD_DELAY = 3
-# The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
-#CONCURRENT_REQUESTS_PER_IP = 16
-
-# 关闭cookies (默认开启)
-COOKIES_ENABLED = False
-
-# 关闭Telnet Console(默认开启)
-#TELNETCONSOLE_ENABLED = False
-
-
-#中间件、item piplines、extensions需要设置以下settings：
+# 中间件、item piplines、extensions需要设置以下settings：
 #------------------------------------------------------------------------------------------------
 # spider中间件
 SPIDER_MIDDLEWARES = {
@@ -86,28 +152,28 @@ SPIDER_MIDDLEWARES = {
 # downloader中间件
 DOWNLOADER_MIDDLEWARES = {
     # Engine side
-    'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware': 100,  #100 过滤所有robots.txt阻止的request
-    'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware': 300,  #300 完成使用http base auth的爬虫生成的请求认证过程
+    'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware': None,  #100 过滤所有robots.txt阻止的request
+    'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware': None,  #300 完成使用http base auth的爬虫生成的请求认证过程
     'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware': 350,  #350 设置download_timeout指定的request下载超时时间，默认180s
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,  #400 禁用scrapy的ua
-    'mycrawler.my_middle_wares.my_user_agent_middle_ware.UserAgentMiddleWare': 400,  # !!!使用我写的ua中间件，测试无误
+    'mycrawler.my_middle_wares.my_user_agent_middle_ware.UserAgentMiddleWare': 400,  # !!!禁用我写的ua中间件，测试无误
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 500,  #500 对于某些可能是由于临时问题导致失败的页面进行重试
     'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware': 550,  #550 设置default_request_headers指定的默认request header
     'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware': 580,  #580 根据meta-refresh html标签处理request重定向
     # 'mycrawler.my_middle_wares.my_proxy_middle_ware.RandomProxy': 581,  # !!!随机抽取ip代理
-    'scrapy_splash.SplashCookiesMiddleware': 585,  # !!!splash处理cookie的中间件
-    'scrapy_splash.SplashCookiesMiddleware': 585,  # !!!splash处理cookie的中间件
-    'scrapy_splash.SplashMiddleware': 586,  # !!!splash中间件
+    # 'scrapy_splash.SplashCookiesMiddleware': 585,  # !!!splash处理cookie的中间件
+    # 'scrapy_splash.SplashMiddleware': 586,  # !!!splash中间件
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 590,  #590 对gzip、deflate压缩数据的支持
     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 600,  #600 根据response状态处理重定向的request
     'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': 700,  #700 追踪了web server发送的cookie，并在之后的request中发送回去
-    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware':750,  #750 对request设置http代理
+    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware':None,  #750 对request设置http代理
     'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware': 830,  #830 添加对chunked transfer encoding的支持
     'scrapy.downloadermiddlewares.stats.DownloaderStats': 850,  #850 保存所有通过的request、response、exception
-    'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 900  #900 为request、response提供底层缓存支持
+    'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 900,  #900 为request、response提供底层缓存支持
+    'mycrawler.my_middle_wares.my_phantomjs_middle_ware.PhantomjsMiddleware':1000, #1000
     # Downloader side
 }
-# 是否开启extensions：
+# 可用的插件列表。需要注意，有些插件需要通过设定来启用。默认情况下， 该设定包含所有稳定(stable)的内置插件。
 #EXTENSIONS = {
     # 'scrapy.extensions.corestats.CoreStats': 0,
     # 'scrapy.extensions.telnet.TelnetConsole': 0,
@@ -119,47 +185,63 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.extensions.spiderstate.SpiderState': 0,
     # 'scrapy.extensions.throttle.AutoThrottle': 0,
 #}
+# 保存项目中启用用于测试spider的scrapy contract及其顺序的字典。
+# SPIDER_CONTRACTS = {
+#     'scrapy.contracts.default.UrlContract': 1,
+#     'scrapy.contracts.default.ReturnsContract': 2,
+#     'scrapy.contracts.default.ScrapesContract': 3,
+# }
+# 项目中启用的下载处理器(request downloader handler)的字典。
+# DOWNLOAD_HANDLERS = {
+#     'file': 'scrapy.core.downloader.handlers.file.FileDownloadHandler',
+#     'http': 'scrapy.core.downloader.handlers.http.HttpDownloadHandler',
+#     'https': 'scrapy.core.downloader.handlers.http.HttpDownloadHandler',
+#     's3': 'scrapy.core.downloader.handlers.s3.S3DownloadHandler',
+# }
 # 配置item pipelines（默认为空）：
 ITEM_PIPELINES = {
-
     # 'scrapy_redis.pipelines.RedisPipeline': 300,  # 将抓取项存在redis中等待方便进一步处理
     'mycrawler.my_pipelines.page_content_pipline.PageContentPipeline':100,
 }
 #------------------------------------------------------------------------------------------------
 
+# 当前是否是动态抓取状态：
+ENABLE_JS = True
 
-# Enable and configure the AutoThrottle extension (disabled by default)
-#AUTOTHROTTLE_ENABLED = True
-# The initial download delay
-#AUTOTHROTTLE_START_DELAY = 5
-# The maximum download delay to be set in case of high latencies
-#AUTOTHROTTLE_MAX_DELAY = 60
-# The average number of requests Scrapy should be sending in parallel to
-# each remote server
-#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
-# Enable showing throttling stats for every response received:
-#AUTOTHROTTLE_DEBUG = False
-# Enable and configure HTTP caching (disabled by default)
-# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
-#HTTPCACHE_EXPIRATION_SECS = 0
-#HTTPCACHE_DIR = 'httpcache'
-#HTTPCACHE_IGNORE_HTTP_CODES = []
-#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-# HTTPCACHE_IGNORE_MISSING = False
-# HTTPCACHE_ALWAYS_STORE = False
-# HTTPCACHE_IGNORE_SCHEMES = ['file']
-# HTTPCACHE_IGNORE_RESPONSE_CACHE_CONTROLS = []
-# HTTPCACHE_DBM_MODULE = 'anydbm' if six.PY2 else 'dbm'
-# HTTPCACHE_POLICY = 'scrapy.extensions.httpcache.DummyPolicy'
-# HTTPCACHE_GZIP = False
-
-
-
-
-
-
-
+#Scrapy-redis插件需要以下settings：
+#------------------------------------------------------------------------------------------------
+#启用Redis调度存储请求队列，默认: 'scrapy.core.scheduler.Scheduler'
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+#确保所有的爬虫通过Redis去重（默认的过滤器基于scrapy.utils.request.request_fingerprint函数生成的请求指纹），默认: 'scrapy.dupefilters.RFPDupeFilter'
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 默认对请求进行序列化的程序是pickle，但是我们可以通过loads和dumps函数将其改为类似模块。注意pickle在不同python版本间是不兼容的。
+# 注意：在python 3.x，序列化程序必须返回字符串键，并且支持字节作为值。由于这个原因，json或msgpack模块默认会不好用。在python2.x中没这个毛病，可以用json或msgpack来作为序列化程序。
+# SCHEDULER_SERIALIZER = "scrapy_redis.picklecompat"
+# 不清空redis队列，这样就可以暂停/恢复爬取
+SCHEDULER_PERSIST = True
+# 使用优先级调度请求队列 （默认使用）
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
+#SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
+#SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.LifoQueue'
+# 最大空闲时间，防止爬虫在分布式爬取时因为等待而自动关闭
+# 只有queue_class是SpiderQueue或SpiderStack时才有用
+# 可能在spider第一次开始爬取的同时也会阻塞（因为队列阻塞）
+#SCHEDULER_IDLE_BEFORE_CLOSE = 10
+# 序列化item pipeline并且作为redis key存储
+REDIS_ITEMS_KEY = '%s:items'%BOT_NAME
+# item序列化程序默认是ScrapyJSONEncoder。你也可以对任何可调用对象使用可导入路径。
+REDIS_ITEMS_SERIALIZER = 'json.dumps'
+# 如果设置此项，则此项优先级高于设置的REDIS_HOST 和 REDIS_PORT
+REDIS_URL = r'redis://admin:1@192.168.28.130:6379'
+# 自定义的redis客户端参数（连接超时之类的）
+#REDIS_PARAMS  = {}
+# 自定义redis客户端类
+#REDIS_PARAMS['redis_cls'] = 'myproject.RedisClient'
+# 如果为True，程序就会就用redis的 ``spop`` 操作。如果你想在start urls中避免起始网址列表重复，就用这个。开启此选项的话urls必须通过``sadd``操作实现添加，否则你会从redis得到一个type error
+#REDIS_START_URLS_AS_SET = False
+# RedisSpider and RedisCrawlSpider默认的start urls键.
+REDIS_START_URLS_KEY = '%s:start_urls'%BOT_NAME
+#------------------------------------------------------------------------------------------------
 
 
 #MySql数据库配置需要以下settings：
@@ -170,11 +252,12 @@ MYSQL_PORT = 3306
 MYSQL_USER = 'root'
 MYSQL_PASS = '7758521123Pp!'
 #------------------------------------------------------------------------------------------------
+
+
 #Scrapy-splash插件需要以下settings：
 #------------------------------------------------------------------------------------------------
 #配置消息队列所使用的过滤类
 # DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 SPLASH_URL = 'http://192.168.28.130:8050/'
 # 重写默认的request headers（用了splash后不能用这个了）：
 #DEFAULT_REQUEST_HEADERS = {
@@ -188,7 +271,6 @@ SPLASH_URL = 'http://192.168.28.130:8050/'
 #------------------------------------------------------------------------------------------------
 #我写的user_agent池
 USER_AGENTS=[
-	"Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; Nexus S Build/GRK39F) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
     "Avant Browser/1.2.789rel1 (http://www.avantbrowser.com)",
     "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.0 Safari/532.5",
     "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9",
@@ -218,38 +300,6 @@ USER_AGENTS=[
     "Mozilla/3.01Gold (Win95; I)",
     "Mozilla/4.8 [en] (Windows NT 5.1; U)",
     "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.4) Gecko Netscape/7.1 (ax)",
-    "HTC_Dream Mozilla/5.0 (Linux; U; Android 1.5; en-ca; Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.2; U; de-DE) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.40.1 Safari/534.6 TouchPad/1.0",
-    "Mozilla/5.0 (Linux; U; Android 1.5; en-us; sdk Build/CUPCAKE) AppleWebkit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 1.5; en-us; htc_bahamas Build/CRB17) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 2.1-update1; de-de; HTC Desire 1.19.161.5 Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; Sprint APA9292KT Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 1.5; de-ch; HTC Hero Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; ADR6300 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 2.1; en-us; HTC Legend Build/cupcake) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 1.5; de-de; HTC Magic Build/PLAT-RC33) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1 FirePHP/0.3",
-    "Mozilla/5.0 (Linux; U; Android 1.6; en-us; HTC_TATTOO_A3288 Build/DRC79) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 1.0; en-us; dream) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2",
-    "Mozilla/5.0 (Linux; U; Android 1.5; en-us; T-Mobile G1 Build/CRB43) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari 525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 1.5; en-gb; T-Mobile_G2_Touch Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 2.0; en-us; Droid Build/ESD20) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; Droid Build/FRG22D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 2.0; en-us; Milestone Build/ SHOLS_U2_01.03.1) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.0.1; de-de; Milestone Build/SHOLS_U2_01.14.0) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2",
-    "Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522  (KHTML, like Gecko) Safari/419.3",
-    "Mozilla/5.0 (Linux; U; Android 1.1; en-gb; dream) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2",
-    "Mozilla/5.0 (Linux; U; Android 2.0; en-us; Droid Build/ESD20) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; Sprint APA9292KT Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-us; ADR6300 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 2.2; en-ca; GT-P1000M Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
-    "Mozilla/5.0 (Linux; U; Android 3.0.1; fr-fr; A500 Build/HRI66) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
-    "Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/525.10  (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2",
-    "Mozilla/5.0 (Linux; U; Android 1.6; es-es; SonyEricssonX10i Build/R1FA016) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1",
-    "Mozilla/5.0 (Linux; U; Android 1.6; en-us; SonyEricssonX10i Build/R1AA056) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1"
 ]
 # scrapy的内置user_agent设置
 #USER_AGENT = 'mycrawler (+http://www.yourdomain.com)'
@@ -257,6 +307,7 @@ USER_AGENTS=[
 
 #PROXY代理池设置需要以下settings：
 PROXY_LIST = r'/root/Crawler/mycrawler/my_middle_wares/ippool.txt'
+ENABLE_PROXY = False
 
 # retry
 #------------------------------------------------------------------------------------------------
@@ -269,3 +320,5 @@ RETRY_TIMES = 2  # initial response + 2 retries = 3 requests
 
 # 遵守robots.txt规则
 ROBOTSTXT_OBEY = False
+#Compression Middleware(压缩中间件)是否开启。
+COMPRESSION_ENABLED = True
