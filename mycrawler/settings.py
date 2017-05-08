@@ -65,7 +65,7 @@ REDIRECT_MAX_TIMES = 5
 # Enable and configure HTTP caching (disabled by default)
 #------------------------------------------------------------------------------------------------
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+# HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 #HTTPCACHE_ENABLED = True
 #HTTPCACHE_EXPIRATION_SECS = 0
 # HTTPERROR_ALLOWED_CODES
@@ -152,6 +152,7 @@ SPIDER_MIDDLEWARES = {
 # downloader中间件
 DOWNLOADER_MIDDLEWARES = {
     # Engine side
+    'mycrawler.my_middle_wares.my_phantomjs_middle_ware.PhantomjsMiddleware': 1,  # 1
     'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware': None,  #100 过滤所有robots.txt阻止的request
     'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware': None,  #300 完成使用http base auth的爬虫生成的请求认证过程
     'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware': 350,  #350 设置download_timeout指定的request下载超时时间，默认180s
@@ -170,7 +171,6 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware': 830,  #830 添加对chunked transfer encoding的支持
     'scrapy.downloadermiddlewares.stats.DownloaderStats': 850,  #850 保存所有通过的request、response、exception
     'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 900,  #900 为request、response提供底层缓存支持
-    'mycrawler.my_middle_wares.my_phantomjs_middle_ware.PhantomjsMiddleware':1000, #1000
     # Downloader side
 }
 # 可用的插件列表。需要注意，有些插件需要通过设定来启用。默认情况下， 该设定包含所有稳定(stable)的内置插件。
@@ -206,21 +206,26 @@ ITEM_PIPELINES = {
 #------------------------------------------------------------------------------------------------
 
 # 当前是否是动态抓取状态：
-ENABLE_JS = True
+ENABLE_JS = False
+
+#网站总网页数量
+TOTAL_PAGE = 100000000
+#误判率
+MISJUDGMENT_RATE = 0.000001
 
 #Scrapy-redis插件需要以下settings：
 #------------------------------------------------------------------------------------------------
 #启用Redis调度存储请求队列，默认: 'scrapy.core.scheduler.Scheduler'
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 #确保所有的爬虫通过Redis去重（默认的过滤器基于scrapy.utils.request.request_fingerprint函数生成的请求指纹），默认: 'scrapy.dupefilters.RFPDupeFilter'
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+DUPEFILTER_CLASS = "mycrawler.my_scrapy_redis_filter.dupefilter.RFPDupeFilter"
 # 默认对请求进行序列化的程序是pickle，但是我们可以通过loads和dumps函数将其改为类似模块。注意pickle在不同python版本间是不兼容的。
 # 注意：在python 3.x，序列化程序必须返回字符串键，并且支持字节作为值。由于这个原因，json或msgpack模块默认会不好用。在python2.x中没这个毛病，可以用json或msgpack来作为序列化程序。
 # SCHEDULER_SERIALIZER = "scrapy_redis.picklecompat"
 # 不清空redis队列，这样就可以暂停/恢复爬取
 SCHEDULER_PERSIST = True
 # 使用优先级调度请求队列 （默认使用）
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
+SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 #SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
 #SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.LifoQueue'
 # 最大空闲时间，防止爬虫在分布式爬取时因为等待而自动关闭
@@ -232,7 +237,7 @@ REDIS_ITEMS_KEY = '%s:items'%BOT_NAME
 # item序列化程序默认是ScrapyJSONEncoder。你也可以对任何可调用对象使用可导入路径。
 REDIS_ITEMS_SERIALIZER = 'json.dumps'
 # 如果设置此项，则此项优先级高于设置的REDIS_HOST 和 REDIS_PORT
-REDIS_URL = r'redis://admin:1@192.168.28.130:6379'
+REDIS_URL = r'redis://admin:1@192.168.28.134:6379'
 # 自定义的redis客户端参数（连接超时之类的）
 #REDIS_PARAMS  = {}
 # 自定义redis客户端类
@@ -241,12 +246,19 @@ REDIS_URL = r'redis://admin:1@192.168.28.130:6379'
 #REDIS_START_URLS_AS_SET = False
 # RedisSpider and RedisCrawlSpider默认的start urls键.
 REDIS_START_URLS_KEY = '%s:start_urls'%BOT_NAME
+# 去重队列的信息
+FILTER_URL = None
+FILTER_HOST = 'localhost'
+FILTER_PORT = 6379
+FILTER_DB = 0
+# REDIS_QUEUE_NAME = 'OneName'   # 如果不设置或者设置为None，则使用默认的，每个spider使用不同的去重队列和种子队列。如果设置了，则不同spider共用去重队列和种子队列
+
 #------------------------------------------------------------------------------------------------
 
 
 #MySql数据库配置需要以下settings：
 #------------------------------------------------------------------------------------------------
-MYSQL_HOST = '192.168.28.130'
+MYSQL_HOST = '192.168.28.134'
 MYSQL_DBNAME = 'crawler'
 MYSQL_PORT = 3306
 MYSQL_USER = 'root'
@@ -258,7 +270,7 @@ MYSQL_PASS = '7758521123Pp!'
 #------------------------------------------------------------------------------------------------
 #配置消息队列所使用的过滤类
 # DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-SPLASH_URL = 'http://192.168.28.130:8050/'
+# SPLASH_URL = 'http://192.168.28.134:8050/'
 # 重写默认的request headers（用了splash后不能用这个了）：
 #DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',

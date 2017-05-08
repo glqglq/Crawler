@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from twisted.enterprise import adbapi
-import MySQLdb
 from scrapy import log
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class PageContentPipeline(object):
     def __init__(self,dbpool):
@@ -32,8 +35,8 @@ class PageContentPipeline(object):
 
     def _do_sert(self, conn, item, spider):
         """Perform an insert or update."""
-        conn.execute("""INSERT INTO pagecontent (url, content) VALUES (%s, %s)""", (item['url'], item['content'].decode('utf-8')))
-        spider.log("Item stored in db: %r" % (item))
+        conn.execute("""INSERT INTO pagecontent (url, content) VALUES (%s, %s)""", (item['url'], item['content']))
+        # spider.log("Item stored in db: %r" % (item))
 
 
     def _handle_error(self, failure, item, spider):

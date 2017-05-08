@@ -5,7 +5,6 @@ class UserAgentMiddleWare(object):
     '''ua池'''
     def __init__(self, user_agent=''):
         self.user_agent = user_agent
-        print '====================================================='
 
     @classmethod
     def from_crawler(cls, crawler):

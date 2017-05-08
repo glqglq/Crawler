@@ -61,40 +61,40 @@ class PhantomjsMiddleware(object):
         return o
 
     def process_request(self, request, spider):
-        if not self.enable_js:
-            pass
-        #随机定义ip代理、
-        self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
-        self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
-        if self.enable_proxy:
-            print '开启设置代理ip'
-            self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
-        self.driver = webdriver.PhantomJS(service_args = self.service_args, desired_capabilities=self.dcap)
-        url = str(request.url)
-        print '正在加载网站-%s' % url
-        self.driver.get(url)
-        # 测试用：打印当前
-        # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')
+        if self.enable_js:
+            #随机定义ip代理、
+            self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
+            self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
+            if self.enable_proxy:
+                print '开启设置代理ip'
+                self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
+            self.driver = webdriver.PhantomJS(service_args = self.service_args, desired_capabilities=self.dcap)
+            url = str(request.url)
+            self.driver.set_window_size(1500, 15000)
+            print '正在加载网站-%s' % url
+            self.driver.get(url)
+            # 测试用：打印当前
+            # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')
 
-        # 等待评论按钮加载出来，并按下
-        WebDriverWait(self.driver, 6, 1).until(EC.presence_of_element_located((self.button_get_type,self.button_get_content)))
-        self.press_button(self.button_get_type,self.button_get_content)
-        self.driver.execute_script(self.js)
+            # 等待评论按钮加载出来，并按下
+            WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located((self.button_get_type,self.button_get_content)))
+            self.press_button(self.button_get_type,self.button_get_content)
+            # self.driver.execute_script(self.js)
 
-        # 不断等待下一页按钮加载进来，并按下
-        try:
-            # TODO 换掉这种sb的加载方式，自己算多少页
-            while True:
-                WebDriverWait(self.driver, 10, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
-                # TODO 对加载进来的内容进行处理（解析、保存），写个回调函数
-                self.press_button(self.next_page_button_type,self.button_get_content)
-        except TimeoutException,e:
-            print '%s 评论区抓取完毕'%url
+            # 不断等待下一页按钮加载进来，并按下
+            try:
+                # TODO 换掉这种sb的加载方式，自己算多少页
+                while True:
+                    WebDriverWait(self.driver, 20, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
+                    # TODO 对加载进来的内容进行处理（解析、保存），写个回调函数
+                    self.press_button(self.next_page_button_type,self.button_get_content)
+            except TimeoutException,e:
+                print '%s 评论区抓取完毕'%url
 
-        content = self.driver.page_source.encode('utf-8')
-        print('网页加载完毕.....')
-        self.driver.quit()
-        return HtmlResponse(url, status=200, body=content, encoding='utf-8', request=request)
+            content = self.driver.page_source.encode('utf-8')
+            print('网页加载完毕.....')
+            self.driver.quit()
+            return HtmlResponse(url, status=200, body=content, encoding='utf-8', request=request)
 
     def process_response(self, request, response, spider):
         if len(response.body) == 100:
