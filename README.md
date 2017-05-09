@@ -1,4 +1,4 @@
-#one.爬虫系统部署
+# one.爬虫系统部署
 ## 0.关闭防火墙：
 	
 	暂时关闭：service iptables stop 
