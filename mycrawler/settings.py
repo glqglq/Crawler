@@ -133,6 +133,8 @@ CLOSESPIDER_ERRORCOUNT = 0
 BOT_NAME = 'mycrawler'  #项目名
 SPIDER_MODULES = ['mycrawler.spiders'] #Scrapy搜索spider的模块列表。
 NEWSPIDER_MODULE = 'mycrawler.spiders'
+ALLOWED_DOMAINS = [r"ict.ac.cn",r"ict.cas.cn"]
+TOP_LEVEL_DOMAINS = [r'.com',r'.cn',r'.co',r'.edu',r'.gov',r'.net',r'.cc',r'.me',r'.org',r'.gov',r'.cc',r'.hk',r'.tv']
 #------------------------------------------------------------------------------------------------
 
 
