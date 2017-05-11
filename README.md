@@ -22,14 +22,14 @@
 1.3配置：
 		
         mv /usr/bin/python /usr/bin/python2.6_temp
-		ln -s /usr/local/bin/python2.7 /usr/bin/python
-		python -V  # Python 2.7.9
-		vi /etc/profile
-		# 添加如下内容：
-		PY_HOME=/usr/local/bin/python2.7
-		export PATH=$PY_HOME/bin:$PATH
-		source /etc/profile  # 当前终端生效，reboot后才会完全生效
-		echo $PATH
+	ln -s /usr/local/bin/python2.7 /usr/bin/python
+	python -V  # Python 2.7.9
+	vi /etc/profile
+	# 添加如下内容：
+	PY_HOME=/usr/local/bin/python2.7
+	export PATH=$PY_HOME/bin:$PATH
+	source /etc/profile  # 当前终端生效，reboot后才会完全生效
+	echo $PATH
 ## 2.安装pip、setuptools并升级到最新版本
 2.1下载setuptools：
 
@@ -37,23 +37,23 @@
 
 2.2解压、安装setuptools：
 
-		tar zxvf setuptools-28.3.0.tar.gz 
-		cd setuptools-28.3.0
-		python setup.py install3
+	tar zxvf setuptools-28.3.0.tar.gz 
+	cd setuptools-28.3.0
+	python setup.py install3
 		
 2.3下载pip：
 
-		wget https://pypi.python.org/packages/e7/a8/7556133689add8d1a54c0b14aeff0acb03c64707ce100ecd53934da1aa13/pip-8.1.2.tar.gz#md5=87083c0b9867963b29f7aba3613e8f4
+	wget https://pypi.python.org/packages/e7/a8/7556133689add8d1a54c0b14aeff0acb03c64707ce100ecd53934da1aa13/pip-8.1.2.tar.gz#md5=87083c0b9867963b29f7aba3613e8f4
 	
 2.4安装pip：
 
-		tar pip-8.1.2.tar.gz 
-		cd pip-8.1.2 
-		python setup.py install
-		pip install --upgrade pip
-## 3.安装scrapy、scrapy-redis、bs4、MySQL-python、selenium、phantomjs：尝试一下内置
+	tar pip-8.1.2.tar.gz 
+	cd pip-8.1.2 
+	python setup.py install
+	pip install --upgrade pip
+## 3.安装scrapy、scrapy-redis、bs4、MySQL-python、selenium、pymongo、phantomjs：尝试一下内置
 3.1安装scrapy、scrapy-redis、bs4、MySQL-python、selenium：
-	pip install scrapy scrapy-redis MySQL-python
+	pip install scrapy scrapy-redis MySQL-python pymongo
 3.2安装phantomjs：
 	wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 	tar -xvzf phantomjs-2.1.1-linux-x86_64.tar.bz2
