@@ -188,6 +188,7 @@
 	alter table pagecontent convert to character set utf8 collate utf8_general_ci;
 
 7.3mongodb建库、集合：
+
 	use admin
 	db.createCollection("pagecontent", {autoIndexID：true})
 	
