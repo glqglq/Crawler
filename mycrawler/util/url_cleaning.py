@@ -19,16 +19,16 @@ def url_cleaning(url):
         url = url[2:]
     if r'https://' in url:
         url = url[8:]
-    # print url
     return url
 
 def url_cleaning2(url):
+    #DONE 前面加上http://
     if r'http://'not in url:
         url = 'http://' + url
-    # url = url.strip(r'/')
     return url
 
 def url_cleaning3(url):
+    #DONE 处理allowed_domains
     for domain in allowed_domains:
         if domain in url:
             return True
@@ -36,12 +36,14 @@ def url_cleaning3(url):
 
 def url_cleaning4(url):
     # DONE 抽取出合法url，只允许前面是.或者/或者字母或者数字
+    if url == '':
+        return False
     flag = 0
     if url[0] == '.' or url[0] == '/' or url[0].isalpha() or url[0].isdigit():
         flag = 1
         if 'javascript' in url or '@' in url:
             flag = 0
-    return flag == 1 and url != ''
+    return flag == 1
 
 def url_join(url_now,urls):
     for i in range(len(urls)):

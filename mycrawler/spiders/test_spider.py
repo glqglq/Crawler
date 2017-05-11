@@ -32,10 +32,10 @@ class test_spider(RedisSpider):
         #DONE Item处理
         item = MyCrawlerItem()
         item['url'] = response.url
-        item['content'] = body
+        item['content'] = body.decode("unicode_escape")
         # print body
         yield item
 
-        #DONE 将符合条件的链接加到待爬取队列中去
+        # #DONE 将符合条件的链接加到待爬取队列中去
         for url in urls:
             yield Request(url)

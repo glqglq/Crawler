@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # 配置最大并发请求request量 (默认: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 # 如果启用，当从相同的网站获取数据时，Scrapy将会等待一个随机的值 (0.5到1.5之间的一个随机值 * DOWNLOAD_DELAY)。
 # RANDOMIZE_DOWNLOAD_DELAY = True
 # 配置抓取同一个网站发出的request的延迟时间 (默认: 0)，支持小数
@@ -14,7 +14,7 @@
 # 该设定也影响 DOWNLOAD_DELAY: 如果 CONCURRENT_REQUESTS_PER_IP 非0，下载延迟应用在IP而不是网站上。
 # CONCURRENT_REQUESTS_PER_IP = 16
 # 下载器超时时间(单位: 秒)。
-# DOWNLOAD_TIMEOUT = 180
+DOWNLOAD_TIMEOUT = 30
 #response的最大值（默认1024MB），我设置为10MB，0是无限下载
 DOWNLOAD_MAXSIZE = 10737418
 # The response size (in bytes) that downloader will start to warn，我设置为5MB，0是无限
@@ -47,7 +47,7 @@ REDIRECT_MAX_TIMES = 5
 # DEPTH_STATS = True
 # 整数值。用于根据深度调整request优先级。如果为0，则不根据深度进行优先级调整。
 #  DEPTH_PRIORITY = 0
-# 启用AutoThrottle扩展。(disabled by default)
+# 启用自动限速扩展。(disabled by default)
 # AUTOTHROTTLE_ENABLED = False
 # 初始下载延迟(单位:秒)。
 # AUTOTHROTTLE_START_DELAY = 5
@@ -203,7 +203,8 @@ DOWNLOADER_MIDDLEWARES = {
 # 配置item pipelines（默认为空）：
 ITEM_PIPELINES = {
     # 'scrapy_redis.pipelines.RedisPipeline': 300,  # 将抓取项存在redis中等待方便进一步处理
-    'mycrawler.my_pipelines.page_content_pipline.PageContentPipeline':100,
+    # 'mycrawler.my_pipelines.page_content_pipline.PageContentPipeline':100,
+    'mycrawler.my_pipelines.mongodb_page_content_pipeline.MongoDBPipeline':100,
 }
 #------------------------------------------------------------------------------------------------
 
@@ -255,16 +256,6 @@ FILTER_PORT = 6379
 FILTER_DB = 0
 # REDIS_QUEUE_NAME = 'OneName'   # 如果不设置或者设置为None，则使用默认的，每个spider使用不同的去重队列和种子队列。如果设置了，则不同spider共用去重队列和种子队列
 
-#------------------------------------------------------------------------------------------------
-
-
-#MySql数据库配置需要以下settings：
-#------------------------------------------------------------------------------------------------
-MYSQL_HOST = '192.168.28.134'
-MYSQL_DBNAME = 'crawler'
-MYSQL_PORT = 3306
-MYSQL_USER = 'root'
-MYSQL_PASS = '7758521123Pp!'
 #------------------------------------------------------------------------------------------------
 
 
@@ -336,3 +327,53 @@ RETRY_TIMES = 2  # initial response + 2 retries = 3 requests
 ROBOTSTXT_OBEY = False
 #Compression Middleware(压缩中间件)是否开启。
 COMPRESSION_ENABLED = True
+
+
+#LOG相关设置
+#------------------------------------------------------------------------------------------------
+# LOG_ENABLED = True
+# LOG_ENCODING = 'utf-8'
+# LOG_FORMATTER = 'scrapy.logformatter.LogFormatter'
+# LOG_FORMAT = '%(asctime)s [%(name)s] %(levelname)s: %(message)s'
+# LOG_DATEFORMAT = '%Y-%m-%d %H:%M:%S'
+#stdout是否以log形式输出
+# LOG_STDOUT = False
+#可选的级别有: CRITICAL、 ERROR、WARNING、INFO、DEBUG。
+LOG_LEVEL = 'INFO'
+# LOG_FILE = None
+# LOG_SHORT_NAMES = False
+#------------------------------------------------------------------------------------------------
+
+
+#MongoDB数据库配置需要以下settings：
+#------------------------------------------------------------------------------------------------
+MONGODB_URI = 'mongodb://192.168.28.134:27017'
+MONGODB_DATABASE = 'admin'
+MONGODB_COLLECTION = 'pagecontent'
+MONGODB_BUFFER_DATA = 20
+MONGODB_ADD_TIMESTAMP = False
+# MONGODB_UNIQUE_KEY = 'url'
+
+#If this is set to True it forces MongoDB to wait for all files to be synced before returning.
+# MONGODB_FSYNC = False
+
+# enable replica set support. 给出想要连接的replica set名。MONGODB_HOST and MONGODB_PORT should point at your config server.
+# MONGODB_REPLICA_SET = 'myReplicaSetName'
+
+# Write operations will block until they have been replicated to the specified number or tagged set of servers.
+# w= always includes the replica set primary (e.g. w=3 means write to the primary and wait until replicated to two secondaries).
+# Passing w=0 disables write acknowledgement and all other write concern options.
+# MONGODB_REPLICA_SET_W = 0
+
+# 置为0的话选项不起作用。置为n，当在爬行时检测到N个重复插入时，蜘蛛关闭。
+# MONGODB_STOP_ON_DUPLICATE = 0
+#------------------------------------------------------------------------------------------------
+
+#MySql数据库配置需要以下settings：
+#------------------------------------------------------------------------------------------------
+MYSQL_HOST = '192.168.28.134'
+MYSQL_DBNAME = 'crawler'
+MYSQL_PORT = 3306
+MYSQL_USER = 'root'
+MYSQL_PASS = '7758521123Pp!'
+#------------------------------------------------------------------------------------------------

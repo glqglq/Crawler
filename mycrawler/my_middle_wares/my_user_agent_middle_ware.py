@@ -18,4 +18,4 @@ class UserAgentMiddleWare(object):
             request.headers.setdefault(b'User-Agent', ua)
         except Exception,e:
             print e
-        print '当前使用的user-agent是' +  request.headers.get(b'User-Agent')
+        # print '当前使用的user-agent是' +  request.headers.get(b'User-Agent')
