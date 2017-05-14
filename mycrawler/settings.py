@@ -2,6 +2,8 @@
 
 # 配置最大并发请求request量 (默认: 16)
 CONCURRENT_REQUESTS = 32
+# The maximum limit for Twisted Reactor thread pool size. This is common multi-purpose thread pool used by various Scrapy components. Threaded DNS Resolver, BlockingFeedStorage, S3FilesStore just to name a few. Increase this value if you’re experiencing problems with insufficient blocking IO.
+# REACTOR_THREADPOOL_MAXSIZE = 10
 # 如果启用，当从相同的网站获取数据时，Scrapy将会等待一个随机的值 (0.5到1.5之间的一个随机值 * DOWNLOAD_DELAY)。
 # RANDOMIZE_DOWNLOAD_DELAY = True
 # 配置抓取同一个网站发出的request的延迟时间 (默认: 0)，支持小数
@@ -23,8 +25,6 @@ DOWNLOAD_WARNSIZE = 5073741
 COOKIES_ENABLED = False
 # 如果启用，Scrapy将记录所有在request(Cookie 请求头)发送的cookies及response接收到的cookies(Set-Cookie 接收头)。
 # COOKIES_DEBUG = False
-# The maximum limit for Twisted Reactor thread pool size. This is common multi-purpose thread pool used by various Scrapy components. Threaded DNS Resolver, BlockingFeedStorage, S3FilesStore just to name a few. Increase this value if you’re experiencing problems with insufficient blocking IO.
-# REACTOR_THREADPOOL_MAXSIZE = 10
 # 定义request允许重定向的最大次数，超过该限制后该request直接返回获取到的结果。默认20
 REDIRECT_MAX_TIMES = 5
 # 是否启用Redirect中间件。
@@ -131,6 +131,7 @@ CLOSESPIDER_ERRORCOUNT = 0
 # 爬虫默认需要以下settings：
 #------------------------------------------------------------------------------------------------
 BOT_NAME = 'mycrawler'  #项目名
+SPIDER_NAME = 'mycrawler'  #我自己加的，爬虫名
 SPIDER_MODULES = ['mycrawler.spiders'] #Scrapy搜索spider的模块列表。
 NEWSPIDER_MODULE = 'mycrawler.spiders'
 ALLOWED_DOMAINS = [r"ict.ac.cn",r"ict.cas.cn"]
@@ -144,7 +145,7 @@ TOP_LEVEL_DOMAINS = [r'.com',r'.cn',r'.co',r'.edu',r'.gov',r'.net',r'.cc',r'.me'
 SPIDER_MIDDLEWARES = {
     #Engine side
     'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware': 50,  #50 过滤出所有失败的response(返回值非200-300的)
-    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,  #splash的去重中间件
+    # 'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,  #splash的去重中间件
     'scrapy.spidermiddlewares.offsite.OffsiteMiddleware': 500,  #500 过滤出所有url不由该spider负责的request
     'scrapy.spidermiddlewares.referer.RefererMiddleware': 700,  #700 根据生成request的response的url来设置request的referer字段
     'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware': 800,  #800 过滤掉url长度比urllength_limit长的request
@@ -227,6 +228,7 @@ DUPEFILTER_CLASS = "mycrawler.my_scrapy_redis_filter.dupefilter.RFPDupeFilter"
 # SCHEDULER_SERIALIZER = "scrapy_redis.picklecompat"
 # 不清空redis队列，这样就可以暂停/恢复爬取
 SCHEDULER_PERSIST = True
+SCHEDULER_FLUSH_ON_START = True
 # 使用优先级调度请求队列 （默认使用）
 SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 #SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
@@ -377,3 +379,5 @@ MYSQL_PORT = 3306
 MYSQL_USER = 'root'
 MYSQL_PASS = '7758521123Pp!'
 #------------------------------------------------------------------------------------------------
+
+SCRAPYD_URL = '192.168.28.134'

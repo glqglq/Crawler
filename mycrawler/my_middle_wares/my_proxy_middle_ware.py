@@ -48,17 +48,15 @@ class RandomProxy(object):
             raise ValueError('All proxies are unusable, cannot proceed')
 
         proxy_address = random.choice(list(self.proxies.keys()))
-        if ENABLE_JS:
-            request.meta['splash']['args']['proxy'] = proxy_address
-        else:
+        if ENABLE_JS == False:
             request.meta['proxy'] = proxy_address
-        log.debug('Using proxy <%s>, %d proxies left' % (
+            log.debug('Using proxy <%s>, %d proxies left' % (
                 proxy_address, len(self.proxies) - 1))
 
     def process_exception(self, request, exception, spider):
         if 'proxy' not in request.meta:
             return
-        proxy = request.meta['splash']['args']['proxy']
+        proxy = request.meta['proxy']
         try:
             del self.proxies[proxy]
         except KeyError:

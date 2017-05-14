@@ -2,8 +2,9 @@
 
 import urlparse
 
-
+from scrapy.linkextractors import IGNORED_EXTENSIONS
 from ..settings import ALLOWED_DOMAINS,TOP_LEVEL_DOMAINS
+from scrapy.utils.url import url_has_any_extension
 
 import sys
 reload(sys)
@@ -30,6 +31,8 @@ def url_cleaning2(url):
 def url_cleaning3(url):
     #DONE 处理allowed_domains
     for domain in allowed_domains:
+        if url_has_any_extension(url,IGNORED_EXTENSIONS):
+            return False
         if domain in url:
             return True
     return False
