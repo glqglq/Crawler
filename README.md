@@ -7,21 +7,21 @@
 ## 1.将centos6.5的python2.6.6升级到python2.7.9
 1.1.安装依赖：
 
-		yum install bzip2 bzip2-devel -y
-		yum install zlib zlib-devel -y
-		yum install openssl openssl-devel -y
+	yum install bzip2 bzip2-devel -y
+	yum install zlib zlib-devel -y
+	yum install openssl openssl-devel -y
 
 1.2. 解压、安装：
 
-		wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
-		tar zxvf Python-2.7.9.tgz
-		./configure
-		make -j4
-		make install
+	wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
+	tar zxvf Python-2.7.9.tgz
+	./configure
+	make -j4
+	make install
 
 1.3配置：
 		
-        mv /usr/bin/python /usr/bin/python2.6_temp
+	mv /usr/bin/python /usr/bin/python2.6_temp
 	ln -s /usr/local/bin/python2.7 /usr/bin/python
 	python -V  # Python 2.7.9
 	vi /etc/profile
@@ -33,7 +33,7 @@
 ## 2.安装pip、setuptools并升级到最新版本
 2.1下载setuptools：
 
-       wget https://pypi.python.org/packages/6b/dd/a7de8caeeffab76bacf56972b3f090c12e0ae6932245abbce706690a6436/setuptools-28.3.0.tar.gz#md5=a46750b6bd90a1343466bd57b0e2721a
+	wget https://pypi.python.org/packages/6b/dd/a7de8caeeffab76bacf56972b3f090c12e0ae6932245abbce706690a6436/setuptools-28.3.0.tar.gz#md5=a46750b6bd90a1343466bd57b0e2721a
 
 2.2解压、安装setuptools：
 
@@ -53,8 +53,11 @@
 	pip install --upgrade pip
 ## 3.安装scrapy、scrapy-redis、bs4、MySQL-python、selenium、pymongo、phantomjs：尝试一下内置
 3.1安装scrapy、scrapy-redis、bs4、MySQL-python、selenium：
+
 	pip install scrapy scrapy-redis MySQL-python pymongo
+	
 3.2安装phantomjs：
+
 	wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
 	tar -xvzf phantomjs-2.1.1-linux-x86_64.tar.bz2
 	vi /etc/profile
@@ -62,6 +65,7 @@
 	export PHANTOMJS_HOME=/root/phantomjs-2.1.1-linux-x86_64
 	
 ## 4.安装redis3.2.8
+
 	wget http://download.redis.io/releases/redis-3.2.8.tar.gz
 	tar -vxzf redis-3.2.8.tar.gz
 	cd redis-3.2.8.tar.gz
@@ -131,8 +135,46 @@
 	show variables like 'character\_set\_%';
 	SHOW VARIABLES LIKE 'collation_%';
 	status
-## 6.建库、建表、加入初始爬取url：
-6.1mysql建库、建表：
+## 6.安装mysql 5.7.17-1
+6.1下载安装包
+
+	wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.4.tar
+
+6.2解压
+	
+	tar -xvzf mongodb-linux-x86_64-rhel62-3.4.4.tar
+
+6.3改名、转移
+	
+	mv mongodb-linux-x86_64-rhel62-3.4.4 mongodb 
+	mv mongodb /usr/local/mongodb
+
+6.4创建文件夹、文件
+
+	cd /usr/local/mongodb
+	mkdir data
+	vi mongo.log
+
+6.5添加环境变量:
+
+	vi /etc/profile
+	添加export PATH=/usr/local/mongodb/bin:$PATH
+	source /etc/profile
+	mkdir /data/db
+6.6随机启动：
+	
+	vim /etc/rc.local
+	添加/usr/local/mongodb/bin/mongod -dbpath=/usr/local/mongodb/data -logpath=/usr/local/mongodb/mongo.log --logappend --fork
+
+6.7连接失败删除
+	
+	rm -f /apps/mongodb/data/db/mongod.lock
+
+6.8关闭mongodb：
+	
+	pkill mongod 
+## 7.建库、建表、加入初始爬取url：
+7.1mysql建库、建表：
 
 	CREATE DATABASE crawler DEFAULT CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
 	CREATE TABLE pagecontent (
@@ -144,7 +186,12 @@
 	alter database crawler character set utf8;
 	alter table pagecontent convert to charset utf8 collate utf8_bin;
 	alter table pagecontent convert to character set utf8 collate utf8_general_ci;
+
+7.3mongodb建库、集合：
+
+	use admin
+	db.createCollection("pagecontent", {autoIndexID：true})
 	
-6.2redis插入初始url：
+7.3redis插入初始url：
 
 	lpush mycrawler:start_urls http://taobao.com
