@@ -134,7 +134,7 @@ BOT_NAME = 'mycrawler'  #项目名
 SPIDER_NAME = 'mycrawler'  #我自己加的，爬虫名
 SPIDER_MODULES = ['mycrawler.spiders'] #Scrapy搜索spider的模块列表。
 NEWSPIDER_MODULE = 'mycrawler.spiders'
-ALLOWED_DOMAINS = [r"ict.ac.cn",r"ict.cas.cn"]
+ALLOWED_DOMAINS = [r"ict.ac.cn",r"ict.cas.cn",r"pully.cn",r"luckygong.cn"]
 TOP_LEVEL_DOMAINS = [r'.com',r'.cn',r'.co',r'.edu',r'.gov',r'.net',r'.cc',r'.me',r'.org',r'.gov',r'.cc',r'.hk',r'.tv']
 #------------------------------------------------------------------------------------------------
 

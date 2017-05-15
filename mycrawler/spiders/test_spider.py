@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import re
+
+import redis
 from scrapy_redis.spiders import RedisSpider
-from ..items.items import MyCrawlerItem
 from scrapy import Request
+from ..items.items import MyCrawlerItem
 from ..util import url_cleaning
-from ..util.get_priority import get_priority
+from ..settings import REDIS_URL,BOT_NAME
+from ..util.get_messge import get_message_from_response
 
 import sys
 reload(sys)
@@ -22,20 +25,23 @@ class test_spider(RedisSpider):
 
     # redis_key = 'mycrawler:start_urls'  #redis中要有主键为mycrawler:start_urls的list，没有的话爬虫只能监听等待
 
-    def __init__(self, name=None, **kwargs):
-        if name is not None:
-            self.name = name
-        elif not getattr(self, 'name', None):
-            raise ValueError("%s must have a name" % type(self).__name__)
-        self.__dict__.update(kwargs)
-        # self.json =
+    # def __init__(self, name=None, **kwargs):
+    #     if name is not None:
+    #         self.name = name
+    #     elif not getattr(self, 'name', None):
+    #         raise ValueError("%s must have a name" % type(self).__name__)
+    #     self.__dict__.update(kwargs)
+    #     if not hasattr(self, 'start_urls'):
+    #         self.start_urls = []
+    #     if kwargs:
+    #         #DONE 初始start_urls加入爬取队列：
+    #         self.json = eval(kwargs["json"])
+    #         self.start_server = redis.StrictRedis.from_url(REDIS_URL)
+    #         for task in self.json.keys():
+    #             self.start_server.lpush('%s:start_urls'%BOT_NAME,task)
 
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield self.make_requests_from_url(url)
-    #
     # def make_requests_from_url(self, url):
-    #     return Request(url, meta = self.json,priority=json)
+    #     return get_message_from_json(url,self.json)
 
     def parse(self, response):
         body = response.body
@@ -55,4 +61,5 @@ class test_spider(RedisSpider):
 
         # #DONE 将符合条件的链接加到待爬取队列中去
         for url in urls:
-            yield Request(url,priority=get_priority(url))
+            # Request(url)
+            yield get_message_from_response(url,response)

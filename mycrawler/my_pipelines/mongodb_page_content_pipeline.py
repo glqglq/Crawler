@@ -214,7 +214,7 @@ class MongoDBPipeline(BaseItemExporter):
         if self.config['unique_key'] is None:
             try:
                 self.collection.insert(item, continue_on_error=True)
-                print '插入成功'
+                # print '插入成功'
                 log.msg(
                     u'Stored item(s) in MongoDB {0}/{1}'.format(
                         self.config['database'], self.config['collection']),

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import urlparse
+import posixpath
 
-from scrapy.linkextractors import IGNORED_EXTENSIONS
 from ..settings import ALLOWED_DOMAINS,TOP_LEVEL_DOMAINS
-from scrapy.utils.url import url_has_any_extension
+from scrapy.utils.url import parse_url
 
 import sys
 reload(sys)
@@ -12,6 +12,29 @@ sys.setdefaultencoding('utf-8')
 
 allowed_domains = ALLOWED_DOMAINS
 top_level_domains = TOP_LEVEL_DOMAINS
+
+IGNORED_EXTENSIONS = [
+    # images
+    'mng', 'pct', 'bmp', 'gif', 'jpg', 'jpeg', 'png', 'pst', 'psp', 'tif',
+    'tiff', 'ai', 'drw', 'dxf', 'eps', 'ps', 'svg',
+
+    # audio
+    'mp3', 'wma', 'ogg', 'wav', 'ra', 'aac', 'mid', 'au', 'aiff',
+
+    # video
+    '3gp', 'asf', 'asx', 'avi', 'mov', 'mp4', 'mpg', 'qt', 'rm', 'swf', 'wmv',
+    'm4a',
+
+    # office suites
+    'xls', 'xlsx', 'ppt', 'pptx', 'pps', 'doc', 'docx', 'odt', 'ods', 'odg',
+    'odp',
+
+    # other
+    'css', 'pdf', 'exe', 'bin', 'rss', 'zip', 'rar',
+]
+
+def url_has_any_extension(url, extensions):
+    return posixpath.splitext(parse_url(url).path)[1].lower()[1:] in extensions
 
 def url_cleaning(url):
     # DONE 去掉href=""，去掉前置的/，去掉https://
