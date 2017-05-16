@@ -15,6 +15,14 @@ from ..util.press_button import press_button
 
 from ..util.get_json_page_content import getitemcontent
 
+"""
+    三种页面：
+        普通页面
+        列表页面（需要翻页）
+        详情页面（需要提取内容+翻页）
+"""
+
+
 class PhantomjsMiddleware(object):
     def __init__(self,user_agents,proxy_list,enable_proxy):
         #取ua列表
@@ -55,15 +63,20 @@ class PhantomjsMiddleware(object):
         return o
 
     def process_request(self, request, spider):
+
         # {   "priority": 20,
         #     "type": 1,
+        #     "this_url_rule":"XXX",
+        #     "alloweddomains":["XXX"],
         #     "rules": {
         #         "XXX": {
         #             "type": 1,
+        #             "comment_button_type":0,
+        #             "comment_button_content":"XXX",
         #             "next_page_type": 0,
         #             "next_page_content": "XXX",
-        #             "contents": [
-        #                 {
+        #             "itemcontents": [
+        #                 "XXX":{
         #                     "content_type": 0,
         #                     "content_content": "XXX"
         #                 }
@@ -74,42 +87,63 @@ class PhantomjsMiddleware(object):
         #             "next_page_type": 0,
         #             "next_page_content": "XXX",
         #         }}}
-        if request.meta["type"] == 1:#爬取电商网站
-            #随机定义ip代理、
+
+        # 爬取电商网站时启用该middleware
+        if request.meta["type"] == 1:
+
+            #随机定义ip代理、UA
             self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
             self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
             if self.enable_proxy:
                 self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
+
+            #开启headless浏览器并进行初始请求
             self.driver = webdriver.PhantomJS(service_args = self.service_args, desired_capabilities=self.dcap)
-            url = str(request.url)
             self.driver.set_window_size(1500, 15000)
-            self.driver.get(url)
+            self.driver.get(request.url)
             # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')  # 测试用：打印当前
 
+            #本页是特殊页
             if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"]:#本页是特殊页
-                if request.meta["rules"][request.meta["this_url_rule"]]["type"] == 1:#本页是详情页
-                    # 详情页：等待评论按钮加载出来，并按下，
-                    WebDriverWait(self.driver, 10, 1).until(EC.presence_of_element_located((self.get_type(request.meta["rules"][request.meta["this_url_rule"]]["comment_button_type"]),request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])))
-                    press_button(self.driver,request.meta["rules"][request.meta["this_url_rule"]]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
+                this_url_rule = request.meta["this_url_rule"]
+                # 本页是详情页，抓取本页该抓取的商品信息、评论
+                if request.meta["rules"][this_url_rule]["type"] == 1:
 
-                # TODO 换掉这种sb的加载方式，自己算多少页
+                    # DONE 抽取详情页的内容
+                    request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, request.meta["rules"][
+                        this_url_rule]["itemcontents"])
 
-                # 抓取评论区：不断等待下一页按钮加载进来，并按下
-                # try:
-                #     while True:
-                #         # 抓取本页内容，存入meta：
-                #         # TODO 对加载进来的内容进行处理（解析、保存），写个回调函数
-                #         getconmmentcontent(self.driver.page_source, request.meta["rules"][request.meta["this_url_rule"]])
-                #         WebDriverWait(self.driver, 20, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
-                #         press_button(self.driver,request.meta["rules"][request.meta["this_url_rule"]]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
-                # except TimeoutException,e:
-                #     print '%s 评论区抓取完毕'%url
+                    # DONE 等待评论按钮加载出来，并按下，
+                    if_found_button = 0
+                    try:
+                        WebDriverWait(self.driver, 3, 1).until(EC.presence_of_element_located((self.get_type(request.meta["rules"][request.meta["this_url_rule"]]["comment_button_type"]),request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])))
+                        press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
+                        if_found_button = 1
+                    except TimeoutException,e:
+                        #评论按钮找不到
+                        pass
 
-                #抓取商品详情内容，抓取回来的内容加入到request,meta中去
-                request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source,request.meta["rules"][request.meta["this_url_rule"]]["itemcontents"])
-            # print('网页加载完毕.....')
+                    if if_found_button == 1:
+                        # TODO 成功按下后抓取评论区：不断等待下一页按钮加载进来，并按下。换掉这种sb的加载方式，自己算多少页
+                        pass
+                        # try:
+                        #     while True:
+                        #         # 抓取本页内容，存入meta：
+                        #         # 对加载进来的内容进行处理（解析、保存），写个回调函数
+                        #         getconmmentcontent(self.driver.page_source, request.meta["rules"][this_url_rule])
+                        #         WebDriverWait(self.driver, 20, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
+                        #         press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
+                        # except TimeoutException,e:
+                        #     print '%s 评论区抓取完毕'%url
+
+                        #抓取商品详情内容，抓取回来的内容加入到request,meta中去
+
+                # 本页是列表页，抓取本页所有链接
+                elif request.meta["rules"][this_url_rule]["type"] == 0:
+                    pass
+
             self.driver.quit()
-            return HtmlResponse(url, status=200, body=self.driver.page_source, encoding='utf-8', request=request)
+            return HtmlResponse(request.url, status=200, body=self.driver.page_source, encoding='utf-8', request=request)
 
     def process_response(self, request, response, spider):
         if len(response.body) == 100:

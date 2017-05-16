@@ -103,17 +103,6 @@ REDIRECT_MAX_TIMES = 5
 # spider完成爬取后发送Scrapy数据。更多内容请查看 StatsMailer 。
 # STATSMAILER_RCPTS = []
 
-# scrapy.extensions.closespider.CloseSpider控件参数，当某些状况发生，spider会自动关闭。每种情况使用指定的关闭原因。
-#------------------------------------------------------------------------------------------------
-# 一个整数值，单位为秒。如果一个spider在指定的秒数后仍在运行， 它将以 closespider_timeout 的原因被自动关闭。 如果值设置为0（或者没有设置），spiders不会因为超时而关闭。
-CLOSESPIDER_TIMEOUT = 0
-# 一个整数值，指定条目的个数。如果spider爬取条目数超过了指定的数， 并且这些条目通过item pipeline传递，spider将会以 closespider_itemcount 的原因被自动关闭。
-CLOSESPIDER_ITEMCOUNT = 0
-# 一个整数值，指定最大的抓取响应(reponses)数。 如果spider抓取数超过指定的值，则会以 closespider_pagecount 的原因自动关闭。 如果设置为0（或者未设置），spiders不会因为抓取的响应数而关闭。
-CLOSESPIDER_PAGECOUNT = 0
-# 一个整数值，指定spider可以接受的最大错误数。 如果spider生成多于该数目的错误，它将以 closespider_errorcount 的原因关闭。 如果设置为0（或者未设置），spiders不会因为发生错误过多而关闭。
-CLOSESPIDER_ERRORCOUNT = 0
-#------------------------------------------------------------------------------------------------
 # WEBSERVICE_ENABLED = True
 # WEBSERVICE_HOST
 # WEBSERVICE_LOGFILE
@@ -134,7 +123,6 @@ BOT_NAME = 'mycrawler'  #项目名
 SPIDER_NAME = 'mycrawler'  #我自己加的，爬虫名
 SPIDER_MODULES = ['mycrawler.spiders'] #Scrapy搜索spider的模块列表。
 NEWSPIDER_MODULE = 'mycrawler.spiders'
-ALLOWED_DOMAINS = [r"ict.ac.cn",r"ict.cas.cn",r"pully.cn",r"luckygong.cn"]
 TOP_LEVEL_DOMAINS = [r'.com',r'.cn',r'.co',r'.edu',r'.gov',r'.net',r'.cc',r'.me',r'.org',r'.gov',r'.cc',r'.hk',r'.tv']
 #------------------------------------------------------------------------------------------------
 
@@ -208,9 +196,6 @@ ITEM_PIPELINES = {
     'mycrawler.my_pipelines.mongodb_page_content_pipeline.MongoDBPipeline':100,
 }
 #------------------------------------------------------------------------------------------------
-
-# 当前是否是动态抓取状态：
-ENABLE_JS = False
 
 #网站总网页数量
 TOTAL_PAGE = 100000000
@@ -381,3 +366,17 @@ MYSQL_PASS = '7758521123Pp!'
 #------------------------------------------------------------------------------------------------
 
 SCRAPYD_URL = '192.168.28.134'
+
+
+# 弃用：
+# scrapy.extensions.closespider.CloseSpider控件参数，当某些状况发生，spider会自动关闭。每种情况使用指定的关闭原因。
+#------------------------------------------------------------------------------------------------
+# 一个整数值，单位为秒。如果一个spider在指定的秒数后仍在运行， 它将以 closespider_timeout 的原因被自动关闭。 如果值设置为0（或者没有设置），spiders不会因为超时而关闭。
+CLOSESPIDER_TIMEOUT = 0
+# 一个整数值，指定条目的个数。如果spider爬取条目数超过了指定的数， 并且这些条目通过item pipeline传递，spider将会以 closespider_itemcount 的原因被自动关闭。
+CLOSESPIDER_ITEMCOUNT = 0
+# 一个整数值，指定最大的抓取响应(reponses)数。 如果spider抓取数超过指定的值，则会以 closespider_pagecount 的原因自动关闭。 如果设置为0（或者未设置），spiders不会因为抓取的响应数而关闭。
+CLOSESPIDER_PAGECOUNT = 0
+# 一个整数值，指定spider可以接受的最大错误数。 如果spider生成多于该数目的错误，它将以 closespider_errorcount 的原因关闭。 如果设置为0（或者未设置），spiders不会因为发生错误过多而关闭。
+CLOSESPIDER_ERRORCOUNT = 0
+#------------------------------------------------------------------------------------------------

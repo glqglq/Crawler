@@ -22,7 +22,7 @@
     <SUITE FILE_PATH="coverage/Crawler$BloomfilterOnRedis.coverage" NAME="BloomfilterOnRedis Coverage Results" MODIFIED="1494245172230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter" />
     <SUITE FILE_PATH="coverage/Crawler$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1494679009995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Crawler$testrequests.coverage" NAME="testrequests Coverage Results" MODIFIED="1489568959538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_xpath.coverage" NAME="test_xpath Coverage Results" MODIFIED="1494855816083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_xpath.coverage" NAME="test_xpath Coverage Results" MODIFIED="1494920149466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_spynner.coverage" NAME="test_spynner Coverage Results" MODIFIED="1492674025109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$testurllib2.coverage" NAME="testurllib2 Coverage Results" MODIFIED="1490012033504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs_jd.coverage" NAME="test_phanstomjs_jd Coverage Results" MODIFIED="1493949851412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_phanstomjs" />
@@ -73,8 +73,40 @@
       <file leaf-file-name="test_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1052">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="-260">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url_cleaning.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="25" />
+              <folding>
+                <element signature="e#25#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongodb_page_content_pipeline.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -83,42 +115,12 @@
       <file leaf-file-name="my_phantomjs_middle_ware.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1378">
-              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_json_page_content.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_requests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/util/add_requests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="279">
+              <caret line="141" column="56" lean-forward="false" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
               <folding>
-                <element signature="e#25#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_messge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/util/get_messge.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="58" column="25" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="58" selection-end-column="25" />
-              <folding>
-                <element signature="e#25#34#0" expanded="true" />
+                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#746#1880#0" expanded="false" />
+                <element signature="e#1943#2064#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -136,36 +138,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dont_fil</find>
-      <find>dont_filte</find>
-      <find>dont_filter</find>
-      <find>serializer</find>
-      <find>self.server</find>
-      <find>stri</find>
-      <find>self.server'</find>
-      <find>self.json</find>
-      <find>t</find>
-      <find>this</find>
-      <find>this_</find>
-      <find>this_url</find>
-      <find>&quot;rules&quot;</find>
-      <find>&quot;rule&quot;</find>
-      <find>&quot;contents&quot;</find>
-      <find>self.button_get_type</find>
-      <find>self.button_get_content</find>
-      <find>self.next_page_button_type</find>
-      <find>self.next_page_button_content</find>
-      <find>tm-price chromeXpathFinder chromeXpathFinder0 chromeXpathFinderHover</find>
-      <find>tm-yen</find>
-      <find>J_ShopPromtion</find>
-      <find>tm-count</find>
-      <find>tag</find>
+      <find>m</find>
+      <find>ENABLE_JS</find>
+      <find>fetcheditemcontents</find>
+      <find>tstart-settings-msg</find>
+      <find>tstart-settings-panel-hd</find>
+      <find>id=</find>
+      <find>tstart-plugin-settings</find>
       <find>name=</find>
-      <find>press_button</find>
-      <find>meta name=&quot;renderer&quot; content=&quot;webkit&quot;</find>
-      <find>self.</find>
-      <find>this_url_rule</find>
-      <find>schedule_next_requests</find>
+      <find>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</find>
+      <find>meta</find>
+      <find>alloweddomains</find>
+      <find>C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor\add_task.py</find>
+      <find>re.compile</find>
+      <find>url</find>
+      <find>meta[</find>
+      <find>dict)</find>
+      <find>A</find>
+      <find>ALLO</find>
+      <find>ALLOW</find>
+      <find>ALLOWR</find>
+      <find>ALLOWED</find>
+      <find>ALLOWED_</find>
+      <find>ALLOWED_DO</find>
+      <find>ALLOWED_DOM</find>
+      <find>ALLOWED_DOMA</find>
+      <find>ALLOWED_DOMAIN</find>
+      <find>ALLOWED_DOMAINS</find>
+      <find>collection</find>
+      <find>enable_</find>
+      <find>request</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter</dir>
@@ -173,6 +175,7 @@
       <dir>C:\Python27\Lib\site-packages</dir>
       <dir>C:\Users\LuckyGong\.PyCharm2016.1\system\remote_sources\1501053355\-183260405\scrapy</dir>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler</dir>
+      <dir>C:\Python27\Lib\site-packages\scrapy</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -181,9 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mycrawler/mycrawler/spiders/test_spider.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_piplines/redis_piplines.py" />
-        <option value="$PROJECT_DIR$/test/test_urlparse.py" />
         <option value="$PROJECT_DIR$/mycrawler/default_settings.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/mysql_connection.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_piplines/__init__.py" />
@@ -192,7 +192,6 @@
         <option value="$PROJECT_DIR$/mycrawler/my_pipelines/page_content_piplines.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_pipelines/yield_request_pipeline.py" />
         <option value="$PROJECT_DIR$/test/test_encode_decode.py" />
-        <option value="$PROJECT_DIR$/mycrawler/items/items.py" />
         <option value="$PROJECT_DIR$/test/test_phanstomjs.py" />
         <option value="$PROJECT_DIR$/test/test_phanstomjs/test_phanstomjs_jd.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/GeneralHashFunctions.py" />
@@ -209,7 +208,6 @@
         <option value="$PROJECT_DIR$/mycrawler/__init__.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_pipelines/scrapy_mongodb.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/get_priority.py" />
         <option value="$PROJECT_DIR$/scrapy.cfg" />
         <option value="$PROJECT_DIR$/__init__.py" />
@@ -217,21 +215,26 @@
         <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/dupefilter.py" />
         <option value="$PROJECT_DIR$/test/test_json.py" />
         <option value="$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/spiders.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
         <option value="$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py" />
-        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
         <option value="$PROJECT_DIR$/test/test_redis.py" />
         <option value="$PROJECT_DIR$/test/test_request.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/add_request.py" />
-        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/get_page_content.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/press_button.py" />
-        <option value="$PROJECT_DIR$/test/test_xpath.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_messge.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/add_requests.py" />
+        <option value="$PROJECT_DIR$/monitor/add_requests.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/my_scheduler.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
+        <option value="$PROJECT_DIR$/mycrawler/items/items.py" />
+        <option value="$PROJECT_DIR$/test/test_xpath.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_messge.py" />
+        <option value="$PROJECT_DIR$/monitor/add_task.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
+        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
+        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
       </list>
     </option>
   </component>
@@ -303,7 +306,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -438,6 +440,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Remote Python 2.7.9 (sftp://root@192.168.28.134:22/usr/local/bin/python2.7) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1501053355" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyRemoteLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-183260405" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyRemoteLibrariesNode$PyRemoteRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -473,6 +505,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="response" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Remote Python 2.7.9 (sftp://root@192.168.28.134:22/usr/local/bin/python2.7) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1501053355" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyRemoteLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="-183260405" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyRemoteLibrariesNode$PyRemoteRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,24 +638,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="my_scrapy_redis_filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -626,41 +670,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_middle_wares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
+              <option name="myItemId" value="monitor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages" />
+    <property name="last_opened_file_path" value="C:/Python27/Lib/site-packages/scrapy" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -679,19 +702,19 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_scheduler" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\my_scrapy_redis_filter" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_phanstomjs" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\items" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -758,7 +781,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util\add_requests.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor\add_task.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -1128,7 +1151,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17654987" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.48865354" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15974212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11604585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.124641836" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1172,70 +1195,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4186">
-          <caret line="166" column="23" lean-forward="false" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#16#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1379">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/BloomfilterOnRedis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="339" column="25" lean-forward="false" selection-start-line="339" selection-start-column="14" selection-end-line="339" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/settings/default_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="237" column="9" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="273" column="20" lean-forward="false" selection-start-line="273" selection-start-column="17" selection-end-line="273" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/commands/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1792">
@@ -1255,9 +1214,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1429">
           <caret line="82" column="20" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="20" />
-          <folding>
-            <element signature="e#110#124#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,9 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#35#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,9 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1118">
           <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="e#15#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,25 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="38" column="1" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="217" column="24" lean-forward="true" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,7 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,26 +1279,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/482107175/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="4002" column="8" lean-forward="false" selection-start-line="4002" selection-start-column="8" selection-end-line="4002" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/core/engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1430">
           <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="50" selection-end-line="152" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/request/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="76" column="50" lean-forward="true" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1399,29 +1313,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="136" column="71" lean-forward="true" selection-start-line="136" selection-start-column="71" selection-end-line="136" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/redis/connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/spiders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="119" column="40" lean-forward="true" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1437,17 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#25#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="71" column="30" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,21 +1343,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-775">
-          <caret line="99" column="33" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#66#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1481,14 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1066">
           <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1529,74 +1394,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-529">
           <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/parse_json.py" />
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/fetch_free_proxyes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4692">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1052">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="364">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/spiders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/482107175/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="4307" column="8" lean-forward="false" selection-start-line="4307" selection-start-column="8" selection-end-line="4307" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/utils/trackref.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/settings/default_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="242" column="39" lean-forward="true" selection-start-line="242" selection-start-column="39" selection-end-line="242" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/extensions/closespider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/my_scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2081">
+          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="169" column="20" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="115" column="18" lean-forward="false" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="50" column="37" lean-forward="true" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_xpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69413">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="42" />
+        <state relative-caret-position="426">
+          <caret line="2689" column="55" lean-forward="true" selection-start-line="2689" selection-start-column="55" selection-end-line="2689" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/parse_json.py">
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="-77">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/press_button.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="52">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/request/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1378">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="194">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/get_messge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="58" column="25" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="58" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="53" column="79" lean-forward="true" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/add_requests.py">
+    <entry file="file://$PROJECT_DIR$/monitor/add_task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="1248">
+          <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="59" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
+    <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="-260">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="25" />
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="141" column="56" lean-forward="false" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#746#1880#0" expanded="false" />
+            <element signature="e#1943#2064#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
           <folding />
         </state>
       </provider>

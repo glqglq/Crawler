@@ -48,7 +48,7 @@ class RandomProxy(object):
             raise ValueError('All proxies are unusable, cannot proceed')
 
         proxy_address = random.choice(list(self.proxies.keys()))
-        if ENABLE_JS == False:
+        if request.meta["type"] == 0:
             request.meta['proxy'] = proxy_address
             log.debug('Using proxy <%s>, %d proxies left' % (
                 proxy_address, len(self.proxies) - 1))

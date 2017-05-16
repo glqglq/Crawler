@@ -3,14 +3,14 @@
 import urlparse
 import posixpath
 
-from ..settings import ALLOWED_DOMAINS,TOP_LEVEL_DOMAINS
+from ..settings import TOP_LEVEL_DOMAINS
 from scrapy.utils.url import parse_url
 
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-allowed_domains = ALLOWED_DOMAINS
+
 top_level_domains = TOP_LEVEL_DOMAINS
 
 IGNORED_EXTENSIONS = [
@@ -51,14 +51,20 @@ def url_cleaning2(url):
         url = 'http://' + url
     return url
 
-def url_cleaning3(url):
+def url_cleaning3(allowed_domains,urls):
+    urlstemp = []
     #DONE 处理allowed_domains
-    for domain in allowed_domains:
-        if url_has_any_extension(url,IGNORED_EXTENSIONS):
-            return False
-        if domain in url:
-            return True
-    return False
+    for url in urls:
+        if url_has_any_extension(url, IGNORED_EXTENSIONS):
+            continue
+        flag = 1
+        for domain in allowed_domains:
+            if domain in url:
+                flag = 0
+                break
+        if flag == 1:
+            urlstemp.append(url)
+    return urlstemp
 
 def url_cleaning4(url):
     # DONE 抽取出合法url，只允许前面是.或者/或者字母或者数字
@@ -83,18 +89,17 @@ def url_join(url_now,urls):
                 break
     return urls
 
-def all_url_cleaning(url_now,urls):
+def all_url_cleaning(response,urls):
     #去掉href=""，去掉前置的//，去掉https://
     urls = map(url_cleaning, urls)
     #去掉前面的字符非英文字母或非.或非/或有非法字符的url
     urls = filter(url_cleaning4,urls)
     #将相对路径改为绝对路径
-    urls = url_join(url_now, urls)
+    urls = url_join(response.url, urls)
     #加上http://头
     urls = map(url_cleaning2, urls)
     #过滤掉非法domain
-    urls = filter(url_cleaning3, urls)
-    return urls
+    return url_cleaning3(response.meta["alloweddomains"],urls)
 
 if __name__ == '__main__':
     urls = ['href="PL.CSS"',

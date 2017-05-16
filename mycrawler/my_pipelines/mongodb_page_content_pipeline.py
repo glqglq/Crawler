@@ -169,7 +169,6 @@ class MongoDBPipeline(BaseItemExporter):
         :returns: Item object
         """
         item = dict(self._get_serialized_fields(item))
-        # item = dict(item)
 
         if self.config['buffer']:
             self.current_item += 1

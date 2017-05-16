@@ -4,7 +4,6 @@ import re
 
 import redis
 from scrapy_redis.spiders import RedisSpider
-from scrapy import Request
 from ..items.items import MyCrawlerItem
 from ..util import url_cleaning
 from ..settings import REDIS_URL,BOT_NAME
@@ -44,22 +43,29 @@ class test_spider(RedisSpider):
     #     return get_message_from_json(url,self.json)
 
     def parse(self, response):
+
+        # DONE 抽取该页新的url并清洗
         body = response.body
-        url_now = response.url
-        # print body
         pattern = re.compile(r'href=\".*?\"',re.M)
         urls = pattern.findall(body)
+        urls = url_cleaning.all_url_cleaning(response,urls)
 
-        urls = url_cleaning.all_url_cleaning(url_now,urls)
+        # DONE 新闻博客类抽取整页
+        if response.meta["type"] == 0:
+            item = MyCrawlerItem()
+            item['url'] = response.url
+            item['type'] = 0
+            item['content'] = body.decode("unicode_escape")
+            yield item
 
-        #DONE Item处理
-        item = MyCrawlerItem()
-        item['url'] = response.url
-        item['content'] = body.decode("unicode_escape")
-        # print body
-        yield item
+        # DONE 电商类抽取部分结构化好的商品信息
+        elif response.meta["type"] == 1:
+            item= MyCrawlerItem()
+            item['url'] = response.url
+            item['type'] = 1
+            item['content'] = response.meta["fetcheditemcontents"]
+            yield item
 
-        # #DONE 将符合条件的链接加到待爬取队列中去
+        # #DONE 将符合条件的链接加到待爬取队列中去，传递meta
         for url in urls:
-            # Request(url)
             yield get_message_from_response(url,response)
