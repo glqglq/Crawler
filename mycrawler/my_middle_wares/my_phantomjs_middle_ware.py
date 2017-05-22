@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
 import re
-
+import redis
 
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
@@ -12,6 +12,7 @@ from scrapy.http import HtmlResponse
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.common.exceptions import TimeoutException
 from ..util.press_button import press_button
+from ..settings import BOT_NAME
 
 from ..util.get_json_page_content import getitemcontent
 
@@ -24,29 +25,32 @@ from ..util.get_json_page_content import getitemcontent
 
 
 class PhantomjsMiddleware(object):
-    def __init__(self,user_agents,proxy_list,enable_proxy):
+    def __init__(self,user_agents,proxy_list,enable_proxy,redis_url):
         #取ua列表
         self.user_agents = user_agents
 
-        #取proxy列表
-        self.proxy_list = proxy_list
-        if self.proxy_list is None:
-            raise KeyError('PROXY_LIST文件不存在')
-        fin = open(self.proxy_list)
-        self.proxies = {}
-        # TODO 删除ip代理的密码
-        for line in fin.readlines():
-            parts = re.match('(\w+:\w+@)?(.+)', line.strip())
-            if not parts:
-                continue
-            # Cut trailing @
-            if parts.group(1):
-                user_pass = parts.group(1)[:-1]
-            else:
-                user_pass = ''
-            self.proxies[parts.group(2)] = user_pass
-        fin.close()
+        # #取proxy列表
+        # self.proxy_list = proxy_list
+        # if self.proxy_list is None:
+        #     raise KeyError('PROXY_LIST文件不存在')
+        # fin = open(self.proxy_list)
+
+        # # TODO 删除ip代理的密码
+        # for line in fin.readlines():
+        #     parts = re.match('(\w+:\w+@)?(.+)', line.strip())
+        #     if not parts:
+        #         continue
+        #     # Cut trailing @
+        #     if parts.group(1):
+        #         user_pass = parts.group(1)[:-1]
+        #     else:
+        #         user_pass = ''
+        #     self.proxies[parts.group(2)] = user_pass
+        # fin.close()
         self.enable_proxy = enable_proxy
+
+        self.proxies = {}
+        self.server = redis.StrictRedis.from_url(redis_url)
 
         #phantomjs相关设置
         self.dcap = dict(DesiredCapabilities.PHANTOMJS)
@@ -59,18 +63,17 @@ class PhantomjsMiddleware(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        o = cls(crawler.settings['USER_AGENTS'],crawler.settings['PROXY_LIST'],crawler.settings['ENABLE_PROXY'])
+        o = cls(crawler.settings['USER_AGENTS'],crawler.settings['PROXY_LIST'],crawler.settings['ENABLE_PROXY'],crawler.settings['REDIS_URL'])
         return o
 
     def process_request(self, request, spider):
-
+        # meta:
         # {   "priority": 20,
         #     "type": 1,
         #     "this_url_rule":"XXX",
         #     "alloweddomains":["XXX"],
         #     "rules": {
         #         "XXX": {
-        #             "type": 1,
         #             "comment_button_type":0,
         #             "comment_button_content":"XXX",
         #             "next_page_type": 0,
@@ -82,19 +85,19 @@ class PhantomjsMiddleware(object):
         #                 }
         #             ]
         #         },
-        #         "XXX": {
-        #             "type": 0,
-        #             "next_page_type": 0,
-        #             "next_page_content": "XXX",
-        #         }}}
+        #     }
+        # }
 
         # 爬取电商网站时启用该middleware
+
         if request.meta["type"] == 1:
 
             #随机定义ip代理、UA
             self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
             self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
             if self.enable_proxy:
+                self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                del self.proxies['running']
                 self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
 
             #开启headless浏览器并进行初始请求
@@ -104,43 +107,39 @@ class PhantomjsMiddleware(object):
             # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')  # 测试用：打印当前
 
             #本页是特殊页
-            if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"]:#本页是特殊页
+            if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"] != '':#本页是特殊页
                 this_url_rule = request.meta["this_url_rule"]
                 # 本页是详情页，抓取本页该抓取的商品信息、评论
-                if request.meta["rules"][this_url_rule]["type"] == 1:
 
-                    # DONE 抽取详情页的内容
-                    request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, request.meta["rules"][
-                        this_url_rule]["itemcontents"])
+                # DONE 抽取详情页的内容
+                request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, request.meta["rules"][
+                    this_url_rule]["itemcontents"])
 
-                    # DONE 等待评论按钮加载出来，并按下，
-                    if_found_button = 0
-                    try:
-                        WebDriverWait(self.driver, 3, 1).until(EC.presence_of_element_located((self.get_type(request.meta["rules"][request.meta["this_url_rule"]]["comment_button_type"]),request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])))
-                        press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
-                        if_found_button = 1
-                    except TimeoutException,e:
-                        #评论按钮找不到
-                        pass
+                # DONE 等待评论按钮加载出来，并按下，
+                if_found_button = 0
+                # try:
+                #     WebDriverWait(self.driver, 3, 0.5).until(EC.presence_of_element_located((self.get_type(request.meta["rules"][this_url_rule]["comment_button_type"]),request.meta["rules"][this_url_rule]["comment_button_content"])))
+                #     press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][this_url_rule]["comment_button_content"])
+                #     if_found_button = 1
+                # except TimeoutException,e:
+                #     #评论按钮找不到
+                #     pass
 
-                    if if_found_button == 1:
-                        # TODO 成功按下后抓取评论区：不断等待下一页按钮加载进来，并按下。换掉这种sb的加载方式，自己算多少页
-                        pass
-                        # try:
-                        #     while True:
-                        #         # 抓取本页内容，存入meta：
-                        #         # 对加载进来的内容进行处理（解析、保存），写个回调函数
-                        #         getconmmentcontent(self.driver.page_source, request.meta["rules"][this_url_rule])
-                        #         WebDriverWait(self.driver, 20, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
-                        #         press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
-                        # except TimeoutException,e:
-                        #     print '%s 评论区抓取完毕'%url
+                # if if_found_button == 1:
+                #     # TODO 成功按下后抓取评论区：不断等待下一页按钮加载进来，并按下。换掉这种sb的加载方式，自己算多少页
+                #     pass
+                    # try:
+                    #     while True:
+                    #         # 抓取本页内容，存入meta：
+                    #         # 对加载进来的内容进行处理（解析、保存），写个回调函数
+                    #         getconmmentcontent(self.driver.page_source, request.meta["rules"][this_url_rule])
+                    #         WebDriverWait(self.driver, 20, 0.5).until(EC.presence_of_element_located((self.next_page_button_type,self.next_page_button_content)))
+                    #         press_button(self.driver,request.meta["rules"][this_url_rule]["comment_button_type"],request.meta["rules"][request.meta["this_url_rule"]]["comment_button_content"])
+                    # except TimeoutException,e:
+                    #     print '%s 评论区抓取完毕'%url
 
-                        #抓取商品详情内容，抓取回来的内容加入到request,meta中去
+                    #抓取商品详情内容，抓取回来的内容加入到request,meta中去
 
-                # 本页是列表页，抓取本页所有链接
-                elif request.meta["rules"][this_url_rule]["type"] == 0:
-                    pass
 
             self.driver.quit()
             return HtmlResponse(request.url, status=200, body=self.driver.page_source, encoding='utf-8', request=request)

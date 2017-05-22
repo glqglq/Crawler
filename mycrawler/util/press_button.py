@@ -1,6 +1,15 @@
 # -*- coding: utf-8 -*-
 
+
 def press_button(driver, button_get_type, button_get_content):
+    """
+    按下按钮，注意要保证唯一性哦
+    是否加上保证按钮按成功的返回值？
+    :param driver: selenium driver
+    :param button_get_type: 按钮类型
+    :param button_get_content: 按钮匹配内容
+    :return: 
+    """
     if button_get_type == 0:  # is By.XPATH:
         driver.find_element_by_xpath(button_get_content).click()
     elif button_get_type == 1:  # is By.CLASS_NAME:

@@ -16,7 +16,7 @@ top_level_domains = TOP_LEVEL_DOMAINS
 IGNORED_EXTENSIONS = [
     # images
     'mng', 'pct', 'bmp', 'gif', 'jpg', 'jpeg', 'png', 'pst', 'psp', 'tif',
-    'tiff', 'ai', 'drw', 'dxf', 'eps', 'ps', 'svg',
+    'tiff', 'ai', 'drw', 'dxf', 'eps', 'ps', 'svg','ico',
 
     # audio
     'mp3', 'wma', 'ogg', 'wav', 'ra', 'aac', 'mid', 'au', 'aiff',
@@ -62,7 +62,7 @@ def url_cleaning3(allowed_domains,urls):
             if domain in url:
                 flag = 0
                 break
-        if flag == 1:
+        if flag == 0:
             urlstemp.append(url)
     return urlstemp
 
@@ -90,6 +90,10 @@ def url_join(url_now,urls):
     return urls
 
 def all_url_cleaning(response,urls):
+    # urls_temp = []
+    # # for url in urls:
+    # #     urls.append(url.decode("utf-8"))
+    # urls = urls_temp
     #去掉href=""，去掉前置的//，去掉https://
     urls = map(url_cleaning, urls)
     #去掉前面的字符非英文字母或非.或非/或有非法字符的url
@@ -99,7 +103,10 @@ def all_url_cleaning(response,urls):
     #加上http://头
     urls = map(url_cleaning2, urls)
     #过滤掉非法domain
-    return url_cleaning3(response.meta["alloweddomains"],urls)
+    urls =  url_cleaning3(response.meta["alloweddomains"],urls)
+    # print response.url,urls
+    return urls
+
 
 if __name__ == '__main__':
     urls = ['href="PL.CSS"',

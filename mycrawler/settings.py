@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 # 配置最大并发请求request量 (默认: 16)
 CONCURRENT_REQUESTS = 32
 # The maximum limit for Twisted Reactor thread pool size. This is common multi-purpose thread pool used by various Scrapy components. Threaded DNS Resolver, BlockingFeedStorage, S3FilesStore just to name a few. Increase this value if you’re experiencing problems with insufficient blocking IO.
@@ -299,7 +300,9 @@ USER_AGENTS=[
 
 #PROXY代理池设置需要以下settings：
 PROXY_LIST = r'/root/Crawler/mycrawler/my_middle_wares/ippool.txt'
-ENABLE_PROXY = False
+ENABLE_PROXY = True
+CHANGE_PROXY_TIME = 15
+PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent/privateProxy/getDynamicIP/DD20175228809744WXT/5b1e075c0a2c11e7a12d00163e1a31c0?returnType=1'
 
 # retry
 #------------------------------------------------------------------------------------------------
@@ -326,7 +329,7 @@ COMPRESSION_ENABLED = True
 #stdout是否以log形式输出
 # LOG_STDOUT = False
 #可选的级别有: CRITICAL、 ERROR、WARNING、INFO、DEBUG。
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'ERROR'
 # LOG_FILE = None
 # LOG_SHORT_NAMES = False
 #------------------------------------------------------------------------------------------------
@@ -336,9 +339,11 @@ LOG_LEVEL = 'INFO'
 #------------------------------------------------------------------------------------------------
 MONGODB_URI = 'mongodb://192.168.28.134:27017'
 MONGODB_DATABASE = 'admin'
-MONGODB_COLLECTION = 'pagecontent'
+MONGODB_NEWSBLOG_COLLECTION = 'newsblogpagecontent'
+MONGODB_EB_COLLECTION = 'ebpagecontent'
 MONGODB_BUFFER_DATA = 20
 MONGODB_ADD_TIMESTAMP = False
+
 # MONGODB_UNIQUE_KEY = 'url'
 
 #If this is set to True it forces MongoDB to wait for all files to be synced before returning.

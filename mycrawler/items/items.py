@@ -13,6 +13,7 @@ class MyCrawlerItem(scrapy.Item):
     type = scrapy.Field()
     content = scrapy.Field()
 
+
 # class MyCrawlerItem(ItemLoader):
 #     default_item_class = MyCrawlerItem()
 

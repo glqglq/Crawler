@@ -44,20 +44,26 @@ JSON格式：
 """
 start_server = redis.StrictRedis.from_url(REDIS_URL)
 def add_requests(json):
+    json = eval(json)
+    spider = test_spider()
+
     for task in json.keys():
         this_meta = json[task]
 
         #电商meta中加入this_url_rule
         if this_meta["type"] == 1:
             this_url_rule = ''
-            for rule in this_meta["rules"].keys():
-                if re.compile(rule).match(task):
-                    this_url_rule = rule
-                    break
+            if this_meta.has_key("rules") and this_meta["rules"]:
+                for rule in this_meta["rules"].keys():
+                    if re.compile(rule).match(task):
+                        this_url_rule = rule
+                        break
             this_meta["this_url_rule"] = this_url_rule
 
-        obj = request_to_dict(Request(task,meta = this_meta,priority = this_meta["priority"]),spider = test_spider())
+        obj = request_to_dict(Request(task,meta = this_meta,priority = this_meta["priority"]))
         obj = picklecompat.dumps(obj)
-        start_server.execute_command('ZADD', '%s:start_urls'%BOT_NAME, this_meta["priority"], obj)
+        start_server.execute_command('ZADD', '%s:requests'%BOT_NAME, -this_meta["priority"], obj)
         # time.sleep(3)
 
+
+add_requests(r'{"http://www.ict.ac.cn":{"priority":10,"type":0,"alloweddomains":["ict.ac.cn","ict.cas.cn"]}}')

@@ -33,7 +33,8 @@ class MongoDBPipeline(BaseItemExporter):
         'fsync': False,
         'write_concern': 0,
         'database': 'scrapy-mongodb',
-        'collection': 'items',
+        'eb_collection': 'eb_items',
+        'newsblog_collection': 'newsblog_items',
         'replica_set': None,
         'unique_key': None,
         'buffer': None,
@@ -42,8 +43,10 @@ class MongoDBPipeline(BaseItemExporter):
     }
 
     # Item缓冲区
-    current_item = 0
-    item_buffer = []
+    current_eb_item = 0
+    current_newsblog_item = 0
+    eb_item_buffer = []
+    newsblog_item_buffer = []
 
     # Duplicate key occurence count
     duplicate_key_count = 0
@@ -78,15 +81,17 @@ class MongoDBPipeline(BaseItemExporter):
 
         # Set up the collection
         database = connection[self.config['database']]
-        self.collection = database[self.config['collection']]
-        log.msg(u'Connected to MongoDB {0}, using "{1}/{2}"'.format(
+        self.eb_collection = database[self.config['eb_collection']]
+        self.newsblog_collection = database[self.config['newsblog_collection']]
+        log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
             self.config['uri'],
             self.config['database'],
-            self.config['collection']))
+            self.config['eb_collection'],self.config['newsblog_collection']))
 
         # Ensure unique index
         if self.config['unique_key']:
-            self.collection.ensure_index(self.config['unique_key'], unique=True)
+            self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+            self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
             log.msg(u'Ensuring index for key {0}'.format(
                 self.config['unique_key']))
 
@@ -134,7 +139,8 @@ class MongoDBPipeline(BaseItemExporter):
             ('fsync', 'MONGODB_FSYNC'),
             ('write_concern', 'MONGODB_REPLICA_SET_W'),
             ('database', 'MONGODB_DATABASE'),
-            ('collection', 'MONGODB_COLLECTION'),
+            ('eb_collection', 'MONGODB_EB_COLLECTION'),
+            ('newsblog_collection', 'MONGODB_NEWSBLOG_COLLECTION'),
             ('replica_set', 'MONGODB_REPLICA_SET'),
             ('unique_key', 'MONGODB_UNIQUE_KEY'),
             ('buffer', 'MONGODB_BUFFER_DATA'),
@@ -169,23 +175,34 @@ class MongoDBPipeline(BaseItemExporter):
         :returns: Item object
         """
         item = dict(self._get_serialized_fields(item))
-
+        # print item
         if self.config['buffer']:
-            self.current_item += 1
-
             if self.config['append_timestamp']:
                 item['scrapy-mongodb'] = {'ts': datetime.datetime.utcnow()}
 
-            self.item_buffer.append(item)
+            if item['type'] == 1:#电商类
+                self.current_eb_item += 1
+                self.eb_item_buffer.append(item)
+            else:
+                self.current_newsblog_item += 1
+                self.newsblog_item_buffer.append(item)
 
-            if self.current_item == self.config['buffer']:
-                self.current_item = 0
-                return self.insert_item(self.item_buffer, spider)
+
+
+
+            if self.current_eb_item == self.config['buffer']:
+                self.current_eb_item = 0
+                return self.insert_item(self.eb_item_buffer, spider,1)
+            if self.current_newsblog_item == self.config['buffer']:
+                self.current_newsblog_item = 0
+                return self.insert_item(self.newsblog_item_buffer, spider,0)
 
             else:
                 return item
-
-        return self.insert_item(item, spider)
+        if item['type'] == 1:
+            return self.insert_item(self.eb_item_buffer, spider,1)
+        else:
+            return self.insert_item(self.newsblog_item_buffer, spider,0)
 
     def close_spider(self, spider):
         """ Method called when the spider is closed
@@ -193,10 +210,12 @@ class MongoDBPipeline(BaseItemExporter):
         :param spider: The spider running the queries
         :returns: None
         """
-        if self.item_buffer:
-            self.insert_item(self.item_buffer, spider)
+        if self.eb_item_buffer:
+            self.insert_item(self.eb_item_buffer, spider,1)
+        if self.newsblog_item_buffer:
+            self.insert_item(self.newsblog_item_buffer, spider,0)
 
-    def insert_item(self, item, spider):
+    def insert_item(self, item, spider,type):
         """ Process the item and add it to MongoDB
         :type item: (Item object) or [(Item object)]
         :param item: The item(s) to put into MongoDB
@@ -212,13 +231,16 @@ class MongoDBPipeline(BaseItemExporter):
 
         if self.config['unique_key'] is None:
             try:
-                self.collection.insert(item, continue_on_error=True)
+                if type == 1:
+                    self.eb_collection.insert(item, continue_on_error=True)
+                    log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'], self.config['eb_collection']),
+                        level=log.DEBUG,spider=spider)
+                else:
+                    self.newsblog_collection.insert(item, continue_on_error=True)
+                    log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'],
+                            self.config['newsblog_collection']),level=log.DEBUG, spider=spider)
                 # print '插入成功'
-                log.msg(
-                    u'Stored item(s) in MongoDB {0}/{1}'.format(
-                        self.config['database'], self.config['collection']),
-                    level=log.DEBUG,
-                    spider=spider)
+
             except errors.DuplicateKeyError:
                 log.msg(u'Duplicate key found', level=log.DEBUG)
                 if (self.stop_on_duplicate > 0):
@@ -237,13 +259,15 @@ class MongoDBPipeline(BaseItemExporter):
                     key[k] = item[k]
             else:
                 key[self.config['unique_key']] = item[self.config['unique_key']]
-
-            self.collection.update(key, item, upsert=True)
-
-            log.msg(
-                u'Stored item(s) in MongoDB {0}/{1}'.format(
-                    self.config['database'], self.config['collection']),
-                level=log.DEBUG,
-                spider=spider)
+            if type == 1:#电商类
+                self.eb_collection.update(key, item, upsert=True)
+                log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
+                    self.config['database'], self.config['eb_collection']),
+                level=log.DEBUG,spider=spider)
+            else:
+                self.newsblog_collection.update(key, item, upsert=True)
+                log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
+                    self.config['database'], self.config['newsblog_collection']),
+                    level=log.DEBUG, spider=spider)
 
         return item
