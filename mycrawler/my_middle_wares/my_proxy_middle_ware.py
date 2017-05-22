@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import re
+import time
 import random
 import logging
 import redis
@@ -44,9 +44,12 @@ class RandomProxy(object):
 
     def process_request(self, request, spider):
         if ENABLE_PROXY:
-            self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
-            del self.proxies['running']
-
+            while True:
+                self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                del self.proxies['running']
+                if self.proxies:
+                    break
+                time.sleep(1)
             # Don't overwrite with a random one (server-side state for IP)
             if 'proxy' in request.meta:
                 if request.meta["exception"] is False:

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import random
-import re
+import time
 import redis
 
 from selenium import webdriver
@@ -96,8 +96,12 @@ class PhantomjsMiddleware(object):
             self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
             self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
             if self.enable_proxy:
-                self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
-                del self.proxies['running']
+                while True:
+                    self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                    del self.proxies['running']
+                    if self.proxies:
+                        break
+                    time.sleep(1)
                 self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
 
             #开启headless浏览器并进行初始请求
