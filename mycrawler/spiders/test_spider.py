@@ -8,7 +8,6 @@ from ..items.items import MyCrawlerItem
 from ..util import url_cleaning
 from ..settings import REDIS_URL,BOT_NAME
 from scrapy import Request
-from ..util.get_messge import get_message_from_response
 from ..util.get_proxy import get_proxy
 
 import sys,threading
@@ -79,4 +78,21 @@ class test_spider(RedisSpider):
         #DONE 将符合条件的链接加到待爬取队列中去，传递meta
         for url in urls:
         #     # yield get_message_from_response(url,response)
-            yield Request(url, priority=response.meta["priority"], meta=response.meta)
+            if response.meta["type"] == 1:
+                this_url_priority = response.meta["priority"]
+                this_url_rule = ''
+
+                # 识别特殊页面，设置优先级和
+                if response.meta.has_key("rules") and response.meta["rules"]:
+                    for rule in response.meta["rules"].keys():
+                        if re.compile(rule).match(url):
+                            this_url_rule = rule
+                            # 详情页，优先级增加
+                            this_url_priority += 1
+
+                # meta中共五项：priority、type、alloweddomains、this_url_rule、rules
+                clean_meta = response.meta
+                clean_meta["this_url_rule"] = this_url_rule
+                yield Request(url, priority=this_url_priority, meta=clean_meta)
+            else:
+                yield Request(url, priority=response.meta["priority"], meta=response.meta)

@@ -6,7 +6,7 @@
 """
 import urllib2,time,redis
 
-from ..settings import PROXY_LIST_URL,REDIS_URL,BOT_NAME,CHANGE_PROXY_TIME
+from ..settings import PROXY_LIST_URL,REDIS_URL,BOT_NAME,CHANGE_PROXY_TIME,PROXY_TEST_URL
 
 # PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent/privateProxy/getDynamicIP/DD20175228809744WXT/5b1e075c0a2c11e7a12d00163e1a31c0?returnType=1'
 # REDIS_URL = r'redis://admin:1@192.168.28.134:6379'
@@ -47,7 +47,7 @@ def get_proxy():
                         proxy_handler = urllib2.ProxyHandler({'http': "http://" + proxy})
                         opener = urllib2.build_opener(proxy_handler)
                         urllib2.install_opener(opener)
-                        urllib2.urlopen(r'https://amos.alicdn.com/muliuserstatus.aw?_ksTS=1495442598290_944&callback=jsonp945&beginnum=0&charset=utf-8&uids=%E6%A1%86%E5%90%89%E5%91%A81976&site=cntaobao')
+                        urllib2.urlopen(PROXY_TEST_URL)
                         server.hset('%s:proxy_pool' % BOT_NAME,proxy,time.time())
                         server.hdel('%s:proxy_pool' % BOT_NAME, need_new)
                         need_new = ''

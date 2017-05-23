@@ -303,6 +303,7 @@ PROXY_LIST = r'/root/Crawler/mycrawler/my_middle_wares/ippool.txt'
 ENABLE_PROXY = True
 CHANGE_PROXY_TIME = 15
 PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent/privateProxy/getDynamicIP/DD20175228809744WXT/5b1e075c0a2c11e7a12d00163e1a31c0?returnType=1'
+PROXY_TEST_URL = r'https://amos.alicdn.com/muliuserstatus.aw?_ksTS=1495442598290_944&callback=jsonp945&beginnum=0&charset=utf-8&uids=%E6%A1%86%E5%90%89%E5%91%A81976&site=cntaobao'
 
 # retry
 #------------------------------------------------------------------------------------------------

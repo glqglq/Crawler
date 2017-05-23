@@ -1,7 +1,8 @@
 from scrapy.utils.reqser import request_to_dict, request_from_dict
+from ..settings import BOT_NAME
+from scrapy_redis import picklecompat
 
-from . import picklecompat
-
+import random
 
 class Base(object):
     """Per-spider base queue class"""
@@ -62,6 +63,7 @@ class Base(object):
     def clear(self):
         """Clear queue/stack"""
         self.server.delete(self.key)
+        self.server.flushall()
 
 
 class FifoQueue(Base):
@@ -101,7 +103,7 @@ class PriorityQueue(Base):
         # We don't use zadd method as the order of arguments change depending on
         # whether the class is Redis or StrictRedis, and the option of using
         # kwargs only accepts strings, not bytes.
-        self.server.execute_command('ZADD', self.key, score, data)
+        self.server.execute_command('ZADD', '%s:task_%s'%('mycrawler',request.meta['id']), score, data)
 
     def pop(self, timeout=0):
         """
@@ -109,9 +111,25 @@ class PriorityQueue(Base):
         timeout not support in this queue class
         """
         # use atomic range/remove using multi/exec
+
+        # 从running_task队列中拿出一个多个优先级高的任务
         pipe = self.server.pipeline()
         pipe.multi()
-        pipe.zrange(self.key, 0, 0).zremrangebyrank(self.key, 0, 0)
+        pipe.zscan('%s:running_task' % BOT_NAME)
+        all_running_tasks = pipe.execute()[0][1]
+        first_score = float(all_running_tasks[0][1])
+        todo_tasks = []
+        for i in range(len(all_running_tasks)):
+            if all_running_tasks[i][1] != first_score:
+                break
+            else:
+                todo_tasks.append(all_running_tasks[i][0])
+
+        # 随便选择一个任务，todo_task是字符串类型
+        todo_task = '%s:task_' % BOT_NAME + random.choice(todo_tasks)
+
+        # 从task_?队列中拿出request并解码
+        pipe.zrange(todo_task, 0, 0).zremrangebyrank(todo_task, 0, 0)
         results, count = pipe.execute()
         if results:
             return self._decode_request(results[0])

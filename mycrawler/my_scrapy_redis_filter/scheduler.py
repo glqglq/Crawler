@@ -3,7 +3,7 @@ import six
 
 from scrapy.utils.misc import load_object
 
-from . import connection, defaults
+from scrapy_redis import connection, defaults
 
 
 # TODO: add SCRAPY_JOB support.
