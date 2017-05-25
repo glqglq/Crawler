@@ -12,7 +12,7 @@ class MyCrawlerItem(scrapy.Item):
     url = scrapy.Field()
     type = scrapy.Field()
     content = scrapy.Field()
-
+    id = scrapy.Field()
 
 # class MyCrawlerItem(ItemLoader):
 #     default_item_class = MyCrawlerItem()

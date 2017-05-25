@@ -216,7 +216,7 @@ DUPEFILTER_CLASS = "mycrawler.my_scrapy_redis_filter.dupefilter.RFPDupeFilter"
 SCHEDULER_PERSIST = True
 SCHEDULER_FLUSH_ON_START = True
 # 使用优先级调度请求队列 （默认使用）
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+SCHEDULER_QUEUE_CLASS = 'mycrawler.my_scrapy_redis_filter.queue.SpiderPriorityQueue'
 #SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.FifoQueue'
 #SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.LifoQueue'
 # 最大空闲时间，防止爬虫在分布式爬取时因为等待而自动关闭
@@ -237,11 +237,9 @@ REDIS_URL = r'redis://admin:1@192.168.28.134:6379'
 #REDIS_START_URLS_AS_SET = False
 # RedisSpider and RedisCrawlSpider默认的start urls键.
 REDIS_START_URLS_KEY = '%s:start_urls'%BOT_NAME
-# 去重队列的信息
-FILTER_URL = None
-FILTER_HOST = 'localhost'
-FILTER_PORT = 6379
-FILTER_DB = 0
+#分布式锁
+LOCK_KEY = '%s:lock'%BOT_NAME
+LOCK_TIMEOUT = 3
 # REDIS_QUEUE_NAME = 'OneName'   # 如果不设置或者设置为None，则使用默认的，每个spider使用不同的去重队列和种子队列。如果设置了，则不同spider共用去重队列和种子队列
 
 #------------------------------------------------------------------------------------------------
@@ -302,7 +300,7 @@ USER_AGENTS=[
 PROXY_LIST = r'/root/Crawler/mycrawler/my_middle_wares/ippool.txt'
 ENABLE_PROXY = True
 CHANGE_PROXY_TIME = 15
-PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent/privateProxy/getDynamicIP/DD20175228809744WXT/5b1e075c0a2c11e7a12d00163e1a31c0?returnType=1'
+PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent//privateProxy/getDynamicIP/DD20175256720NUOmWU/4083e822fd9511e6942200163e1a31c0?returnType=1'
 PROXY_TEST_URL = r'https://amos.alicdn.com/muliuserstatus.aw?_ksTS=1495442598290_944&callback=jsonp945&beginnum=0&charset=utf-8&uids=%E6%A1%86%E5%90%89%E5%91%A81976&site=cntaobao'
 
 # retry
@@ -330,7 +328,7 @@ COMPRESSION_ENABLED = True
 #stdout是否以log形式输出
 # LOG_STDOUT = False
 #可选的级别有: CRITICAL、 ERROR、WARNING、INFO、DEBUG。
-LOG_LEVEL = 'ERROR'
+LOG_LEVEL = 'DEBUG'
 # LOG_FILE = None
 # LOG_SHORT_NAMES = False
 #------------------------------------------------------------------------------------------------

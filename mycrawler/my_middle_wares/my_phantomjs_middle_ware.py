@@ -11,7 +11,7 @@ from scrapy.exceptions import IgnoreRequest
 from scrapy.http import HtmlResponse
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.common.exceptions import TimeoutException
-from ..util.press_button import press_button
+from mycrawler.util.distributed_lock import dist_lock
 from ..settings import BOT_NAME
 
 from ..util.get_json_page_content import getitemcontent
@@ -59,7 +59,7 @@ class PhantomjsMiddleware(object):
         self.service_args = []
         self.service_args.append('--ignore-ssl-errors=true')  ##忽略https错误
 
-        self.js = "var i=1;window.setInterval(a, 50);function a(){document.getElementsByTagName('body')[0].scrollTop=100*i;i++;}"
+        # self.js = "var i=1;window.setInterval(a, 50);function a(){document.getElementsByTagName('body')[0].scrollTop=100*i;i++;}"
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -67,37 +67,18 @@ class PhantomjsMiddleware(object):
         return o
 
     def process_request(self, request, spider):
-        # meta:
-        # {   "priority": 20,
-        #     "type": 1,
-        #     "this_url_rule":"XXX",
-        #     "alloweddomains":["XXX"],
-        #     "rules": {
-        #         "XXX": {
-        #             "comment_button_type":0,
-        #             "comment_button_content":"XXX",
-        #             "next_page_type": 0,
-        #             "next_page_content": "XXX",
-        #             "itemcontents": [
-        #                 "XXX":{
-        #                     "content_type": 0,
-        #                     "content_content": "XXX"
-        #                 }
-        #             ]
-        #         },
-        #     }
-        # }
-
         # 爬取电商网站时启用该middleware
-
-        if request.meta["type"] == 1:
+        with dist_lock(BOT_NAME, self.server):
+            this_task_information = eval(self.server.hget('%s:task_information'%BOT_NAME,request.meta["id"]))
+        if this_task_information['type'] == 1:
 
             #随机定义ip代理、UA
             self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
             self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
             if self.enable_proxy:
                 while True:
-                    self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                    with dist_lock(BOT_NAME, self.server):
+                        self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
                     del self.proxies['running']
                     if self.proxies:
                         break
@@ -111,13 +92,13 @@ class PhantomjsMiddleware(object):
             # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')  # 测试用：打印当前
 
             #本页是特殊页
-            if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"] != '':#本页是特殊页
+            if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"]:#本页是特殊页
                 this_url_rule = request.meta["this_url_rule"]
                 # 本页是详情页，抓取本页该抓取的商品信息、评论
 
                 # DONE 抽取详情页的内容
-                request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, request.meta["rules"][
-                    this_url_rule]["itemcontents"])
+                rules = this_task_information["rules"][this_url_rule]["itemcontents"]
+                request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, rules)
 
                 # DONE 等待评论按钮加载出来，并按下，
                 if_found_button = 0

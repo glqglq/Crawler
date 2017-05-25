@@ -6,7 +6,7 @@ import logging
 import redis
 
 from ..settings import BOT_NAME,REDIS_URL,ENABLE_PROXY
-
+from mycrawler.util.distributed_lock import dist_lock
 
 log = logging.getLogger('scrapy.proxies')
 
@@ -18,10 +18,10 @@ class RandomProxy(object):
         self.proxy_list = settings.get('PROXY_LIST')
         if self.proxy_list is None:
             raise KeyError('PROXY_LIST setting is missing')
-
-        fin = open(self.proxy_list)
+        self.enable_proxy = settings.get('ENABLE_PROXY')
         self.proxies = {}
         self.server = redis.StrictRedis.from_url(REDIS_URL)
+        # fin = open(self.proxy_list)
         # for line in fin.readlines():
         #     parts = re.match('(\w+://)(\w+:\w+@)?(.+)', line.strip())
         #     if not parts:
@@ -43,9 +43,11 @@ class RandomProxy(object):
         return cls(crawler.settings)
 
     def process_request(self, request, spider):
-        if ENABLE_PROXY:
+        if self.enable_proxy:
+
             while True:
-                self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                with dist_lock(BOT_NAME, self.server):
+                    self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
                 del self.proxies['running']
                 if self.proxies:
                     break
@@ -59,7 +61,7 @@ class RandomProxy(object):
                 raise ValueError('All proxies are unusable, cannot proceed')
 
             proxy_address = random.choice(list(self.proxies.keys()))
-            if request.meta["type"] == 0:
+            if request.meta["type"] == 0:  #新闻博客类
                 request.meta['proxy'] = proxy_address
                 log.debug('Using proxy <%s>, %d proxies left' % (
                     proxy_address, len(self.proxies) - 1))

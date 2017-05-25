@@ -39,6 +39,9 @@ class test_spider(RedisSpider):
         self.get_proxy_threading = threading.Thread(target=get_proxy,args=())
         self.get_proxy_threading.setDaemon(True)
         self.get_proxy_threading.start()
+
+        self.server = redis.StrictRedis.from_url(REDIS_URL)
+
     #     if kwargs:
     #         #DONE 初始start_urls加入爬取队列：
     #         self.json = eval(kwargs["json"])
@@ -55,17 +58,22 @@ class test_spider(RedisSpider):
         body = response.body
         pattern = re.compile(r'href=\".*?\"',re.M)
         urls = pattern.findall(body)
-        urls = url_cleaning.all_url_cleaning(response,urls)
+        urls = url_cleaning.all_url_cleaning(self.server,response,urls)
         # print 'haha'
         item = MyCrawlerItem()
         item['url'] = response.url
+        item['id'] = response.meta["id"]
+
+        this_task_information = eval(self.server.hget('%s:task_information' % BOT_NAME, response.meta["id"]))
+
+
         # DONE 新闻博客类抽取整页
-        if response.meta["type"] == 0:
+        if this_task_information["type"] == 0:
             item['type'] = 0
             item['content'] = body.decode("unicode_escape")
 
         # DONE 电商类抽取部分结构化好的商品信息
-        elif response.meta["type"] == 1 and response.meta.has_key('fetcheditemcontents'):
+        elif this_task_information["type"] == 1 and response.meta.has_key('fetcheditemcontents'):
             item['type'] = 1
             item['content'] = response.meta["fetcheditemcontents"]
         #未识别类型
@@ -75,24 +83,26 @@ class test_spider(RedisSpider):
 
         yield item
 
+
         #DONE 将符合条件的链接加到待爬取队列中去，传递meta
         for url in urls:
-        #     # yield get_message_from_response(url,response)
-            if response.meta["type"] == 1:
-                this_url_priority = response.meta["priority"]
+            if this_task_information["type"] == 1:
+                this_url_priority = this_task_information["priority"]
                 this_url_rule = ''
 
                 # 识别特殊页面，设置优先级和
-                if response.meta.has_key("rules") and response.meta["rules"]:
-                    for rule in response.meta["rules"].keys():
+                if this_task_information.has_key("rules") and this_task_information["rules"]:
+                    for rule in this_task_information["rules"].keys():
                         if re.compile(rule).match(url):
                             this_url_rule = rule
                             # 详情页，优先级增加
                             this_url_priority += 1
 
-                # meta中共五项：priority、type、alloweddomains、this_url_rule、rules
-                clean_meta = response.meta
+                # meta中共两项：id、this_url_rule
+                clean_meta = {}
+                clean_meta["id"] = response.meta["id"]
                 clean_meta["this_url_rule"] = this_url_rule
                 yield Request(url, priority=this_url_priority, meta=clean_meta)
             else:
-                yield Request(url, priority=response.meta["priority"], meta=response.meta)
+                # meta中共一项：id
+                yield Request(url, priority=this_task_information["priority"], meta=response.meta)

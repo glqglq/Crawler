@@ -5,6 +5,7 @@ import posixpath
 
 from ..settings import TOP_LEVEL_DOMAINS
 from scrapy.utils.url import parse_url
+from mycrawler.settings import BOT_NAME
 
 import sys
 reload(sys)
@@ -89,7 +90,7 @@ def url_join(url_now,urls):
                 break
     return urls
 
-def all_url_cleaning(response,urls):
+def all_url_cleaning(server,response,urls):
     # urls_temp = []
     # # for url in urls:
     # #     urls.append(url.decode("utf-8"))
@@ -103,7 +104,9 @@ def all_url_cleaning(response,urls):
     #加上http://头
     urls = map(url_cleaning2, urls)
     #过滤掉非法domain
-    urls =  url_cleaning3(response.meta["alloweddomains"],urls)
+
+    alloweddomains_from_redis = eval(server.hget('%s:task_information'%BOT_NAME,response.meta["id"]))["alloweddomains"]
+    urls =  url_cleaning3(alloweddomains_from_redis,urls)
     # print response.url,urls
     return urls
 

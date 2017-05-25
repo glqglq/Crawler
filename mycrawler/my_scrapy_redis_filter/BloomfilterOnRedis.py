@@ -1,5 +1,8 @@
 # encoding=utf-8
 
+from mycrawler.settings import BOT_NAME
+from mycrawler.util.distributed_lock import dist_lock
+
 class SimpleHash(object):
     def __init__(self, cap, seed):
         self.cap = cap
@@ -34,13 +37,15 @@ class BloomFilter(object):
         ret = True
 
         name = self.key + str(int(str_input[0:2], 16) % self.blockNum)
-        for f in self.hashfunc:
-            loc = f.hash(str_input)
-            ret = ret & self.server.getbit(name, loc)
+        with dist_lock(BOT_NAME, self.server):
+            for f in self.hashfunc:
+                loc = f.hash(str_input)
+                ret = ret & self.server.getbit(name, loc)
         return ret
 
     def insert(self, str_input):
         name = self.key + str(int(str_input[0:2], 16) % self.blockNum)
-        for f in self.hashfunc:
-            loc = f.hash(str_input)
-            self.server.setbit(name, loc, 1)
+        with dist_lock(BOT_NAME, self.server):
+            for f in self.hashfunc:
+                loc = f.hash(str_input)
+                self.server.setbit(name, loc, 1)
