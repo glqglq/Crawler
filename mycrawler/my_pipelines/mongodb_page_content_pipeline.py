@@ -66,7 +66,7 @@ class MongoDBPipeline(BaseItemExporter):
         self.configure()
 
         if self.config['replica_set'] is not None:
-            connection = MongoReplicaSetClient(
+            self.connection = MongoReplicaSetClient(
                 self.config['uri'],
                 replicaSet=self.config['replica_set'],
                 w=self.config['write_concern'],
@@ -74,26 +74,26 @@ class MongoDBPipeline(BaseItemExporter):
                 read_preference=ReadPreference.PRIMARY_PREFERRED)
         else:
             # Connecting to a stand alone MongoDB
-            connection = MongoClient(
+            self.connection = MongoClient(
                 self.config['uri'],
                 fsync=self.config['fsync'],
                 read_preference=ReadPreference.PRIMARY)
 
-        # Set up the collection
-        database = connection[self.config['database']]
-        self.eb_collection = database[self.config['eb_collection']]
-        self.newsblog_collection = database[self.config['newsblog_collection']]
-        log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
-            self.config['uri'],
-            self.config['database'],
-            self.config['eb_collection'],self.config['newsblog_collection']))
-
-        # Ensure unique index
-        if self.config['unique_key']:
-            self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
-            self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
-            log.msg(u'Ensuring index for key {0}'.format(
-                self.config['unique_key']))
+        # # Set up the collection，移入insert_item中去
+        # database = connection[self.config['database']]
+        # self.eb_collection = database[self.config['eb_collection']]
+        # self.newsblog_collection = database[self.config['newsblog_collection']]
+        # log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
+        #     self.config['uri'],
+        #     self.config['database'],
+        #     self.config['eb_collection'],self.config['newsblog_collection']))
+        #
+        # # Ensure unique index
+        # if self.config['unique_key']:
+        #     self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+        #     self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
+        #     log.msg(u'Ensuring index for key {0}'.format(
+        #         self.config['unique_key']))
 
         # Get the duplicate on key option
         if self.config['stop_on_duplicate']:
@@ -223,6 +223,31 @@ class MongoDBPipeline(BaseItemExporter):
         :param spider: The spider running the queries
         :returns: Item object
         """
+
+        # Set up the collection
+        database = self.connection[self.config['database']]
+        if type == 1 and  isinstance(item,list):
+            self.eb_collection = database[self.config['eb_collection'] + '_' + str(item[0]['id']) + '_' + item[0]['this_url_rule']]
+        elif type == 0 and isinstance(item,list):
+            self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item[0]['id'])]
+        elif type == 1 and not isinstance(item,list):
+            self.eb_collection = database[
+                self.config['eb_collection'] + '_' + str(item['id']) + '_' + item['this_url_rule']]
+        elif type == 0 and not isinstance(item,list):
+            self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item['id'])]
+
+        log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
+            self.config['uri'],
+            self.config['database'],
+            self.config['eb_collection'], self.config['newsblog_collection']))
+
+        # Ensure unique index
+        if self.config['unique_key']:
+            self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+            self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
+            log.msg(u'Ensuring index for key {0}'.format(
+                self.config['unique_key']))
+
         if not isinstance(item, list):
             item = dict(item)
 

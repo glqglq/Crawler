@@ -298,10 +298,11 @@ USER_AGENTS=[
 
 #PROXY代理池设置需要以下settings：
 PROXY_LIST = r'/root/Crawler/mycrawler/my_middle_wares/ippool.txt'
-ENABLE_PROXY = True
+ENABLE_PROXY = False
 CHANGE_PROXY_TIME = 15
-PROXY_LIST_URL = r'http://www.xdaili.cn/ipagent//privateProxy/getDynamicIP/DD20175256720NUOmWU/4083e822fd9511e6942200163e1a31c0?returnType=1'
+PROXY_LIST_URL = r'http://api.ip.data5u.com/api/get.shtml?order=8d090f91a5287eee8bd04031240892c8&num=100&area=%E4%B8%AD%E5%9B%BD&carrier=0&protocol=0&an1=1&sp1=1&sp2=2&sort=1&system=1&distinct=0&rettype=1&seprator=%0D%0A'
 PROXY_TEST_URL = r'https://amos.alicdn.com/muliuserstatus.aw?_ksTS=1495442598290_944&callback=jsonp945&beginnum=0&charset=utf-8&uids=%E6%A1%86%E5%90%89%E5%91%A81976&site=cntaobao'
+MIN_PROXY_NUM = 10
 
 # retry
 #------------------------------------------------------------------------------------------------
@@ -328,7 +329,7 @@ COMPRESSION_ENABLED = True
 #stdout是否以log形式输出
 # LOG_STDOUT = False
 #可选的级别有: CRITICAL、 ERROR、WARNING、INFO、DEBUG。
-LOG_LEVEL = 'DEBUG'
+LOG_LEVEL = 'ERROR'
 # LOG_FILE = None
 # LOG_SHORT_NAMES = False
 #------------------------------------------------------------------------------------------------

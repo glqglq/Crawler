@@ -46,8 +46,7 @@ class RandomProxy(object):
         if self.enable_proxy:
 
             while True:
-                with dist_lock(BOT_NAME, self.server):
-                    self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
                 del self.proxies['running']
                 if self.proxies:
                     break

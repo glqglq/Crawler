@@ -10,9 +10,10 @@ from scrapy.loader import ItemLoader
 
 class MyCrawlerItem(scrapy.Item):
     url = scrapy.Field()
+    id = scrapy.Field()
     type = scrapy.Field()
     content = scrapy.Field()
-    id = scrapy.Field()
+    this_url_rule = scrapy.Field()
 
 # class MyCrawlerItem(ItemLoader):
 #     default_item_class = MyCrawlerItem()

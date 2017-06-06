@@ -14,38 +14,65 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Crawler$test_redis.coverage" NAME="test_redis Coverage Results" MODIFIED="1494839414094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_mechanize.coverage" NAME="test_mechanize Coverage Results" MODIFIED="1492609530259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_webkit_selenium.coverage" NAME="test_webkit_selenium Coverage Results" MODIFIED="1492670978761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_pyteaser.coverage" NAME="test_pyteaser Coverage Results" MODIFIED="1496653727842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_goose.coverage" NAME="test_goose Coverage Results" MODIFIED="1496653404866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$Unittests_in_test_spider.coverage" NAME="Unittests in test_spider Coverage Results" MODIFIED="1492779304810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/mycrawler/mycrawler/spiders" />
-    <SUITE FILE_PATH="coverage/Crawler$chrome.coverage" NAME="chrome Coverage Results" MODIFIED="1492657982237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python27/Lib/site-packages/splinter/driver/webdriver" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_in_test_cx_extrctor2_py.coverage" NAME="Unittests in test_cx_extrctor2.py Coverage Results" MODIFIED="1496199745122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_sumy.coverage" NAME="test_sumy Coverage Results" MODIFIED="1496647799878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_spider_test_spider___init__.coverage" NAME="Unittests for test_spider.test_spider.__init__ Coverage Results" MODIFIED="1496140306952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/spiders" />
     <SUITE FILE_PATH="coverage/Crawler$test_ghost.coverage" NAME="test_ghost Coverage Results" MODIFIED="1492606636262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$BloomfilterOnRedis.coverage" NAME="BloomfilterOnRedis Coverage Results" MODIFIED="1494245172230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter" />
-    <SUITE FILE_PATH="coverage/Crawler$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1494679009995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_cs_extractor2_test.coverage" NAME="Unittests for test_cs_extractor2.test Coverage Results" MODIFIED="1496153691925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_spider_test_spider_parse.coverage" NAME="Unittests for test_spider.test_spider.parse Coverage Results" MODIFIED="1495866844500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/spiders" />
     <SUITE FILE_PATH="coverage/Crawler$test_request__1_.coverage" NAME="test_request (1) Coverage Results" MODIFIED="1495116968547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$testrequests.coverage" NAME="testrequests Coverage Results" MODIFIED="1489568959538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_xpath.coverage" NAME="test_xpath Coverage Results" MODIFIED="1494920149466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$cancel_task.coverage" NAME="cancel_task Coverage Results" MODIFIED="1495718642468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_in_test_jieba_keywords_py.coverage" NAME="Unittests in test_jieba_keywords.py Coverage Results" MODIFIED="1496728163339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_spynner.coverage" NAME="test_spynner Coverage Results" MODIFIED="1492674025109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$testurllib2.coverage" NAME="testurllib2 Coverage Results" MODIFIED="1490012033504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs_jd.coverage" NAME="test_phanstomjs_jd Coverage Results" MODIFIED="1493949851412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_phanstomjs" />
-    <SUITE FILE_PATH="coverage/Crawler$test_taobao.coverage" NAME="test_taobao Coverage Results" MODIFIED="1495264602778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_form.coverage" NAME="test_form Coverage Results" MODIFIED="1490847749682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$url_cleaning.coverage" NAME="url_cleaning Coverage Results" MODIFIED="1495269088719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
-    <SUITE FILE_PATH="coverage/Crawler$add_task.coverage" NAME="add_task Coverage Results" MODIFIED="1495455929893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
-    <SUITE FILE_PATH="coverage/Crawler$get_proxy.coverage" NAME="get_proxy Coverage Results" MODIFIED="1495453349595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
+    <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs_jd.coverage" NAME="test_phanstomjs_jd Coverage Results" MODIFIED="1496140970570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_phanstomjs" />
+    <SUITE FILE_PATH="coverage/Crawler$distributed_lock.coverage" NAME="distributed_lock Coverage Results" MODIFIED="1495700915882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$test_jparser.coverage" NAME="test_jparser Coverage Results" MODIFIED="1496322405769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$add_task.coverage" NAME="add_task Coverage Results" MODIFIED="1495942052232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$test.coverage" NAME="test Coverage Results" MODIFIED="1496646992256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/textteaser-master" />
+    <SUITE FILE_PATH="coverage/Crawler$get_proxy.coverage" NAME="get_proxy Coverage Results" MODIFIED="1496133602726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
     <SUITE FILE_PATH="coverage/Crawler$testurllib.coverage" NAME="testurllib Coverage Results" MODIFIED="1489573242781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$pause_task.coverage" NAME="pause_task Coverage Results" MODIFIED="1495718629893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$page_content_pipline.coverage" NAME="page_content_pipline Coverage Results" MODIFIED="1494210135606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_pipelines" />
+    <SUITE FILE_PATH="coverage/Crawler$test_json.coverage" NAME="test_json Coverage Results" MODIFIED="1494742460209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$list_task.coverage" NAME="list_task Coverage Results" MODIFIED="1495706145202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$test_cx_extrctor2.coverage" NAME="test_cx_extrctor2 Coverage Results" MODIFIED="1496199443753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_in_test_cs_extractor2_py.coverage" NAME="Unittests in test_cs_extractor2.py Coverage Results" MODIFIED="1496153800552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_jieba_keywords.coverage" NAME="test_jieba_keywords Coverage Results" MODIFIED="1496646809237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_splinter.coverage" NAME="test_splinter Coverage Results" MODIFIED="1492670913105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_cookie.coverage" NAME="test_cookie Coverage Results" MODIFIED="1490866057169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_bosonnlp.coverage" NAME="test_bosonnlp Coverage Results" MODIFIED="1496638557501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_mechanize.coverage" NAME="test_mechanize Coverage Results" MODIFIED="1492609530259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_webkit_selenium.coverage" NAME="test_webkit_selenium Coverage Results" MODIFIED="1492670978761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$reduction.coverage" NAME="reduction Coverage Results" MODIFIED="1496725423045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$get_json_page_content.coverage" NAME="get_json_page_content Coverage Results" MODIFIED="1495874194645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
+    <SUITE FILE_PATH="coverage/Crawler$chrome.coverage" NAME="chrome Coverage Results" MODIFIED="1492657982237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python27/Lib/site-packages/splinter/driver/webdriver" />
+    <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_cx_extractor_test_file.coverage" NAME="Unittests for test_cx_extractor.test_file Coverage Results" MODIFIED="1496154099381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$BloomfilterOnRedis.coverage" NAME="BloomfilterOnRedis Coverage Results" MODIFIED="1494245172230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter" />
+    <SUITE FILE_PATH="coverage/Crawler$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1494679009995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Crawler$test_xpath.coverage" NAME="test_xpath Coverage Results" MODIFIED="1494920149466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$testurllib2.coverage" NAME="testurllib2 Coverage Results" MODIFIED="1490012033504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_taobao.coverage" NAME="test_taobao Coverage Results" MODIFIED="1495264602778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_proxies.coverage" NAME="test_proxies Coverage Results" MODIFIED="1496134132858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_form.coverage" NAME="test_form Coverage Results" MODIFIED="1490847749682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_textteaser.coverage" NAME="test_textteaser Coverage Results" MODIFIED="1496646687407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$url_cleaning.coverage" NAME="url_cleaning Coverage Results" MODIFIED="1495269088719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
+    <SUITE FILE_PATH="coverage/Crawler$test_cx_extractor.coverage" NAME="test_cx_extractor Coverage Results" MODIFIED="1496200070939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_str_hash.coverage" NAME="test_str_hash Coverage Results" MODIFIED="1494245268917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_url_cleaning.coverage" NAME="test_url_cleaning Coverage Results" MODIFIED="1494250780315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$page_content_pipline.coverage" NAME="page_content_pipline Coverage Results" MODIFIED="1494210135606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_pipelines" />
+    <SUITE FILE_PATH="coverage/Crawler$test_textrank.coverage" NAME="test_textrank Coverage Results" MODIFIED="1496644008606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$my_phantomjs_middle_ware.coverage" NAME="my_phantomjs_middle_ware Coverage Results" MODIFIED="1493867247835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_middle_wares" />
-    <SUITE FILE_PATH="coverage/Crawler$test_json.coverage" NAME="test_json Coverage Results" MODIFIED="1494742460209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_encode_decode.coverage" NAME="test_encode_decode Coverage Results" MODIFIED="1493690883270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs.coverage" NAME="test_phanstomjs Coverage Results" MODIFIED="1493801270175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_request.coverage" NAME="test_request Coverage Results" MODIFIED="1494837913607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$test_textrank2.coverage" NAME="test_textrank2 Coverage Results" MODIFIED="1496643545474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_webkit.coverage" NAME="test_webkit Coverage Results" MODIFIED="1490771338949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$test_splinter.coverage" NAME="test_splinter Coverage Results" MODIFIED="1492670913105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$continue_task.coverage" NAME="continue_task Coverage Results" MODIFIED="1495718636023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$test_chech.coverage" NAME="test_chech Coverage Results" MODIFIED="1495507280275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$fetch_free_proxyes.coverage" NAME="fetch_free_proxyes Coverage Results" MODIFIED="1493033982234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/mycrawler/mycrawler/my_middle_wares" />
-    <SUITE FILE_PATH="coverage/Crawler$test_cookie.coverage" NAME="test_cookie Coverage Results" MODIFIED="1490866057169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -75,69 +102,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="queue.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py">
+      <file leaf-file-name="test_jieba_keywords.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_jieba_keywords.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="161" column="29" lean-forward="true" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
               <folding>
-                <element signature="e#0#66#0" expanded="true" />
+                <element signature="e#24#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_spider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_spider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+            <state relative-caret-position="286">
+              <caret line="95" column="86" lean-forward="false" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
               <folding>
-                <element signature="e#25#34#0" expanded="true" />
+                <element signature="e#25#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_chech.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_chech.py">
+      <file leaf-file-name="summary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mycrawler/util/summary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_proxy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/util/get_proxy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="366">
+              <caret line="222" column="72" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="72" />
               <folding>
-                <element signature="e#49#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="230" column="50" lean-forward="true" selection-start-line="230" selection-start-column="12" selection-end-line="230" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scheduler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/scheduler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#25#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,50 +144,51 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Setup Script" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sleep</find>
-      <find>close</find>
-      <find>need_new</find>
-      <find>BOT_NAME</find>
       <find>proxy</find>
-      <find>server</find>
-      <find>e</find>
-      <find>en</find>
-      <find>enab</find>
-      <find>enabl</find>
+      <find>request.meta.has_key(&quot;this_url_rule&quot;)</find>
+      <find>redis_url</find>
+      <find>phantomjs.page.settings.userAgent</find>
+      <find>self.service_args</find>
+      <find>true</find>
+      <find>url</find>
+      <find>loadjs</find>
+      <find>cx_extractor_python</find>
+      <find>request</find>
+      <find>coll</find>
       <find>enable</find>
-      <find>proxies</find>
-      <find>next_request</find>
-      <find>f</find>
-      <find>fl</find>
-      <find>flush</find>
-      <find>p</find>
-      <find>pri</find>
-      <find>prio</find>
-      <find>priori</find>
-      <find>priority</find>
-      <find>get</find>
-      <find>get_</find>
-      <find>get_m</find>
-      <find>get_me</find>
-      <find>get_mes</find>
-      <find>get_mess</find>
-      <find>get_messa</find>
-      <find>get_messag</find>
-      <find>get_message</find>
+      <find>enable_p</find>
+      <find>collection</find>
+      <find>database</find>
+      <find>this_url_rule</find>
+      <find>matplotlib</find>
+      <find>pandas</find>
+      <find>print</find>
+      <find>scipy</find>
+      <find>TextRank4Sentence</find>
+      <find>title</find>
+      <find>czech</find>
+      <find>text</find>
+      <find>StopWordsChinese</find>
+      <find>german</find>
+      <find>chin</find>
+      <find>chine</find>
+      <find>chinese</find>
+      <find>stopw</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter</dir>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler\</dir>
       <dir>C:\Python27\Lib\site-packages</dir>
       <dir>C:\Users\LuckyGong\.PyCharm2016.1\system\remote_sources\1501053355\-183260405\scrapy</dir>
-      <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler</dir>
       <dir>C:\Python27\Lib\site-packages\scrapy</dir>
+      <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -201,57 +197,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/yield_request_pipeline.py" />
-        <option value="$PROJECT_DIR$/test/test_encode_decode.py" />
-        <option value="$PROJECT_DIR$/test/test_phanstomjs.py" />
-        <option value="$PROJECT_DIR$/test/test_phanstomjs/test_phanstomjs_jd.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/GeneralHashFunctions.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_bloom_filter_2.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_bloom_filter.py" />
-        <option value="$PROJECT_DIR$/mycrawler/scrapy_redis_filter/pipelines.py" />
-        <option value="$PROJECT_DIR$/my_scrapy_redis_filter/dupefilter.py" />
-        <option value="$PROJECT_DIR$/my_scrapy_redis_filter/BloomfilterOnRedis.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/page_content_pipline.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/BloomfilterOnRedis.py" />
-        <option value="$PROJECT_DIR$/test/test_str_hash.py" />
-        <option value="$PROJECT_DIR$/test/test_url_cleaning.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/url_join.py" />
-        <option value="$PROJECT_DIR$/mycrawler/__init__.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/scrapy_mongodb.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_priority.py" />
-        <option value="$PROJECT_DIR$/scrapy.cfg" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/parse_json.py" />
-        <option value="$PROJECT_DIR$/test/test_json.py" />
-        <option value="$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/spiders.py" />
-        <option value="$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py" />
-        <option value="$PROJECT_DIR$/test/test_redis.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/add_request.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_page_content.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/add_requests.py" />
-        <option value="$PROJECT_DIR$/monitor/add_requests.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/my_scheduler.py" />
-        <option value="$PROJECT_DIR$/test/test_xpath.py" />
-        <option value="$PROJECT_DIR$/mycrawler/items/items.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/press_button.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
         <option value="$PROJECT_DIR$/test/test_request.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/get_messge.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_pipelines/my_mongodb_page_content_pipeline.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/dupefilter.py" />
         <option value="$PROJECT_DIR$/test/test_taobao.py" />
-        <option value="$PROJECT_DIR$/monitor/add_task.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/scheduler.py" />
         <option value="$PROJECT_DIR$/test/test_chech.py" />
-        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
-        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
+        <option value="$PROJECT_DIR$/monitor/get_task_data.py" />
+        <option value="$PROJECT_DIR$/monitor/distributed_lock.py" />
+        <option value="$PROJECT_DIR$/monitor/list_task.py" />
+        <option value="$PROJECT_DIR$/monitor/json_example.py" />
+        <option value="$PROJECT_DIR$/monitor/pause_task.py" />
+        <option value="$PROJECT_DIR$/monitor/continue_task.py" />
+        <option value="$PROJECT_DIR$/monitor/cancel_task.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/BloomfilterOnRedis.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
+        <option value="$PROJECT_DIR$/monitor/add_task.py" />
+        <option value="$PROJECT_DIR$/test/test_celery.py" />
+        <option value="$PROJECT_DIR$/test/test_proxies.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
+        <option value="$PROJECT_DIR$/test/test_phanstomjs/test_phanstomjs_jd.py" />
+        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
+        <option value="$PROJECT_DIR$/test/1.html" />
+        <option value="$PROJECT_DIR$/test/test_cs_extractor2.py" />
+        <option value="$PROJECT_DIR$/test/test_cx_extrctor2.py" />
+        <option value="$PROJECT_DIR$/test/test_cx_extractor.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/jparser/model.py" />
+        <option value="$PROJECT_DIR$/test/test_jparser.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
+        <option value="$PROJECT_DIR$/mycrawler/items/items.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
+        <option value="$PROJECT_DIR$/test/textteaser-master/test.py" />
+        <option value="$PROJECT_DIR$/test/test_bosonnlp.py" />
+        <option value="$PROJECT_DIR$/test/test_textrank2.py" />
+        <option value="$PROJECT_DIR$/test/test_textrank.py" />
+        <option value="$PROJECT_DIR$/test/test_textteaser.py" />
+        <option value="$PROJECT_DIR$/test/test_sumy.py" />
+        <option value="$PROJECT_DIR$/test/test_goose.py" />
+        <option value="$PROJECT_DIR$/test/test_pyteaser.py" />
+        <option value="$PROJECT_DIR$/test/stopWords.txt" />
+        <option value="$PROJECT_DIR$/test/test_summarization.py" />
+        <option value="$PROJECT_DIR$/test/reduction.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/jparser/summary .py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/summary .py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/__init__.py" />
+        <option value="$PROJECT_DIR$/test/test_jieba_keywords.py" />
+        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
       </list>
     </option>
   </component>
@@ -323,6 +319,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -475,46 +472,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_scrapy_redis_filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monitor" />
+              <option name="myItemId" value="jparser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -529,6 +497,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/LuckyGong/Documents/GitHub/Crawler/mycrawler/spiders/test_spider.py" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -539,19 +508,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\my_scrapy_redis_filter" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\my_scrapy_redis_filter" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_scheduler" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\my_scrapy_redis_filter" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util\jparser" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_scheduler" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -566,27 +535,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_chech">
-    <configuration default="false" name="add_task" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monitor" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Crawler" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monitor/add_task.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_chech" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests in test_jieba_keywords.py">
+    <configuration default="false" name="test_sumy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -599,13 +549,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_chech.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_sumy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test_taobao" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test_goose" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -618,48 +568,64 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_taobao.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_goose.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="url_cleaning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test_pyteaser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mycrawler/util" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_pyteaser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="get_proxy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="reduction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mycrawler/util" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util\summary.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in test_jieba_keywords.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Crawler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_jieba_keywords.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -906,19 +872,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.test_phanstomjs_jd" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_phanstomjs" />
-      <item index="2" class="java.lang.String" itemvalue="Python.add_task" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_chech" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_taobao" />
-      <item index="5" class="java.lang.String" itemvalue="Python.url_cleaning" />
-      <item index="6" class="java.lang.String" itemvalue="Python.get_proxy" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_sumy" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_goose" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_pyteaser" />
+      <item index="5" class="java.lang.String" itemvalue="Python.reduction" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in test_jieba_keywords.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_chech" />
-        <item index="1" class="java.lang.String" itemvalue="Python.add_task" />
-        <item index="2" class="java.lang.String" itemvalue="Python.get_proxy" />
-        <item index="3" class="java.lang.String" itemvalue="Python.url_cleaning" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_taobao" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_jieba_keywords.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.reduction" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_pyteaser" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_goose" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_sumy" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -963,8 +929,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_spider - 2017.04.21 at 20h 55m 06s.xml">
-      <configuration name="Unittests in test_spider" configurationId="tests" />
+    <history-entry file="Unittests_for_test_cs_extractor2_test - 2017.05.30 at 22h 14m 52s.xml">
+      <configuration name="Unittests for test_cs_extractor2.test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_cx_extractor_test_file - 2017.05.30 at 22h 21m 39s.xml">
+      <configuration name="Unittests for test_cx_extractor.test_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cs_extractor2_py - 2017.05.30 at 22h 15m 28s.xml">
+      <configuration name="Unittests in test_cs_extractor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cs_extractor2_py - 2017.05.30 at 22h 16m 35s.xml">
+      <configuration name="Unittests in test_cs_extractor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cs_extractor2_py - 2017.05.30 at 22h 16m 46s.xml">
+      <configuration name="Unittests in test_cs_extractor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cs_extractor2_py - 2017.05.30 at 22h 18m 57s.xml">
+      <configuration name="Unittests in test_cs_extractor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cx_extrctor2_py - 2017.05.31 at 11h 00m 01s.xml">
+      <configuration name="Unittests in test_cx_extrctor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_cx_extrctor2_py - 2017.05.31 at 11h 02m 25s.xml">
+      <configuration name="Unittests in test_cx_extrctor2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_jieba_keywords_py - 2017.06.06 at 13h 47m 24s.xml">
+      <configuration name="Unittests in test_jieba_keywords.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_jieba_keywords_py - 2017.06.06 at 13h 49m 26s.xml">
+      <configuration name="Unittests in test_jieba_keywords.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -982,15 +975,14 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6671159" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698113" sideWeight="0.51432663" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17789757" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17520216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66885245" sideWeight="0.4924357" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1361186" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17868853" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20485175" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2590164" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14398281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17550144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12535816" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25606468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1001,35 +993,23 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34697217" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6671159" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698113" sideWeight="0.51432663" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17789757" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34697217" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66885245" sideWeight="0.4924357" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1361186" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17868853" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14398281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12653062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25606468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1047,7 +1027,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1056,375 +1036,357 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/parse_json.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/482107175/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="4307" column="8" lean-forward="false" selection-start-line="4307" selection-start-column="8" selection-end-line="4307" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/settings/default_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="242" column="39" lean-forward="true" selection-start-line="242" selection-start-column="39" selection-end-line="242" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/extensions/closespider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/my_scheduler.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/selenium/webdriver/common/actions/pointer_actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_webkit_selenium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_phanstomjs/test_phanstomjs_jd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/response/html.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/response/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/response/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="135" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="248" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/1963110281/twisted/mail/test/test_pop3client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="396" column="33" lean-forward="false" selection-start-line="396" selection-start-column="20" selection-end-line="396" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/utils/trackref.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2/typing.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="209" column="37" lean-forward="false" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2/six/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="53" column="42" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="169" column="20" lean-forward="false" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/picklecompat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/utils/reqser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/request/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/exporters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="62" column="41" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="217" column="19" lean-forward="false" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/defaults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/selector/unified.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_xpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="2689" column="37" lean-forward="false" selection-start-line="2689" selection-start-column="34" selection-end-line="2689" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/press_button.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/dupefilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_taobao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/urllib2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="130" column="35" lean-forward="false" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/482107175/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="121" column="67" lean-forward="true" selection-start-line="121" selection-start-column="67" selection-end-line="121" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/spiders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="89" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/monitor/add_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="e#25#51#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="166" column="20" lean-forward="false" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_messge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_proxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding>
-            <element signature="e#49#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.948/region.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.554/tags_util.py" />
     <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="230" column="50" lean-forward="true" selection-start-line="230" selection-start-column="12" selection-end-line="230" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="152">
+          <caret line="300" column="8" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_chech.py">
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="104">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/redis/client.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="2429" column="63" lean-forward="true" selection-start-line="2428" selection-start-column="8" selection-end-line="2429" selection-end-column="63" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="517" column="8" lean-forward="false" selection-start-line="517" selection-start-column="8" selection-end-line="517" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="246">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/tags_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/region.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_jparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/textrank4zh/TextRank4Sentence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/snownlp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="177" column="16" lean-forward="false" selection-start-line="177" selection-start-column="10" selection-end-line="177" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_textrank2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="225" column="25" lean-forward="true" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_cx_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-744">
+          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_cx_extrctor2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146866">
+          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_textrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="214" column="15" lean-forward="true" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/textteaser/textteaser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_bosonnlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="17" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/textteaser/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/textteaser-master/textteaser/summarizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/textteaser-master/textteaser/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/parsers/html.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2355">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/goose/utils/images.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/goose/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="134" column="6" lean-forward="false" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/goose/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_goose.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_pyteaser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/stopWords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="643" column="1" lean-forward="false" selection-start-line="643" selection-start-column="1" selection-end-line="643" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/pkgutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="555" column="4" lean-forward="false" selection-start-line="555" selection-start-column="4" selection-end-line="555" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="53" column="84" lean-forward="false" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/nlp/stemmers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="134" column="15" lean-forward="false" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/nlp/tokenizers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="92" column="50" lean-forward="false" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_sumy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/textteaser-master/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_summarization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ASExtractor-master/rouge.py" />
+    <entry file="file://$PROJECT_DIR$/test/test_textteaser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="155" column="23" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="155" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/request/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/fetch_free_proxyes.py">
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="165" column="41" lean-forward="true" selection-start-line="165" selection-start-column="41" selection-end-line="165" selection-end-column="41" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/summary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="222" column="72" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="72" />
+          <folding>
+            <element signature="e#25#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_jieba_keywords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="161" column="29" lean-forward="true" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/jieba/analyse/tfidf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="115" column="23" lean-forward="false" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="92" column="47" lean-forward="false" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+        <state relative-caret-position="286">
+          <caret line="95" column="86" lean-forward="false" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
+            <element signature="e#25#68#0" expanded="true" />
           </folding>
         </state>
       </provider>

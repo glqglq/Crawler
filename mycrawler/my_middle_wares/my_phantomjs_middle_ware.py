@@ -2,6 +2,7 @@
 import random
 import time
 import redis
+import chardet
 
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
@@ -17,6 +18,7 @@ from ..settings import BOT_NAME
 from ..util.get_json_page_content import getitemcontent
 
 """
+    爬取电商网站时启用该middleware
     三种页面：
         普通页面
         列表页面（需要翻页）
@@ -56,8 +58,7 @@ class PhantomjsMiddleware(object):
         self.dcap = dict(DesiredCapabilities.PHANTOMJS)
         self.dcap["phantomjs.page.settings.disk-cache"] = True
         self.dcap["phantomjs.page.settings.loadImages"] = False
-        self.service_args = []
-        self.service_args.append('--ignore-ssl-errors=true')  ##忽略https错误
+
 
         # self.js = "var i=1;window.setInterval(a, 50);function a(){document.getElementsByTagName('body')[0].scrollTop=100*i;i++;}"
 
@@ -67,29 +68,33 @@ class PhantomjsMiddleware(object):
         return o
 
     def process_request(self, request, spider):
-        # 爬取电商网站时启用该middleware
-        with dist_lock(BOT_NAME, self.server):
-            this_task_information = eval(self.server.hget('%s:task_information'%BOT_NAME,request.meta["id"]))
-        if this_task_information['type'] == 1:
+        this_task_information = eval(self.server.hget('%s:task_information'%BOT_NAME,request.meta["id"]))
+        if this_task_information['type'] == 1 and request.meta.has_key("this_url_rule"):#如果想对eb类网站全体用phantomjs的话，就把这个has_key去掉
+            self.service_args = []
+            self.service_args.append('--ignore-ssl-errors=true')  ##忽略https错误
 
-            #随机定义ip代理、UA
-            self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
-            self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
+            #找代理
             if self.enable_proxy:
                 while True:
-                    with dist_lock(BOT_NAME, self.server):
-                        self.proxies = self.server.hgetall('%s:proxy_pool'%BOT_NAME)
+                    self.proxies = self.server.hgetall('%s:proxy_pool' % BOT_NAME)
                     del self.proxies['running']
                     if self.proxies:
                         break
                     time.sleep(1)
-                self.service_args.append('--proxy=%s'%random.choice(self.proxies.keys()))
+                self.service_args.append('--proxy=%s' % random.choice(self.proxies.keys()))
+                # print self.service_args
+            #随机定义ip代理、UA
+            self.dcap["phantomjs.page.settings.userAgent"] = (random.choice(self.user_agents))
+            # print self.dcap
+            # self.dcap["phantomjs.page.customHeaders.User-Agent"] = self.dcap["phantomjs.page.settings.userAgent"]
 
             #开启headless浏览器并进行初始请求
-            self.driver = webdriver.PhantomJS(service_args = self.service_args, desired_capabilities=self.dcap)
-            self.driver.set_window_size(1500, 15000)
-            self.driver.get(request.url)
-            # self.driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')  # 测试用：打印当前
+            driver = webdriver.PhantomJS(service_args = self.service_args, desired_capabilities=self.dcap)
+            driver.set_window_size(1500, 15000)
+            # print request.url
+            driver.get(request.url.replace(';','&'))
+            # driver.get_screenshot_as_file(r'/root/Crawler/mycrawler/1.png')  # 测试用：打印当前
+            page_source = driver.page_source.encode('utf-8')
 
             #本页是特殊页
             if request.meta.has_key("this_url_rule") and request.meta["this_url_rule"]:#本页是特殊页
@@ -98,7 +103,8 @@ class PhantomjsMiddleware(object):
 
                 # DONE 抽取详情页的内容
                 rules = this_task_information["rules"][this_url_rule]["itemcontents"]
-                request.meta['fetcheditemcontents'] = getitemcontent(self.driver.page_source, rules)
+                # print rules
+                request.meta['fetcheditemcontents'] = getitemcontent(page_source, rules)
 
                 # DONE 等待评论按钮加载出来，并按下，
                 if_found_button = 0
@@ -126,8 +132,8 @@ class PhantomjsMiddleware(object):
                     #抓取商品详情内容，抓取回来的内容加入到request,meta中去
 
 
-            self.driver.quit()
-            return HtmlResponse(request.url, status=200, body=self.driver.page_source, encoding='utf-8', request=request)
+            driver.close()
+            return HtmlResponse(request.url, status=200, body=page_source, encoding='utf-8', request=request)
 
     def process_response(self, request, response, spider):
         if len(response.body) == 100:
