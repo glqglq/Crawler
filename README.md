@@ -53,7 +53,7 @@
 	pip install --upgrade pip
 ## 3.安装scrapy、scrapy-redis、bs4、MySQL-python、selenium、pymongo、phantomjs：尝试一下内置
 3.1安装scrapy、scrapy-redis、bs4、MySQL-python、selenium：
-
+	yum install gcc libffi-devel openssl-devel libxml2 libxslt-devel libxml2-devel python-devel -y
 	pip install scrapy scrapy-redis MySQL-python pymongo
 	
 3.2安装phantomjs：
