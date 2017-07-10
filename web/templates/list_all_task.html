@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% block neirong %}
+    <style type="text/css">
+        table.altrowstable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #a9c6c9;
+            border-collapse: collapse;
+        }
+        table.altrowstable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        table.altrowstable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        .oddrowcolor{
+            background-color:#d4e3e5;
+        }
+        .evenrowcolor{
+            background-color:#c3dde0;
+        }
+        span.status-RUNNING{
+            border:1px solid #449d44;
+            padding:1px 5px 0;
+            background:#5cb85c;
+            color:#fff;
+        }
+        span.status-STOP{
+             border:1px solid #c9302c;
+             padding:1px 5px 0;
+             background:#d9534f;
+             color:#fff;
+        }
+        span.status-PAUSED{
+             border:1px solid #3c3c3c;
+             padding:1px 5px 0;
+             background:#555;
+             color:#fff;
+        }
+        .btn_run{
+            border:1px solid #449d44;
+            padding:1px 5px 0;
+            background:#5cb85c;
+            color:#fff;
+        }
+        .btn_stop{
+             border:1px solid #c9302c;
+             padding:1px 5px 0;
+             background:#d9534f;
+             color:#fff;
+        }
+        .btn_pause{
+             border:1px solid #3c3c3c;
+             padding:1px 5px 0;
+             background:#555;
+             color:#fff;
+        }
+    </style>
+    <div class="span9">
+        <table name="show" class ="altrowstable" id="alternatecolor">
+            <tr>
+                <th>序号</th>
+                <th>任务id</th>
+                <th>起始url</th>
+                <th>任务优先级</th>
+                <th>任务状态</th>
+                <th>任务类型</th>
+                <th>允许爬取域名</th>
+                <th>状态修改</th>
+            </tr>
+
+
+            {% for str1 in jsonstr %}
+                <tr>
+                    <td class = "id"></td>
+                    <td class="id-cnt"><a href="{{ url_for('static',filename='chakan3.html') }}">task_{{ str1['id'] }}</a></td>
+                    <td>{{ str1['url'] }}</td>
+                    <td>{{ str1['priority'] }}</td>
+                    <td class="status">
+                        {% if str1['status'] == 1 %}
+                        <span class="status-RUNNING">RUNNING</span>
+                        {% elif str1['status'] == 0 %}
+                        <span class="status-STOP">STOP</span>
+                        {% elif str1['status'] == -1 %}
+                        <span class="status-PAUSED">PAUSED</span>
+                        {% endif %}
+                    </td>
+{#                        {{ str1['status'] }}</td>#}
+                    <td>{{ str1['type'] }}</td>
+                    <td>{% for str in str1['alloweddomains'] %}
+                            {{ str }},
+                        {% endfor %}</td>
+                    <td class="status_changed">
+                        <button class="btn_run status-show">run</button>
+                        <button class="btn_pause status-show">pause</button>
+                        <button class="btn_stop status-show">stop</button>
+                    </td>
+{#                            {{ str1['alloweddomains'] }}</td>#}
+                </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(function () {
+            var num = $(".id").length;
+            for(var i = 1;i <= num;i++)
+            {
+                $(".id").eq(i-1).html(i);
+            }
+        })
+        $(document).ready(function () {
+            function altRows(id){
+                if(document.getElementsByTagName){
+                    var table = document.getElementById(id);
+                    var rows = table.getElementsByTagName("tr");
+                    for(i = 0; i < rows.length; i++){
+                        if(i % 2 == 0){
+                            rows[i].className = "evenrowcolor";
+                        }else{
+                            rows[i].className = "oddrowcolor";
+                        }
+                    }
+                }
+            }
+            window.onload=function(){
+                altRows('alternatecolor');
+            }
+        });
+        $(document).ready(function () {
+            $(".btn_run").click(function () {
+
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if(task_status_prev.indexOf("PAUSED") >= 0)
+                {
+                    task_status_now = 0;
+                }
+                else if(task_status_prev.indexOf("STOP")>= 0)
+                {
+                    task_status_now = 2;
+                }
+                else if(task_status_prev.indexOf("RUNNING")>= 0)
+                {
+                    task_status_now = 1;
+                }
+
+                var task_status_change = 1;
+
+                $(this).parent().parent().find(".status").html("<span class=\"status-RUNNING\">RUNNING</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+
+            });
+            $(".btn_pause").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+                var task_status_now = 0;
+                if(task_status_prev.indexOf("PAUSED")>= 0)
+                {
+                    task_status_now = 0;
+                }
+                else if(task_status_prev.indexOf("STOP")>= 0)
+                {
+                    task_status_now = 2;
+                }
+                else if(task_status_prev.indexOf("RUNNING")>= 0)
+                {
+                    task_status_now = 1;
+                }
+                var task_status_change = 0;
+                $(this).parent().parent().find(".status").html("<span class=\"status-PAUSED\">PAUSED</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+            $(".btn_stop").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if(task_status_prev.indexOf("PAUSED")>= 0)
+                {
+                    task_status_now = 0;
+                }
+                else if(task_status_prev.indexOf("STOP")>= 0)
+                {
+                    task_status_now = 2;
+                }
+                else if(task_status_prev.indexOf("RUNNING")>= 0)
+                {
+                    task_status_now = 1;
+                }
+                var task_status_change = 2;
+{#                alert(task_status_prev);#}
+                $(this).parent().parent().find(".status").html("<span class=\"status-STOP\">STOP</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
+{% endblock %}

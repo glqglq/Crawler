@@ -8,13 +8,9 @@ import urllib2,time,redis,httplib
 
 from ..settings import PROXY_LIST_URL,REDIS_URL,BOT_NAME,CHANGE_PROXY_TIME,PROXY_TEST_URL,MIN_PROXY_NUM
 
-# PROXY_LIST_URL = r'http://api.ip.data5u.com/api/get.shtml?order=8d090f91a5287eee8bd04031240892c8&num=100&area=%E4%B8%AD%E5%9B%BD&carrier=0&protocol=0&an1=1&sp1=1&sp2=2&sort=1&system=1&distinct=0&rettype=1&seprator=%0D%0A'
-# REDIS_URL = r'redis://admin:1@192.168.28.134:6379'
-# BOT_NAME = 'mycrawler'
-# CHANGE_PROXY_TIME = 15
-# PROXY_TEST_URL = r'https://amos.alicdn.com/muliuserstatus.aw?_ksTS=1495442598290_944&callback=jsonp945&beginnum=0&charset=utf-8&uids=%E6%A1%86%E5%90%89%E5%91%A81976&site=cntaobao'
-# MIN_PROXY_NUM = 10
-# PROXY_TEST_URL = r'http://www.ip002.net/'
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 start_time = time.time()
 

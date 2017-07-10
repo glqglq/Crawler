@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block neirong %}
+    <div class="span9">
+        <h1 class="page-title">任务</h1>
+        <div class="well">
+            <input type='button' class='btnAdd' value='添加' hidden="hidden"/>
+            <div id="father">
+                <form method="post" action="{{ url_for('addtask') }}" name="conform" class="confirm">
+                    <fieldset>
+                        <!--<legend>任务</legend>-->
+                        <table border="0">
+                        <tr>
+                        <td>任务入口url    </td>
+                        <td><input type="text" name="start_url" class="start_url"/></td>
+                        </tr>
+                        <tr>
+                        <td>任务优先级     </td>
+                        <td><input type="text" name="priority" class="priority"/></td>
+                        </tr>
+                        <tr>
+                                <td>任  务  类  型     </td>
+                                <td>
+                                    <select name="type" class="testName">
+                                        <option value="1" autofocus="true">电商类</option>
+                                        <option value="0">新闻博客类</option>
+                                    </select>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>允许爬取域名   </td>
+                            <td><input type="text" name="alloweddomains" class="testName"></td>
+                        </tr>
+                        </table>
+
+
+                        <!--<input type="text" placeholder="type"  name="type" class="testName" hidden="hidden"/>-->
+
+                        <div>
+                            <input type="button" value="添加一个规则" class="btn" id="btn_addrules">
+                            <input type="button" value="删除一个规则" class="btn" id="btn_deleterules">
+                            <br>
+                            <div class="app1" name="app1">
+                            </div>
+                        </div>
+                        <br>
+                        <input type='button' class='btnDel' value='delete the task' onclick = "$(this).parent().remove();" hidden="hidden"/>
+                    </fieldset>
+                    <br>
+                    <input type="submit" id="btn_sub" value="提交" onclick="alert('任务提交成功')"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='lib/bootstrap/js/bootstrap.js') }}"></script>
+    <script type="text/javascript">
+        var blockNum=10;
+        $(document).ready(function(){
+            var parentDom=$('#father').find("form"),oriDom=parentDom.children(":first");
+            $('.btnAdd').click(function(){
+                var clLength=parentDom.children().length;
+                if(blockNum>clLength){
+                    var nowDom=oriDom.clone();
+                    nowDom.children(":first").text('任务');
+                    parentDom.append(nowDom);
+                }
+                else
+                    return false;
+            });
+{#            $('.btnSub').click(function(){#}
+{#                $('.conform').submit();#}
+{#            });#}
+        });
+
+        //定义rulenum表示第几个rule,定义itemnum[i][j]表示第i个rule的第j个itemcontent
+        var rulenum = 1;
+        var itemnum = new Array();
+        for(var i = 0;i < 10;i++)
+        {
+            itemnum[i] = 1;
+        }
+
+	    $(document).ready(function(){
+		    $("#btn_addrules").click(function(){
+		        var html1 = ' <div class="well" id='+rulenum+'>'
+                        +'<input type="text" placeholder="re_url" name="re_url'+'.'+rulenum+'"/><br>'
+//                        +'<input type="text" placeholder="rule_type" name="rule_type'+'.'+rulenum+'"/><br>'
+                        +'<select name="type" class="testName"><option value="0" autofocus="true">XPATH匹配</option><option value="1">元素CLASS NAME匹配</option><option value="2">CSSSELECTOR匹配</option><option value="3">元素ID匹配</option><option value="5">元素NAME匹配</option><option value="6">元素TAG_NAME匹配</option></select><br>'
+//                        +'<input type="text" placeholder="comment_button_type" name="comment_button_type'+'.'+rulenum+'"/>'
+//                        +'<input type="text" placeholder="comment_button_content" name="comment_button_content'+'.'+rulenum+'"/>'
+//                        +'<input type="text" placeholder="next_page_type" name="next_page_type'+'.'+rulenum+'" />'
+//                        +'<input type="text" placeholder="next_page_content" name="next_page_content'+'.'+rulenum+'" /><br>'
+                    +'<input type="button" value="add itemcontents" class="add_itemcontents" id="'+rulenum+'">'
+                        +'<input type="button" value="delete" class="btn_deleteitem" id="'+rulenum+'">'
+                        +'<div id="items'+rulenum+'" class="app2">'+'</div>'
+                    +'</div>';
+			    $(".app1").append(html1);
+
+                $(".add_itemcontents").click(function(){
+                    var str1 = $(this).parents("div").attr("id");
+                    var str5 = ".well"+str1;
+                    var str2 = $(str5).size() + 1;
+{#                    alert(str2);#}
+
+                    var str3 = str1+"."+str2;
+{#                    alert(str3);#}
+                    var str4 = "#items"+str1;
+                    var html2='<br><div class="well'+str1+'"id ="'+str3+'"><input type="text" placeholder="key" name="key'+'.'+str3+'"/>' +
+//                        '<input type="text" placeholder="content_type" name="content_type'+'.'+str3+'"/>' +
+                        '<input type="text" placeholder="content_content" name="content_content'+'.'+str3+'"/>'
+{#                        + '<input type="button" id="delete" value="delete" onclick="del()">'#}
+                        +'</div>';
+                    $(this).parents("div").find(str4).append(html2);
+
+{#                    $("#delete").click(function () {#}
+{#                        $(this).parent().remove();#}
+{#                    });#}
+
+                });
+
+                $(".btn_deleteitem").click(function(){
+
+                    var str1 = $(this).attr("id");
+                    var str5 = ".well"+str1+":last";
+
+                    var str2 = $(str5).size();
+                    var str4 = "#"+str1+"."+str2;
+
+{#                    alert($(".well1").size());#}
+                    $(str5).remove();
+{#                    $(str4).remove();#}
+
+                });
+
+                rulenum = rulenum + 1;
+		    });
+
+
+
+		    $("#btn_deleterules").click(function(){
+		        if(rulenum >= 1)
+                {
+                    var str1 = "#"+(rulenum-1);
+                    $(str1).remove();
+			        rulenum = rulenum - 1;
+                }
+		    });
+	    });
+    </script>
+{% endblock %}
+

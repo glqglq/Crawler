@@ -258,10 +258,12 @@ class MongoDBPipeline(BaseItemExporter):
             try:
                 if type == 1:
                     self.eb_collection.insert(item, continue_on_error=True)
+                    self.eb_item_buffer = []
                     log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'], self.config['eb_collection']),
                         level=log.DEBUG,spider=spider)
                 else:
                     self.newsblog_collection.insert(item, continue_on_error=True)
+                    self.newsblog_item_buffer = []
                     log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'],
                             self.config['newsblog_collection']),level=log.DEBUG, spider=spider)
                 # print '插入成功'

@@ -1,0 +1,527 @@
+{% extends "base.html" %}
+
+{% block active %}
+    <li class="mt">
+        <a class="active" href="/index">
+            <i class="fa fa-dashboard"></i>
+            <span>首页</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <span>节点</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addslave">添加节点</a></li>
+            <li><a href="/listallslave">节点状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-th"></i>
+            <span>任务</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addtask">添加任务</a></li>
+            <li><a href="/listalltask">任务状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>数据</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/listnewsblogdata">新闻博客</a></li>
+            <li><a href="/listebdata">电子商务</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+{% block neirong %}
+
+    <section id="main-content">
+        <section class="wrapper">
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <div class="content-panel pn" style="height: auto">
+                    <p id="blog-bg">
+                        <p class="blog-title">系统通知</p>
+                    </p>
+                    <p>
+
+                        <div class="blog-text" style="font-size:16px">
+                            <!--<p>欢迎来到分布式爬虫系统控制台！</p>-->
+                            <p>&nbsp&nbsp左侧导航栏中有节点添加管理、任务添加查询、数据可视化相关操作。<br/>
+                            &nbsp&nbsp1.作品由于本身使用了docker技术模拟分布式节点的增删，不便于在docker系统上部署，作者将其部署在服务器上。<br/>
+                            &nbsp&nbsp2.由于项目用到了代理ip池，并且代理ip价格昂贵，所以请评委老师运行演示前务必先联系我们，购买的代理ip之后系统才能高效运行，解决反爬虫。<br/>
+                            &nbsp&nbsp3.作者联系方式：luckygong95@foxmail.com    15621197691</p>
+                        </div>
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                    <div class="showback">
+                        <h4><i class="fa fa-angle-right"></i> 任务状态</h4>
+                        <div class="alert alert-success"><b></b>
+                            运行任务：{{ num_task_r }}个<br/>
+                            暂停任务：{{ num_task_p }}个<br/>
+                            停止/完成任务：{{ num_task_s }}个<br/>
+                        </div>
+                    </div><!-- /showback -->
+                </div><!-- /col-md-4 -->
+
+                <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                    <div class="showback">
+                        <h4><i class="fa fa-angle-right"></i> 节点状态</h4>
+                        <div class="alert alert-info"><b></b>
+                            运行节点：{{ num_slave_r }}个<br/>
+                            停止节点：{{ num_slave_p }}个<br/><br/>
+                        </div>
+                    </div><!-- /showback -->
+                </div><!-- /col-md-4 -->
+
+                <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                    <div class="showback">
+                        <h4><i class="fa fa-angle-right"></i> 数据状态</h4>
+                        <div class="alert alert-warning"><b></b>
+                            电商页面：{{ eb_count }}页<br/>
+                            新闻博客页面：{{ newsblog_count }}页<br/><br/>
+                        </div>
+                    </div><!-- /showback -->
+                </div><!-- /col-md-4 -->
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <div class="showback" style="width: 100%;height: 500px;margin: 0 auto;">
+                    <h4><i class="fa fa-angle-right"></i>服务器状态</h4>
+                    <br>
+                    <div class="well" style="height: 400px;width: 90%;margin: 0 auto;">
+                        <div id="show_cpu" style="height:350px;float: left;"
+                             class="col-lg-12 col-md-12 col-sm-12 mb"></div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 mb">
+                <div class="showback" style="width: 100%;height: 500px;margin: 0 auto;">
+                    <h4><i class="fa fa-angle-right"></i>任务以及节点状态</h4>
+                    <br>
+                    <div class="well" style="height: 400px;width:90%;margin: 0 auto;">
+
+                        <div id="task_status" style="height:350px;float: left"
+                             class="col-lg-5 col-md-5 col-sm-5 mb"></div>
+                        <div id="node_status" style="height:350px;float: left;margin-left: 100px"
+                             class="col-lg-5 col-md-5 col-sm-5 mb"></div>
+
+                    </div>
+
+                </div>
+            </div>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('task_status'));
+                var option = {
+                    backgroundColor: '#f5f5f5',
+
+                    title: {
+                        text: '任务状态',
+                        left: 'center',
+                        top: 20,
+                        textStyle: {
+                            color: '#ff0000'
+                        }
+                    },
+
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+{##}
+{#                    visualMap: {#}
+{#                        show: false,#}
+{#                        min: 80,#}
+{#                        max: 600,#}
+{#                        inRange: {#}
+{#                            colorLightness: [0, 1]#}
+{#                        }#}
+{#                    },#}
+                    series: [
+                        {
+                            name: '任务状态',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '50%'],
+                            data: [
+                                {
+                                    value: {{ num_task_r }},
+                                    name: '正在运行',
+                                    normal: {
+                                        color: '#00ff00',
+{#                                        shadowBlur: 200,#}
+{#                                        shadowColor: 'rgba(0, 0, 0, 0.5)'#}
+                                    }
+                                }, {
+                                    value: {{ num_task_p }},
+                                    name: '暂停中',
+                                    normal: {
+                                        color: '#ff0000',
+{#                                        shadowBlur: 200,#}
+{#                                        shadowColor: 'rgba(0, 0, 0, 0.5)'#}
+                                    }
+                                }, {
+                                    value: {{ num_task_s }},
+                                    name: '已停止',
+                                    normal: {
+                                        color: '#0000ff',
+{#                                        shadowBlur: 200,#}
+{#                                        shadowColor: 'rgba(0, 0, 0, 0.5)'#}
+                                    }
+                                }].sort(function (a, b) {
+                                return a.value - b.value;
+                            }),
+                            roseType: 'radius',
+                            label: {
+                                normal: {
+                                    textStyle: {
+{#                                        color: 'rgba(255, 255, 255, 0.3)'#}
+                                        color: '#3398DB'
+                                    }
+                                }
+                            },
+                            labelLine: {
+                                normal: {
+                                    lineStyle: {
+{#                                        color: 'rgba(255, 255, 255, 0.3)'#}
+                                        color: '#3398DB'
+                                    },
+                                    smooth: 0.2,
+                                    length: 10,
+                                    length2: 20
+                                }
+                            },
+                            animationType: 'scale',
+                            animationEasing: 'elasticOut',
+                            animationDelay: function (idx) {
+                                return Math.random() * 200;
+                            }
+                        }
+                    ]
+                };
+
+                myChart.setOption(option);
+
+                var myChart2 = echarts.init(document.getElementById('node_status'));
+
+                // 指定图表的配置项和数据
+                var option2 = {
+                    title: {
+                        text: '节点状态',
+                        left: 'center',
+                        top: 20,
+                        textStyle: {
+                            color: '#ff0000'
+                        }
+                    },
+                    color: ['#3398DB'],
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: ['正常节点', '异常节点'],
+                            axisTick: {
+                                alignWithLabel: true
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value'
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '直接访问',
+                            type: 'bar',
+                            barWidth: '60%',
+                            data: [{{ num_slave_r }}, {{ num_slave_p }}]
+                        }
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart2.setOption(option2);
+
+                var myChart3 = echarts.init(document.getElementById('show_cpu'));
+                var option3 = {
+                    tooltip: {
+                        formatter: "{a} <br/>{c} {b}"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'CPU使用率',
+                            type: 'gauge',
+                            z: 3,
+                            min: 0,
+                            max: 556570627.87,
+                            splitNumber: 2,
+                            radius: '75%',
+                            axisLine: {            // 坐标轴线
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    width: 10
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                length: 15,        // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                length: 20,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            title: {
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 20,
+                                    fontStyle: 'italic'
+                                }
+                            },
+                            detail: {
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder'
+                                }
+                            },
+                            data: [{value: {{ cpu_times }}, name: 'CPU使用率'}]
+                        },
+                        {
+                            name: '内存使用率',
+                            type: 'gauge',
+                            center: ['20%', '55%'],    // 默认全局居中
+                            radius: '55%',
+                            min: 0,
+                            max: 100,
+                            endAngle: 45,
+                            splitNumber: 10,
+                            axisLine: {            // 坐标轴线
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    width: 8
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                length: 12,        // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                length: 20,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            pointer: {
+                                width: 5
+                            },
+                            title: {
+                                offsetCenter: [0, '-30%'],       // x, y，单位px
+                            },
+                            detail: {
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder'
+                                }
+                            },
+                            data: [{value: {{ neicun }}, name: '内存使用率'}]
+                        }, {
+                            name: '磁盘使用率',
+                            type: 'gauge',
+                            center: ['79%', '55%'],    // 默认全局居中
+                            radius: '55%',
+                            min: 0,
+                            max: 100,
+                            startAngle: 135,
+                            endAngle: -45,
+                            splitNumber: 10,
+                            axisLine: {            // 坐标轴线
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    width: 8
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                length: 12,        // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                length: 20,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: 'auto'
+                                }
+                            },
+                            pointer: {
+                                width: 5
+                            },
+                            title: {
+                                offsetCenter: [0, '-30%'],       // x, y，单位px
+                            },
+                            detail: {
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder'
+                                }
+                            },
+                            data: [{value: {{ disk }}, name: '磁盘使用率'}]
+                        }]
+                };
+                myChart3.setOption(option3);
+            </script>
+        </section>
+    </section>
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer"></footer>
+    <!--footer end-->
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='js/echarts.min.js') }}"></script>
+    {#    <script type="text/javascript">#}
+    {#        alert({{ cpu_times }});#}
+    {#    </script>#}
+    <script type="text/javascript">
+     {#                $.ajax({#}
+                {#                    type: "post",#}
+                {#                    async: true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）#}
+                {#                    url: "/index",    //请求发送到TestServlet处#}
+                {#                    data: {},#}
+                {#                    dataType: "json",        //返回数据形式为json#}
+                {#                    success: function (result) {#}
+                {#                        //请求成功时执行该函数内容，result即为服务器返回的json对象#}
+                {#                        if (result) {#}
+                {#                            for (var i = 0; i < result.length; i++) {#}
+                {#                                names.push(result[i].name);    //挨个取出类别并填入类别数组#}
+                {#                            }#}
+                {#                            for (var i = 0; i < result.length; i++) {#}
+                {#                                nums.push(result[i].num);    //挨个取出销量并填入销量数组#}
+                {#                            }#}
+                {#                            myChart.hideLoading();    //隐藏加载动画#}
+                {#                            myChart.setOption({        //加载数据图表#}
+                {#                                xAxis: {#}
+                {#                                    data: names#}
+                {#                                },#}
+                {#                                series: [{#}
+                {#                                    // 根据名字对应到相应的系列#}
+                {#                                    name: '销量',#}
+                {#                                    data: nums#}
+                {#                                }]#}
+                {#                            });#}
+                {##}
+                {#                        }#}
+                {##}
+                {#                    },#}
+                {#                    error: function (errorMsg) {#}
+                {#                        //请求失败时执行该函数#}
+                {#                        alert("图表请求数据失败!");#}
+                {#                        myChart.hideLoading();#}
+                {#                    }#}
+                {#                })#}
+                {##}
+{#                                setInterval(function () {#}
+{#                                    option.series[0].data[0].value = {{ num_task_r }};#}
+{#                                    option.series[0].data[1].value = {{ num_task_p }};#}
+{#                                    option.series[0].data[2].value = {{ num_task_s }};#}
+{##}
+{#                                    option2.series[0].data[0].value = {{ num_slave_r }};#}
+{#                                    option2.series[0].data[1].value = {{ num_slave_p }};#}
+{##}
+{#                                    option3.series[0].data[0].value = {{ cpu_times }};#}
+{#                                    option3.series[1].data[0].value = {{ neicun }};#}
+{#                                    option3.series[2].data[0].value = {{ disk }};#}
+{#                                    myChart.setOption(option, true);#}
+{#                                    myChart2.setOption(option2, true);#}
+{#                                    myChart3.setOption(option3, true);#}
+{#                                }, 2000);#}
+                {#                window.location.reload(true, 1000);#}
+
+                {#                $.get('/index').done(function (num_task_r,num_task_p,num_task_s,num_slave_r,num_slave_p,neicun,cpu_times,disk) {#}
+                {#                    myChart.hideLoading();#}
+                {#                    myChart2.hideLoading();#}
+                {#                    myChart3.hideLoading();#}
+                {##}
+                {#                    myChart.data[0].value = num_task_r;#}
+                {#                    myChart.data[1].value = num_task_p;#}
+                {#                    myChart.data[2].value = num_task_s;#}
+                {##}
+                {#                    myChart2.data[0].value = num_slave_r;#}
+                {#                    myChart2.data[1].value = num_slave_p;#}
+                {##}
+                {#                    myChart3.data[0].value = cpu_times;#}
+                {#                    myChart3.data[1].value = neicun;#}
+                {#                    myChart3.data[2].value = disk;#}
+                {##}
+                {##}
+                {#                })#}
+                {##}
+                {#                $.ajax({#}
+                {#                    type: "post",#}
+                {#                    async: false,#}
+                {#                    url: "/index",#}
+                {#                    dataType: "json", //返回数据形式为json#}
+                {#                    success: function (result) {#}
+                {#                        if (result) {#}
+                {#                            //将返回的category和series对象赋值给options对象内的category和series#}
+                {#                            myChart.option.data[0].value = result.num_task_r;#}
+                {#                            myChart.option.data[1].value = result.num_task_p;#}
+                {#                            myChart.option.data[2].value = result.num_task_s;#}
+                {##}
+                {#                            myChart2.option2.data[0].value = result.num_slave_r;#}
+                {#                            myChart2.option2.data[1].value = result.num_slave_p;#}
+                {##}
+                {#                            myChart3.option3.data[0].value = result.cpu_times;#}
+                {#                            myChart3.option3.data[1].value = result.neicun;#}
+                {#                            myChart3.option3.data[2].value = result.disk*100;#}
+                {##}
+                {#                            myChart.hideLoading();#}
+                {#                            myChart.setOption(myChart.option);#}
+                {#                            myChart2.hideLoading();#}
+                {#                            myChart2.setOption(myChart2.option2);#}
+                {#                            myChart3.hideLoading();#}
+                {#                            myChart3.setOption(myChart3.option3);#}
+                {#                        }#}
+                {#                    }#}
+                {#                });#}
+    </script>
+{% endblock %}

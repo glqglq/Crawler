@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="8428bf20-6052-4de0-b272-037c9863a8b1" name="122.5.51.230" url="http://122.5.51.230:40000">
+        <fileTransfer host="122.5.51.230" port="22204" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22204" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

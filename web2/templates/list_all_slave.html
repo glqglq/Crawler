@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block active %}
+    <li class="mt">
+        <a href="/index">
+            <i class="fa fa-dashboard"></i>
+            <span>首页</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a  class="active" href="javascript:;">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <span>节点</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addslave">添加节点</a></li>
+            <li class="active"><a href="/listallslave">节点状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-th"></i>
+            <span>任务</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addtask">添加任务</a></li>
+            <li><a href="/listalltask">任务状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>数据</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/listnewsblogdata">新闻博客</a></li>
+            <li><a href="/listebdata">电子商务</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+
+{% block neirong %}
+    <style>
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+
+    <section id="main-content">
+        <section class="wrapper">
+            <h3>节点状态</h3>
+
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <table class="table table-striped table-advance table-hover">
+                            <h4><i class="fa fa-angle-right"></i> 节点状态一览</h4>
+                            <hr>
+                            <thead>
+                            <tr>
+                                <th><i class="glyphicon glyphicon-asterisk"></i>序号</th>
+                                <th><i class="glyphicon glyphicon-hdd"></i>节点id</th>
+                                <th class="hidden-phone"><i class="glyphicon glyphicon-bookmark"></i>节点</th>
+                                <th><i class="glyphicon glyphicon-adjust"></i> 节点状态</th>
+                                <th><i class="glyphicon glyphicon-pencil"></i>删除节点</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for str in jsonstr %}
+                                <tr>
+                                    <td class="id"></td>
+                                    <td class="slave_id hidden-phone">{{ str['id'] }}</td>
+                                    <td>{{ str['name'] }}</td>
+                                    <td>
+                                        {% if str['status'] == 0 %}
+                                            <span class="STOP label label-warning label-mini">STOP</span>
+                                        {% elif str['status'] == 1 %}
+                                            <span class="RUNNING label label-info label-mini">RUNNING</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <button class="delete btn btn-danger btn-xs" onclick="chuanid()"><i
+                                                class="glyphicon glyphicon-trash"></i></button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(function () {
+            var num = $(".id").length;
+            for (var i = 1; i <= num; i++) {
+                $(".id").eq(i - 1).html(i);
+            }
+        });
+
+        $(document).ready(function () {
+            $(".delete").click(function () {
+                var id = $(this).parent().parent().find(".slave_id").text();
+                $(this).parent().parent().remove();
+                var num = $(".id").length;
+                for (var i = 1; i <= num; i++) {
+                    $(".id").eq(i - 1).html(i);
+                }
+                $.ajax({
+                    url: "{{ url_for('listallslave') }}",
+                    type: "POST",
+                    data: {
+                        id: id
+                    },
+                    dataType: "json"
+                });
+            })
+        })
+    </script>
+{% endblock %}
+

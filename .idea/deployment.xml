@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="On explicit save action">
     <serverData>
+      <paths name="122.5.51.230">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ictxhw/Crawler" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="crawler">
         <serverdata>
           <mappings>

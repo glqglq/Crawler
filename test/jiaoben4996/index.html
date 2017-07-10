@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ch">
+<head>
+<meta charset="UTF-8">
+<title>jQuery蓝色商品分页样式代码 - 站长素材</title>
+
+<link href="page.css" type="text/css" rel="stylesheet"/>
+
+<script src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="page.js"></script>
+
+</head>
+<body>
+<div> 
+<!--currentpage="1" numbercount="100"-->
+<ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+<script type="text/javascript">
+    function tt(dd){
+//        alert(dd);
+    }
+    var GG = {
+        "kk":function(mm){
+//           alert(mm);
+        }
+    }
+
+    $("#page").initPage(101,1,GG.kk);
+</script>
+</div>
+
+</div>
+</body>
+</html>

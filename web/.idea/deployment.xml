@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="192.168.93.129 (1)">
+    <serverData>
+      <paths name="122.5.51.230">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/web" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="192.168.93.129">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/srg/code/MyProject" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="192.168.93.129 (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/srg/code/Last" local="$PROJECT_DIR$/../lastflask" web="" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

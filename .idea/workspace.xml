@@ -1,7 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dfb8e8e-2f1e-4f5b-b03e-308d4dc14860" name="Default" comment="" />
+    <list default="true" id="0dfb8e8e-2f1e-4f5b-b03e-308d4dc14860" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/blog-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/checkbox-gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/friends/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/instagram.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/login-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/lorde.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/mask.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ny.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port06.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/product.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/product.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/profile-01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/profile-02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/radio-gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-danro.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-sam.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-zac.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/weather.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter-light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter-long.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/ie-spacer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/bingo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.plastic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.round.plastic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.round.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/add_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/cancel_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/continue_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/distributed_lock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/get_task_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/node_manager.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/pause_task.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/mycrawl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/style-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/table-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/to-do.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/zabuto_calendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap-switch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/calendar-conf-events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/chart-master/Chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/chartjs-conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/common-scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/easy-pie-chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fancybox/jquery.fancybox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fancybox/jquery.fancybox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/form-component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fullcalendar/bootstrap-fullcalendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fullcalendar/fullcalendar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter-conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/css/jquery.gritter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/css/jquery.gritter0.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/js/jquery.gritter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-ui-1.9.2.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.backstretch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.dcjqaccordion.2.7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.nicescroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.scrollTo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.sparkline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.tagsinput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.ui.touch-punch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/morris-conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/sparkline-chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/tasks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/zabuto_calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/lte-ie7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jquery.slider.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.plastic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.round.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.round.plastic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/draggable-0.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/echarts.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery-1.7.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.dependClass-0.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.numberformatter-1.2.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.slider.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jshashtable-2.1_src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/morris-0.4.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/raphael-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/tmpl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/taskState1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/list_all_eb_data.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/list_all_newsblog_data.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/add_task.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/cancel_task.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/continue_task.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/distributed_lock.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/get_task_data.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/json_example.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/list_task.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/pause_task.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mycrawler/util/fetch_free_proxyes.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" afterPath="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/settings.py" afterPath="$PROJECT_DIR$/mycrawler/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" afterPath="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" afterPath="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/get_proxy.py" afterPath="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/jparser/model.py" afterPath="$PROJECT_DIR$/mycrawler/util/jparser/model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/stopWords.txt" afterPath="$PROJECT_DIR$/mycrawler/util/stopWords.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/summary.py" afterPath="$PROJECT_DIR$/mycrawler/util/summary.py" />
+    </list>
     <ignored path="Crawler.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,6 +177,7 @@
     <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_spider_test_spider___init__.coverage" NAME="Unittests for test_spider.test_spider.__init__ Coverage Results" MODIFIED="1496140306952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/spiders" />
     <SUITE FILE_PATH="coverage/Crawler$test_ghost.coverage" NAME="test_ghost Coverage Results" MODIFIED="1492606636262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_cs_extractor2_test.coverage" NAME="Unittests for test_cs_extractor2.test Coverage Results" MODIFIED="1496153691925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$add_task__1_.coverage" NAME="add_task (1) Coverage Results" MODIFIED="1498891555352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_spider_test_spider_parse.coverage" NAME="Unittests for test_spider.test_spider.parse Coverage Results" MODIFIED="1495866844500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/spiders" />
     <SUITE FILE_PATH="coverage/Crawler$test_request__1_.coverage" NAME="test_request (1) Coverage Results" MODIFIED="1495116968547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$testrequests.coverage" NAME="testrequests Coverage Results" MODIFIED="1489568959538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -31,12 +187,13 @@
     <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs_jd.coverage" NAME="test_phanstomjs_jd Coverage Results" MODIFIED="1496140970570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_phanstomjs" />
     <SUITE FILE_PATH="coverage/Crawler$distributed_lock.coverage" NAME="distributed_lock Coverage Results" MODIFIED="1495700915882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$test_jparser.coverage" NAME="test_jparser Coverage Results" MODIFIED="1496322405769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Crawler$add_task.coverage" NAME="add_task Coverage Results" MODIFIED="1495942052232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
+    <SUITE FILE_PATH="coverage/Crawler$add_task.coverage" NAME="add_task Coverage Results" MODIFIED="1497012102654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$test.coverage" NAME="test Coverage Results" MODIFIED="1496646992256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/textteaser-master" />
     <SUITE FILE_PATH="coverage/Crawler$get_proxy.coverage" NAME="get_proxy Coverage Results" MODIFIED="1496133602726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
     <SUITE FILE_PATH="coverage/Crawler$testurllib.coverage" NAME="testurllib Coverage Results" MODIFIED="1489573242781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$pause_task.coverage" NAME="pause_task Coverage Results" MODIFIED="1495718629893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$page_content_pipline.coverage" NAME="page_content_pipline Coverage Results" MODIFIED="1494210135606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_pipelines" />
+    <SUITE FILE_PATH="coverage/Crawler$model.coverage" NAME="model Coverage Results" MODIFIED="1499067653209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util/jparser" />
     <SUITE FILE_PATH="coverage/Crawler$test_json.coverage" NAME="test_json Coverage Results" MODIFIED="1494742460209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$list_task.coverage" NAME="list_task Coverage Results" MODIFIED="1495706145202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monitor" />
     <SUITE FILE_PATH="coverage/Crawler$test_cx_extrctor2.coverage" NAME="test_cx_extrctor2 Coverage Results" MODIFIED="1496199443753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -48,12 +205,14 @@
     <SUITE FILE_PATH="coverage/Crawler$test_mechanize.coverage" NAME="test_mechanize Coverage Results" MODIFIED="1492609530259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_webkit_selenium.coverage" NAME="test_webkit_selenium Coverage Results" MODIFIED="1492670978761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$reduction.coverage" NAME="reduction Coverage Results" MODIFIED="1496725423045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$web.coverage" NAME="web Coverage Results" MODIFIED="1496930831192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Crawler$get_json_page_content.coverage" NAME="get_json_page_content Coverage Results" MODIFIED="1495874194645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
     <SUITE FILE_PATH="coverage/Crawler$chrome.coverage" NAME="chrome Coverage Results" MODIFIED="1492657982237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Python27/Lib/site-packages/splinter/driver/webdriver" />
     <SUITE FILE_PATH="coverage/Crawler$Unittests_for_test_cx_extractor_test_file.coverage" NAME="Unittests for test_cx_extractor.test_file Coverage Results" MODIFIED="1496154099381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$BloomfilterOnRedis.coverage" NAME="BloomfilterOnRedis Coverage Results" MODIFIED="1494245172230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter" />
     <SUITE FILE_PATH="coverage/Crawler$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1494679009995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Crawler$test_xpath.coverage" NAME="test_xpath Coverage Results" MODIFIED="1494920149466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$summary.coverage" NAME="summary Coverage Results" MODIFIED="1498910701146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/util" />
     <SUITE FILE_PATH="coverage/Crawler$testurllib2.coverage" NAME="testurllib2 Coverage Results" MODIFIED="1490012033504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_taobao.coverage" NAME="test_taobao Coverage Results" MODIFIED="1495264602778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_proxies.coverage" NAME="test_proxies Coverage Results" MODIFIED="1496134132858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -64,6 +223,7 @@
     <SUITE FILE_PATH="coverage/Crawler$test_str_hash.coverage" NAME="test_str_hash Coverage Results" MODIFIED="1494245268917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_url_cleaning.coverage" NAME="test_url_cleaning Coverage Results" MODIFIED="1494250780315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_textrank.coverage" NAME="test_textrank Coverage Results" MODIFIED="1496644008606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Crawler$mycrawl.coverage" NAME="mycrawl Coverage Results" MODIFIED="1498969210520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web" />
     <SUITE FILE_PATH="coverage/Crawler$my_phantomjs_middle_ware.coverage" NAME="my_phantomjs_middle_ware Coverage Results" MODIFIED="1493867247835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mycrawler/my_middle_wares" />
     <SUITE FILE_PATH="coverage/Crawler$test_encode_decode.coverage" NAME="test_encode_decode Coverage Results" MODIFIED="1493690883270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Crawler$test_phanstomjs.coverage" NAME="test_phanstomjs Coverage Results" MODIFIED="1493801270175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -102,38 +262,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_jieba_keywords.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_jieba_keywords.py">
+      <file leaf-file-name="mycrawl.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web2/mycrawl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="161" column="29" lean-forward="true" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
-              <folding>
-                <element signature="e#24#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="208">
+              <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_spider.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web2/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="95" column="86" lean-forward="false" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
-              <folding>
-                <element signature="e#25#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mycrawler/util/summary.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="222" column="72" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="72" />
-              <folding>
-                <element signature="e#25#55#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="178">
+              <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,36 +295,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>proxy</find>
-      <find>request.meta.has_key(&quot;this_url_rule&quot;)</find>
-      <find>redis_url</find>
-      <find>phantomjs.page.settings.userAgent</find>
-      <find>self.service_args</find>
-      <find>true</find>
+      <find>d</find>
+      <find>done</find>
+      <find>c</find>
+      <find>canc</find>
+      <find>cance</find>
+      <find>cancel</find>
+      <find>cancele</find>
+      <find>canceled</find>
+      <find>db</find>
+      <find>getnewsblogdetaildata</find>
+      <find>cpu_times</find>
+      <find>disk</find>
+      <find>num_task_r</find>
+      <find>{{</find>
+      <find>script</find>
+      <find>echarts</find>
       <find>url</find>
-      <find>loadjs</find>
-      <find>cx_extractor_python</find>
-      <find>request</find>
-      <find>coll</find>
-      <find>enable</find>
-      <find>enable_p</find>
-      <find>collection</find>
-      <find>database</find>
-      <find>this_url_rule</find>
-      <find>matplotlib</find>
-      <find>pandas</find>
+      <find>id</find>
+      <find>m</find>
+      <find>meta</find>
+      <find>this_task_information</find>
+      <find>insert_item</find>
       <find>print</find>
-      <find>scipy</find>
-      <find>TextRank4Sentence</find>
-      <find>title</find>
-      <find>czech</find>
-      <find>text</find>
-      <find>StopWordsChinese</find>
-      <find>german</find>
-      <find>chin</find>
-      <find>chine</find>
-      <find>chinese</find>
-      <find>stopw</find>
+      <find>newsblog_item_buffer</find>
+      <find>pymongo</find>
+      <find>data</find>
+      <find>database</find>
+      <find>'database'</find>
+      <find>eb_collection</find>
+      <find>MONGODB_DATABASE</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter</dir>
@@ -197,57 +341,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mycrawler/util/press_button.py" />
-        <option value="$PROJECT_DIR$/test/test_request.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_messge.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/my_mongodb_page_content_pipeline.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/dupefilter.py" />
-        <option value="$PROJECT_DIR$/test/test_taobao.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/scheduler.py" />
-        <option value="$PROJECT_DIR$/test/test_chech.py" />
-        <option value="$PROJECT_DIR$/monitor/get_task_data.py" />
-        <option value="$PROJECT_DIR$/monitor/distributed_lock.py" />
         <option value="$PROJECT_DIR$/monitor/list_task.py" />
-        <option value="$PROJECT_DIR$/monitor/json_example.py" />
-        <option value="$PROJECT_DIR$/monitor/pause_task.py" />
         <option value="$PROJECT_DIR$/monitor/continue_task.py" />
         <option value="$PROJECT_DIR$/monitor/cancel_task.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/BloomfilterOnRedis.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
-        <option value="$PROJECT_DIR$/monitor/add_task.py" />
-        <option value="$PROJECT_DIR$/test/test_celery.py" />
-        <option value="$PROJECT_DIR$/test/test_proxies.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/url_cleaning.py" />
-        <option value="$PROJECT_DIR$/test/test_phanstomjs/test_phanstomjs_jd.py" />
-        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
-        <option value="$PROJECT_DIR$/test/1.html" />
-        <option value="$PROJECT_DIR$/test/test_cs_extractor2.py" />
-        <option value="$PROJECT_DIR$/test/test_cx_extrctor2.py" />
-        <option value="$PROJECT_DIR$/test/test_cx_extractor.py" />
+        <option value="$PROJECT_DIR$/monitor/distributed_lock.py" />
+        <option value="$PROJECT_DIR$/monitor/get_task_data.py" />
+        <option value="$PROJECT_DIR$/web/templates/base.html" />
+        <option value="$PROJECT_DIR$/web/static/chakan3.html" />
+        <option value="$PROJECT_DIR$/web/static/chakan4.html" />
+        <option value="$PROJECT_DIR$/web/static/chakan5.html" />
+        <option value="$PROJECT_DIR$/web/static/chakan2.html" />
+        <option value="$PROJECT_DIR$/web/monitor/json_example.py" />
+        <option value="$PROJECT_DIR$/web/monitor/settings.py" />
+        <option value="$PROJECT_DIR$/web/monitor/distributed_lock.py" />
+        <option value="$PROJECT_DIR$/web/monitor/node_monitor.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/summary.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/stopWords.txt" />
+        <option value="$PROJECT_DIR$/web/templates/add_task2.html" />
+        <option value="$PROJECT_DIR$/web/templates/add_task.html" />
+        <option value="$PROJECT_DIR$/web/templates/add_slave.html" />
+        <option value="$PROJECT_DIR$/web/templates/list_all_task.html" />
+        <option value="$PROJECT_DIR$/web/monitor/node_manager.py" />
+        <option value="$PROJECT_DIR$/web/templates/list_all_slave.html" />
+        <option value="$PROJECT_DIR$/web/mycrawl.py" />
+        <option value="$PROJECT_DIR$/web/templates/index.html" />
         <option value="$PROJECT_DIR$/mycrawler/util/jparser/model.py" />
-        <option value="$PROJECT_DIR$/test/test_jparser.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
-        <option value="$PROJECT_DIR$/mycrawler/items/items.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+        <option value="$PROJECT_DIR$/web/monitor/add_task.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
-        <option value="$PROJECT_DIR$/test/textteaser-master/test.py" />
-        <option value="$PROJECT_DIR$/test/test_bosonnlp.py" />
-        <option value="$PROJECT_DIR$/test/test_textrank2.py" />
-        <option value="$PROJECT_DIR$/test/test_textrank.py" />
-        <option value="$PROJECT_DIR$/test/test_textteaser.py" />
-        <option value="$PROJECT_DIR$/test/test_sumy.py" />
-        <option value="$PROJECT_DIR$/test/test_goose.py" />
-        <option value="$PROJECT_DIR$/test/test_pyteaser.py" />
-        <option value="$PROJECT_DIR$/test/stopWords.txt" />
-        <option value="$PROJECT_DIR$/test/test_summarization.py" />
-        <option value="$PROJECT_DIR$/test/reduction.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/jparser/summary .py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/summary .py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/__init__.py" />
-        <option value="$PROJECT_DIR$/test/test_jieba_keywords.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
+        <option value="$PROJECT_DIR$/mycrawler/settings.py" />
+        <option value="$PROJECT_DIR$/web2/monitor/add_task.py" />
+        <option value="$PROJECT_DIR$/web2/templates/base.html" />
+        <option value="$PROJECT_DIR$/web2/monitor/node_manager.py" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_task_data.py" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_task_data.html" />
+        <option value="$PROJECT_DIR$/web2/templates/add_task.html" />
+        <option value="$PROJECT_DIR$/web2/templates/add_slave.html" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_slave.html" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_task.html" />
+        <option value="$PROJECT_DIR$/web2/monitor/get_task_data.py" />
+        <option value="$PROJECT_DIR$/web/monitor/get_task_data.py" />
+        <option value="$PROJECT_DIR$/web2/mycrawl.py" />
+        <option value="$PROJECT_DIR$/web2/static/taskState1.html" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_newsblog_data.html" />
+        <option value="$PROJECT_DIR$/web2/templates/list_all_eb_data.html" />
+        <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py" />
         <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
+        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+        <option value="$PROJECT_DIR$/web2/templates/index.html" />
       </list>
     </option>
   </component>
@@ -264,7 +408,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
+    <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -319,7 +463,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,7 +565,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="web2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -454,7 +615,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
+              <option name="myItemId" value="spiders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,17 +633,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
+              <option name="myItemId" value="my_scrapy_redis_filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jparser" />
+              <option name="myItemId" value="mycrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_pipelines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mycrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,19 +702,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\my_scrapy_redis_filter" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_scheduler" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\my_scrapy_redis_filter" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web\templates" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web\monitor" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web" />
       <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util\jparser" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\test\test_scheduler" />
-      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\monitor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web2\static" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web2\static\js" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web2\templates" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web2\static\img" />
+      <recent name="C:\Users\LuckyGong\Documents\GitHub\Crawler\web2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -535,97 +729,84 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_jieba_keywords.py">
-    <configuration default="false" name="test_sumy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.model">
+    <configuration default="false" name="add_task.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Crawler/web/templates/add_task.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="add_task (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web/monitor" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_sumy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/monitor/add_task.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test_goose" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="summary" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mycrawler/util" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_goose.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mycrawler/util/summary.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test_pyteaser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="mycrawl" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_pyteaser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/mycrawl.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="reduction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mycrawler/util/jparser" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Crawler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\util\summary.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mycrawler/util/jparser/model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in test_jieba_keywords.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Crawler" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_jieba_keywords.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -872,19 +1053,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.test_phanstomjs_jd" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_phanstomjs" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_sumy" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_goose" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_pyteaser" />
-      <item index="5" class="java.lang.String" itemvalue="Python.reduction" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in test_jieba_keywords.py" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.add_task.html" />
+      <item index="3" class="java.lang.String" itemvalue="Python.add_task (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.summary" />
+      <item index="5" class="java.lang.String" itemvalue="Python.mycrawl" />
+      <item index="6" class="java.lang.String" itemvalue="Python.model" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_jieba_keywords.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python.reduction" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_pyteaser" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_goose" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_sumy" />
+        <item index="0" class="java.lang.String" itemvalue="Python.model" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mycrawl" />
+        <item index="2" class="java.lang.String" itemvalue="Python.summary" />
+        <item index="3" class="java.lang.String" itemvalue="Python.add_task (1)" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.add_task.html" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -970,20 +1151,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="1358" y="-8" width="1616" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6671159" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698113" sideWeight="0.51432663" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17520216" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1590164" sideWeight="0.5091047" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2574124" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66885245" sideWeight="0.4924357" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20485175" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20327869" sideWeight="0.48710167" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2590164" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17550144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13303342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12535816" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1590164" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25606468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -993,7 +1175,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34697217" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1027,7 +1208,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1036,358 +1217,367 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.948/region.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.554/tags_util.py" />
-    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="300" column="8" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="2652">
+          <caret line="102" column="51" lean-forward="false" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/selenium/webdriver/remote/webdriver.py">
+    <entry file="file://$PROJECT_DIR$/web/monitor/list_task.py" />
+    <entry file="file://$PROJECT_DIR$/web/mycrawl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="517" column="8" lean-forward="false" selection-start-line="517" selection-start-column="8" selection-end-line="517" selection-end-column="8" />
+        <state relative-caret-position="-2314">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/static/assets/js/gritter/js/jquery.gritter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/monitor/add_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/distributed_lock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/fetch_free_proxyes.py" />
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/press_button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/tags_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/region.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_jparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/textrank4zh/TextRank4Sentence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/snownlp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="177" column="16" lean-forward="false" selection-start-line="177" selection-start-column="10" selection-end-line="177" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_textrank2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="225" column="25" lean-forward="true" selection-start-line="225" selection-start-column="25" selection-end-line="225" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_cx_extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-744">
-          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_cx_extrctor2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146866">
-          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_textrank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="214" column="15" lean-forward="true" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/textteaser/textteaser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_bosonnlp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="17" column="58" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/textteaser/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/textteaser-master/textteaser/summarizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702">
-          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/textteaser-master/textteaser/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/parsers/html.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2355">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/goose/utils/images.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/goose/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="134" column="6" lean-forward="false" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/goose/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1013">
-          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/article.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_goose.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_pyteaser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/stopWords.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="643" column="1" lean-forward="false" selection-start-line="643" selection-start-column="1" selection-end-line="643" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/collections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/249572967/pkgutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-281">
-          <caret line="555" column="4" lean-forward="false" selection-start-line="555" selection-start-column="4" selection-end-line="555" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="53" column="84" lean-forward="false" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/nlp/stemmers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/python-goose-develop/goose/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="134" column="15" lean-forward="false" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/sumy/nlp/tokenizers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="92" column="50" lean-forward="false" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_sumy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/textteaser-master/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_summarization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ASExtractor-master/rouge.py" />
-    <entry file="file://$PROJECT_DIR$/test/test_textteaser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="155" column="23" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="155" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/http/request/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/get_proxy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="312">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="100" column="33" lean-forward="true" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="145" lean-forward="false" selection-start-line="37" selection-start-column="129" selection-end-line="37" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/monitor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/list_all_task_data.py" />
+    <entry file="file://$PROJECT_DIR$/web2/monitor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197">
+          <caret line="230" column="50" lean-forward="true" selection-start-line="230" selection-start-column="12" selection-end-line="230" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flask_project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/add_slave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/mycrawl2.py" />
+    <entry file="file://$PROJECT_DIR$/web2/static/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/add_task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <marker date="1499354697056" expanded="true" signature="8523:8546" ph="..." />
+            <marker date="1499354697056" expanded="true" signature="10539:10577" ph="..." />
+            <marker date="1499354697056" expanded="true" signature="10677:10686" ph="..." />
+            <marker date="1499354697056" expanded="true" signature="10823:10832" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/list_all_slave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/summary.py">
+    <entry file="file://$PROJECT_DIR$/web2/templates/list_all_task.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="222" column="72" lean-forward="true" selection-start-line="222" selection-start-column="10" selection-end-line="222" selection-end-column="72" />
+        <state relative-caret-position="884">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/monitor/get_task_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/chakan2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="91" column="3" lean-forward="true" selection-start-line="91" selection-start-column="3" selection-end-line="174" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/chakan5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-624">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/monitor/get_task_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/chakan3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="182" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/static/taskState2.html" />
+    <entry file="file://$PROJECT_DIR$/web2/static/taskState1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
-            <element signature="e#25#55#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_jieba_keywords.py">
+    <entry file="file://$PROJECT_DIR$/web2/templates/list_all_newsblog_data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="161" column="29" lean-forward="true" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
+        <state relative-caret-position="2626">
+          <caret line="101" column="56" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="56" />
           <folding>
-            <element signature="e#24#41#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/jieba/analyse/tfidf.py">
+    <entry file="file://$PROJECT_DIR$/web2/templates/list_all_eb_data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="115" column="23" lean-forward="false" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="23" />
+        <state relative-caret-position="156">
+          <caret line="85" column="43" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/monitor/node_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/items/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/picklecompat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy_redis/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/remote_sources/1501053355/-183260405/scrapy/exporters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/monitor/add_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="95" column="86" lean-forward="false" selection-start-line="95" selection-start-column="86" selection-end-line="95" selection-end-column="86" />
-          <folding>
-            <element signature="e#25#68#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="110" column="34" lean-forward="true" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/remote_sources/482107175/-183260405/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="558" column="47" lean-forward="false" selection-start-line="558" selection-start-column="40" selection-end-line="558" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-434">
+          <caret line="246" column="36" lean-forward="false" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="341" column="25" lean-forward="false" selection-start-line="341" selection-start-column="20" selection-end-line="341" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/mycrawl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

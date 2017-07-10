@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+
+{% block active %}
+    <li class="mt">
+        <a href="/index">
+            <i class="fa fa-dashboard"></i>
+            <span>首页</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <span>节点</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addslave">添加节点</a></li>
+            <li><a href="/listallslave">节点状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-th"></i>
+            <span>任务</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addtask">添加任务</a></li>
+            <li><a href="/listalltask">任务状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a  class="active" href="javascript:;">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>数据</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/listnewsblogdata">新闻博客</a></li>
+            <li class="active"><a href="/listebdata">电子商务</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+{% block neirong %}
+    <style>
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+    <section id="main-content">
+        <section class="wrapper">
+            <h3><i class="fa fa-angle-right"></i>电子商务类任务爬取数据</h3>
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <table class="table table-striped table-advance table-hover">
+                            <h4><i class="fa fa-angle-right"></i>电子商务类任务爬取数据一览</h4>
+                            <hr>
+                            <thead>
+                            <tr>
+                                <th><i class="glyphicon glyphicon-asterisk"></i>任务id</th>
+                                <th class="hidden-phone"><i class="glyphicon glyphicon-tag"></i>起始url</th>
+                                <th><i class="glyphicon glyphicon-star-empty"></i>任务类型</th>
+                                <th><i class="glyphicon glyphicon-file"></i>页面类型</th>
+                                <th><i class="glyphicon glyphicon-adjust"></i>爬取数据数量</th>
+                                <th><i class="glyphicon glyphicon-th-large"></i>爬取数据大小</th>
+                                <th><i class="glyphicon glyphicon-pencil"></i>详细数据</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for str1 in jsonstr %}
+                                <tr>
+                                    <td class="id-cnt">task_{{ str1['id'] }}
+                                    </td>
+                                    <td>{{ str1['url'] }}</td>
+                                    <td>{{ str1['type'] }}</td>
+                                    <td>{{ str1['re_type'] }}</td>
+                                    <td>{{ str1['count'] }}</td>
+                                    <td>{{ str1['size'] }}</td>
+                                    {#                        {{ str1['status'] }}</td>#}
+                                    <td><button class="btn btn-primary btn-sm  btn-theme03" data-toggle="modal" data-target="#myModal">
+                                        <!--<a href="/listebdetaildata/{{ str1['id'] }}">详细数据</a>-->
+                                        详细数据
+                                    </button></td>
+                                    {#                            {{ str1['alloweddomains'] }}</td>#}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div><!-- /content-panel -->
+                </div><!-- /col-md-12 -->
+            </div><!-- /row -->
+
+        </section>
+        <! --/wrapper -->
+    </section><!-- /MAIN CONTENT -->
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 1000px">
+        <div class="modal-content" style="width: 1000px">
+            <div class="modal-header">
+                <button type="button" class="close " data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">详细数据</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped table-advance table-hover">
+                            <h4><i class="fa fa-angle-right"></i>任务状态一览</h4>
+                            <hr>
+                              <thead>
+                              <tr>
+                                  <th><i class="glyphicon glyphicon-asterisk"></i>名称</th>
+                                  <th class="hidden-phone"><i class="glyphicon glyphicon-comment"></i>评价数</th>
+                                  <th><i class="glyphicon glyphicon-usd"></i>价格</th>
+                                  <th><i class="glyphicon glyphicon-stats"></i>人气值</th>
+                                  <th><i class="glyphicon glyphicon-map-marker"></i>发货地</th>
+                                  <th><i class="glyphicon glyphicon-shopping-cart"></i>交易量</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+          <td>新款韩版时尚亮片蕾丝女鞋正品老北京布鞋软底平跟透气单鞋休闲鞋</td>
+          <td>4</td>
+          <td>169.00</td>
+          <td>153人气</td>
+          <td>北京</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>2017新款正品老北京布鞋手工编带休闲散步舒适女鞋软底平跟女单鞋</td>
+          <td>18</td>
+          <td>169.00</td>
+          <td>65人气</td>
+          <td>北京</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>2016春夏款蝶恋花坡跟老北京女布鞋内增高民族风绣花鞋演出舞蹈鞋</td>
+          <td>216</td>
+          <td>188.00</td>
+          <td>662人气</td>
+          <td>北京</td>
+          <td>120</td>
+        </tr>
+        <tr>
+          <td>正品老北京布鞋女夏时尚平底跟浅口编带休闲妈妈鞋舒适透气工作鞋</td>
+          <td>57</td>
+          <td>166.00</td>
+          <td>229人气</td>
+          <td>北京</td>
+          <td>42</td>
+        </tr>
+        <tr>
+          <td>老北京布鞋坡跟小碎花民族风绣花鞋舞蹈休闲布鞋内增高妈妈女单鞋</td>
+          <td>320</td>
+          <td>168.00</td>
+          <td>455人气</td>
+          <td>北京</td>
+          <td>182</td>
+        </tr>
+        <tr>
+          <td>2017新款春老北京布鞋女民族风绣花鞋舞蹈布鞋内增高妈妈休闲单鞋</td>
+          <td>57</td>
+          <td>168.00</td>
+          <td>98人气</td>
+          <td>北京</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>新款正品老北京布鞋女春款女单鞋平底布鞋休闲鞋浅口时尚工作单鞋</td>
+          <td>2</td>
+          <td>168.00</td>
+          <td>15人气</td>
+          <td>北京</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>2017春季新款老北京布鞋女水钻浅口女鞋小尖头单鞋舒适休闲妈妈鞋</td>
+          <td>7</td>
+          <td>168.00</td>
+          <td>13人气</td>
+          <td>北京</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>春夏老北京布鞋工作单鞋平底时尚水钻平跟妈妈鞋休闲舒适浅口女鞋</td>
+          <td>25</td>
+          <td>168.00</td>
+          <td>54人气</td>
+          <td>北京</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>2017新款老北京布鞋女网鞋镂空平底单鞋豆豆鞋透气防滑孕妇鞋夏</td>
+          <td>0</td>
+          <td>189.00</td>
+          <td>15人气</td>
+          <td>北京</td>
+          <td>0</td>
+        </tr>
+                                  </tbody>
+                                </table>
+            </div>
+
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">上一页</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">1</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">2</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">3</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">4</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">5</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">6</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-theme">下一页</button>
+                </div>
+            </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+    </footer>
+    <!--footer end-->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btn_run").click(function () {
+
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+
+                var task_status_change = 1;
+
+                $(this).parent().parent().find(".status").html("<span class=\"label label-info label-mini status-RUNNING\">RUNNING</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+
+            });
+            $(".btn_pause").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+                var task_status_change = 0;
+                $(this).parent().parent().find(".status").html("<span class=\"label label-warning label-mini status-PAUSED\">PAUSED</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+            $(".btn_stop").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+                var task_status_change = 2;
+                {#                alert(task_status_prev);#}
+                $(this).parent().parent().find(".status").html("<span class=\"label label-danger label-mini status-STOP\">STOP</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                var username=$('#username').val();
+                var password=$('#password').val();
+                var data= {
+                    "this_page":
+                    "next_page":
+                }
+                    $.ajax({
+                    url:'/listnewsblogdetaildata',
+                    type:'GET',
+                    data:data,
+                    dataType: 'json',
+                    success:function(data){
+                    },
+                    error:function (xhr,type) {
+                    }
+
+                })
+            })
+        })
+    </script>
+{% endblock %}

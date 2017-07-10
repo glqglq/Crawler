@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block neirong %}
+    <style type="text/css">
+        span.RUNNING{
+            border:1px solid #449d44;
+            padding:1px 5px 0;
+            background:#5cb85c;
+            color:#fff;
+            display:inline-block;
+            width: 80px;
+            text-align:center
+        }
+        span.STOP{
+            border:1px solid #c9302c;
+            padding:1px 5px 0;
+            background:#d9534f;
+            color:#fff;
+            display:inline-block;
+            width: 80px;
+            text-align:center
+        }
+        .delete {
+            background-color: #969696; /* Green */
+            border: none;
+            color: white;
+            padding: 4px 10px;
+
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+    <div class="span9">
+        <h1 class="page-title">节点状态</h1>
+        <div class="well">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>节点id</th>
+                        <th>节点</th>
+                        <th>状态</th>
+                        <th>删除</th>
+                        <th style="width: 26px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for str in jsonstr %}
+                    <tr>
+                        <td class = "id"></td>
+                        <td class="slave_id">{{ str['id'] }}</td>
+                        <td>{{ str['name'] }}</td>
+                        <td>
+                            {% if str['status'] == 0 %}
+                                <span class="STOP">STOP</span>
+                            {% elif str['status'] == 1 %}
+                                <span class="RUNNING">RUNNING</span>
+                            {% endif %}
+                        </td>
+                        <td><input type="button" value="删除节点" class="delete" onclick="chuanid()"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Delete Confirmation</h3>
+            </div>
+            <div class="modal-body">
+                <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(function () {
+            var num = $(".id").length;
+            for(var i = 1;i <= num;i++)
+            {
+                $(".id").eq(i-1).html(i);
+            }
+        })
+        $(document).ready(function () {
+            $(".delete").click(function () {
+                var id = $(this).parent().parent().find(".slave_id").text();
+                $(this).parent().parent().remove();
+                var num = $(".id").length;
+                for(var i = 1;i <= num;i++)
+                {
+                    $(".id").eq(i-1).html(i);
+                }
+                $.ajax({
+                    url: "{{ url_for('listallslave') }}",
+                    type: "POST",
+                    data: {
+                        id: id
+                    },
+                    dataType: "json"
+                });
+            })
+        })
+    </script>
+{% endblock %}
+

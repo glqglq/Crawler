@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import random
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class UserAgentMiddleWare(object):
     '''ua池'''
@@ -12,10 +15,10 @@ class UserAgentMiddleWare(object):
         return o
 
     def process_request(self, request, spider):
+
         # 随机选择user-agent
         ua = random.choice(self.user_agent)
         try:
             request.headers.setdefault(b'User-Agent', ua)
         except Exception,e:
             print e
-        # print '当前使用的user-agent是' +  request.headers.get(b'User-Agent')

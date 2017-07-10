@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Admin</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+
+    <script src="lib/jquery-1.8.1.min.js" type="text/javascript"></script>
+
+    <!-- Demo page code -->
+    
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+  <body> 
+  <!--<![endif]-->
+    
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                
+                <a class="brand" href="index.html"><span class="first">My</span> <span class="second">Crawl</span></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div>
+          <h1>分布式爬虫系统</h1>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="sidebar-nav">
+                  <div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>节点</div>
+                    <ul id="dashboard-menu" class="nav nav-list collapse in">
+                        <li><a href="index.html">添加节点</a></li>
+                        <li ><a href="zhuangtai.html">节点状态</a></li>
+                    </ul>
+                <div class="nav-header" data-toggle="collapse" data-target="#legal-menu"><i class="icon-legal"></i>任务</div>
+                <ul id="legal-menu" class="nav nav-list collapse in">
+                  <li ><a href="tianjia.html">添加任务</a></li>
+                  <li class="active"><a href="http://192.168.28.134:10000/listalltask">任务状态</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <h2 class="page-title">查看</h2>
+
+<div class="well">
+   <table class="table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <!--<th>网址</th>-->
+          <th>正文</th>
+          <th>摘要</th>
+          <th>关键词</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="chakan5.html">1</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月24日上午，2017届研究生毕业典礼在计算...</td>
+          <td>2017届研究生毕业典礼在计算...</td>
+          <td>计算所，毕业典礼，毕业歌，致辞</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">2</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>2017年6月21日，国务院办公厅发布《关于建...</td>
+          <td>中科院计算所入选全国第二批双创示范基地...</td>
+          <td>双创，示范基地，第二批，入选</td>
+        </tr>
+        <tr>
+            <td><a href="chakan5.html">3</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月15日，由苏州市集成电路行业协会、苏州...</td>
+          <td>苏州市集成电路设计企业市场应用对接交流...</td>
+          <td>苏州市，对接，交流会，举办</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">4</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>根据科技部国家重点研发计划工作部署，中科...</td>
+          <td>国家重点研发计划“软件定义的云计算基础...</td>
+          <td>论证，年度进展，情况，汇报会 </td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">5</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>网络数据科学与技术重点实验室开源了Easy ...</td>
+          <td>网络数据科学与技术重点实验室开源Easy M...</td>
+          <td>重点，实验室，开源，系统</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">6</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月2日，山东省中小微企业创新竞技行动计...</td>
+          <td>计算所济宁分所助力山东省中小微企业创新...</td>
+          <td>济宁，助力，企业，创新</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">7</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>2017年5月20日，中国科学院计算技术研究...</td>
+          <td>中科院计算所第十三届公众科学日活动成功...</td>
+          <td>计算所，十三届，科学日，举办</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">8</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>2017年5月10日，大数据分析系统国家工程...</td>
+          <td>大数据分析系统国家工程实验室召开第一届...</td>
+          <td>大数据，实验室，第一届，理事会</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">9</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>5月10日上午，中国科学院计算技术研究所I...</td>
+          <td>中科院计算所成立I-Tech创新创业学院</td>
+          <td>计算所，成立，创新创业，学院</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">10</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>近日，国家人力资源和社会保障部下发《关...</td>
+          <td>中科院计算所烟台分所成功获批国家级高级...</td>
+          <td>计算所，烟台，研修，项目</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+    <ul style="text-align: center;">
+        <li style="display:inline;"><a href="#">    Prev    </a></li>
+        <li style="display:inline;"><a href="#"> 1 </a></li>
+        <li style="display:inline;"><a href="#"> 2 </a></li>
+        <li style="display:inline;"><a href="#"> 3 </a></li>
+        <li style="display:inline;"><a href="#"> 4 </a></li>
+        <li style="display:inline;"><a href="#"> ... </a></li>
+        <li style="display:inline;"><a href="#">    Next    </a></li>
+    </ul>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+
+
+
+        </div>
+    </div>
+    
+
+    
+    <footer>
+        <hr>
+        
+        <p class="pull-right">Collect from <a href="http://www.17sucai.com/" title="" target="_blank"></a></p>
+        
+        
+        <p>&copy; <a href="#"></a></p>
+    </footer>
+    
+
+    
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+  </body>
+</html>
+
+

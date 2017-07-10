@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block neirong %}
+    {{ super() }}
+    <div class="span9">
+        <script type="text/javascript" src="{{ url_for('static',filename='lib/jqplot/jquery.jqplot.min.js') }}"></script>
+        <script type="text/javascript" charset="utf-8" src="{{ url_for('static',filename='javascripts/graphDemo.js') }}"></script>
+        <h2 class="page-title">添加节点</h2>
+        <div class="well">
+            {% if result == 1 %}
+            <div style="text-align:center"><img src="{{ url_for('static',filename='images/bingo.png') }}" alt="chenggong"><br/>添加成功，docker节点正在运行！</div>
+            {% else %}
+            <div style="text-align:center"><img src="{{ url_for('static',filename='images/fail.png') }}" alt="shibai"><br/>添加失败，请检查docker配置！</div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static',filename='lib/bootstrap/js/bootstrap.js') }}"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#btn_1').click(function () {
+            alert("afadfadf");
+        })
+    })
+{#        function tishi() {#}
+{#            alert("adfa");#}
+{#        }#}
+{#        var blockNum=10;#}
+{#        $(document).ready(function(){#}
+{#            var parentDom=$('#father').find("form"),oriDom=parentDom.children(":first");#}
+{#            $('.btnAdd').click(function(){#}
+{#                var clLength=parentDom.children().length;#}
+{#                if(blockNum>clLength){#}
+{#                    var nowDom=oriDom.clone();#}
+{#                    nowDom.children(":first").text('任务');#}
+{#                    parentDom.append(nowDom);#}
+{#                }#}
+{#                else#}
+{#                    return false;#}
+{#            });#}
+{#            $('.btnSub').click(function(){#}
+{#                $('.conform').submit();#}
+{#            });#}
+{#        });#}
+    </script>
+{% endblock %}
+

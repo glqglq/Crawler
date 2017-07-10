@@ -1,0 +1,352 @@
+{% extends 'base.html' %}
+
+{% block active %}
+    <li class="mt">
+        <a href="/index">
+            <i class="fa fa-dashboard"></i>
+            <span>首页</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <span>节点</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addslave">添加节点</a></li>
+            <li><a href="/listallslave">节点状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-th"></i>
+            <span>任务</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addtask">添加任务</a></li>
+            <li><a href="/listalltask">任务状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a  class="active" href="javascript:;">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>数据</span>
+        </a>
+        <ul class="sub">
+            <li class="active"><a href="/listnewsblogdata">新闻博客</a></li>
+            <li><a href="/listebdata">电子商务</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+{% block neirong %}
+    <style>
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+    <section id="main-content">
+        <section class="wrapper">
+            <h3><i class="fa fa-angle-right"></i>新闻博客类任务爬取数据</h3>
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <table class="table table-striped table-advance table-hover">
+                            <h4><i class="fa fa-angle-right"></i>新闻博客类任务爬取数据一览</h4>
+                            <hr>
+                            <thead>
+                            <tr>
+                                <th><i class="glyphicon glyphicon-asterisk"></i>任务id</th>
+                                <th class="hidden-phone"><i class="glyphicon glyphicon-tag"></i>起始url</th>
+                                <th><i class="glyphicon glyphicon-star-empty"></i>任务类型</th>
+                                <th><i class="glyphicon glyphicon-adjust"></i>爬取数据数量</th>
+                                <th><i class="glyphicon glyphicon-th-large"></i>爬取数据大小</th>
+                                <!--<th><i class="glyphicon glyphicon-file"></i></th>-->
+                                <th><i class="glyphicon glyphicon-pencil"></i>详细数据</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for str1 in jsonstr %}
+                                <tr>
+                                    <td class="id-cnt">task_{{ str1['id'] }}
+                                    </td>
+                                    <td>{{ str1['url'] }}</td>
+                                    <td>{{ str1['type'] }}</td>
+                                    <td>{{ str1['count'] }}</td>
+                                    <td>{{ str1['size'] }}</td>
+                                    {#                        {{ str1['status'] }}</td>#}
+                                    <td>
+                                        <button class="btn btn-primary btn-sm  btn-theme03" data-toggle="modal" data-target="#myModal">
+                                            详细数据</button>
+                                        <!--<button type="button" class="btn btn-theme03"><a href="/listnewsblogdetaildata/{{ str1['id'] }}">详细数据</a></button></td>-->
+
+                                    {#                            {{ str1['alloweddomains'] }}</td>#}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div><!-- /content-panel -->
+                </div><!-- /col-md-12 -->
+            </div><!-- /row -->
+
+        </section>
+        <! --/wrapper -->
+    </section><!-- /MAIN CONTENT -->
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 1000px">
+        <div class="modal-content" style="width: 1000px">
+            <div class="modal-header">
+                <button type="button" class="close " data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">详细数据</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <!--<th>网址</th>-->
+          <th>正文</th>
+          <th>摘要</th>
+          <th>关键词</th>
+          <th style="width: 26px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="{{ url_for('static',filename='taskState1.html') }}">1</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月24日上午，2017届研究生毕业典礼在计算...</td>
+          <td>2017届研究生毕业典礼在计算...</td>
+          <td>计算所，毕业典礼，毕业歌，致辞</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">2</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>2017年6月21日，国务院办公厅发布《关于建...</td>
+          <td>中科院计算所入选全国第二批双创示范基地...</td>
+          <td>双创，示范基地，第二批，入选</td>
+        </tr>
+        <tr>
+            <td><a href="chakan5.html">3</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月15日，由苏州市集成电路行业协会、苏州...</td>
+          <td>苏州市集成电路设计企业市场应用对接交流...</td>
+          <td>苏州市，对接，交流会，举办</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">4</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>根据科技部国家重点研发计划工作部署，中科...</td>
+          <td>国家重点研发计划“软件定义的云计算基础...</td>
+          <td>论证，年度进展，情况，汇报会 </td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">5</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>网络数据科学与技术重点实验室开源了Easy ...</td>
+          <td>网络数据科学与技术重点实验室开源Easy M...</td>
+          <td>重点，实验室，开源，系统</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">6</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201706/...</td>-->
+          <td>6月2日，山东省中小微企业创新竞技行动计...</td>
+          <td>计算所济宁分所助力山东省中小微企业创新...</td>
+          <td>济宁，助力，企业，创新</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">7</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>2017年5月20日，中国科学院计算技术研究...</td>
+          <td>中科院计算所第十三届公众科学日活动成功...</td>
+          <td>计算所，十三届，科学日，举办</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">8</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>2017年5月10日，大数据分析系统国家工程...</td>
+          <td>大数据分析系统国家工程实验室召开第一届...</td>
+          <td>大数据，实验室，第一届，理事会</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">9</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>5月10日上午，中国科学院计算技术研究所I...</td>
+          <td>中科院计算所成立I-Tech创新创业学院</td>
+          <td>计算所，成立，创新创业，学院</td>
+        </tr>
+        <tr>
+          <td><a href="chakan5.html">10</a></td>
+          <!--<td>http://www.ict.cas.cn/xwzx/jssxw/201705/...</td>-->
+          <td>近日，国家人力资源和社会保障部下发《关...</td>
+          <td>中科院计算所烟台分所成功获批国家级高级...</td>
+          <td>计算所，烟台，研修，项目</td>
+        </tr>
+      </tbody>
+    </table>
+                </div>
+                <div class="btn-group btn-group-justified">
+						  <div class="btn-group">
+						    <button type="button" class="btn btn-theme">上一页</button>
+						  </div>
+						  <div class="btn-group">
+						    <button type="button" class="btn btn-theme">1</button>
+						  </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-theme">2</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-theme">3</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-theme">4</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-theme">5</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-theme">6</button>
+              </div>
+						  <div class="btn-group">
+						    <button type="button" class="btn btn-theme">下一页</button>
+						  </div>
+						</div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+    </footer>
+    <!--footer end-->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btn_run").click(function () {
+
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+
+                var task_status_change = 1;
+
+                $(this).parent().parent().find(".status").html("<span class=\"label label-info label-mini status-RUNNING\">RUNNING</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+
+            });
+            $(".btn_pause").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+                var task_status_change = 0;
+                $(this).parent().parent().find(".status").html("<span class=\"label label-warning label-mini status-PAUSED\">PAUSED</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+            $(".btn_stop").click(function () {
+                var task_status_prev = $(this).parent().parent().find(".status").html();
+
+                var task_status_now = 0;
+                if (task_status_prev.indexOf("PAUSED") >= 0) {
+                    task_status_now = 0;
+                }
+                else if (task_status_prev.indexOf("STOP") >= 0) {
+                    task_status_now = 2;
+                }
+                else if (task_status_prev.indexOf("RUNNING") >= 0) {
+                    task_status_now = 1;
+                }
+                var task_status_change = 2;
+                {#                alert(task_status_prev);#}
+                $(this).parent().parent().find(".status").html("<span class=\"label label-danger label-mini status-STOP\">STOP</span>");
+                var task_id = $(this).parent().parent().find(".id-cnt").text();
+
+                $.ajax({
+                    url: "{{ url_for('listalltask') }}",
+                    type: "POST",
+                    data: {
+                        id: task_id,
+                        prev: task_status_now,
+                        next: task_status_change
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+//                var username=$('#username').val();
+//                var password=$('#password').val();
+                var data= {
+                    "id":
+                    "next_page":
+                }
+                    $.ajax({
+                    url:'/listnewsblogdetaildata',
+                    type:'GET',
+                    data:data,
+                    dataType: 'json',
+                    success:function(data){
+                        var json_data = JSON.stringify(data)
+                    },
+                    error:function (xhr,type) {
+                    }
+
+                })
+            })
+        })
+    </script>
+{% endblock %}

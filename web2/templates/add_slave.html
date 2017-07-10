@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block active %}
+    <li class="mt">
+        <a href="/index">
+            <i class="fa fa-dashboard"></i>
+            <span>首页</span>
+        </a>
+    </li>
+
+    <li class="sub-menu">
+        <a class="active" href="javascript:;">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <span>节点</span>
+        </a>
+        <ul class="sub">
+            <li class="active"><a href="/addslave">添加节点</a></li>
+            <li><a href="/listallslave">节点状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-th"></i>
+            <span>任务</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/addtask">添加任务</a></li>
+            <li><a href="/listalltask">任务状态</a></li>
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="javascript:;">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>数据</span>
+        </a>
+        <ul class="sub">
+            <li><a href="/listnewsblogdata">新闻博客</a></li>
+            <li><a href="/listebdata">电子商务</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+
+{% block neirong %}
+    {{ super() }}
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="span9">
+                <h2 class="page-title">添加节点</h2>
+                <div class="well">
+                    {% if result == 1 %}
+                        <div style="text-align:center"><img src="{{ url_for('static',filename='img/bingo.png') }}"
+                                                            alt="chenggong"><br/>添加成功，docker节点正在运行！
+                        </div>
+                    {% else %}
+                        <div style="text-align:center"><img src="{{ url_for('static',filename='img/fail.png') }}"
+                                                            alt="shibai"><br/>添加失败，请检查docker配置！
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            {#            <span>alaadfad</span>#}
+        </section>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
