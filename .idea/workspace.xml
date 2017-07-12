@@ -2,160 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dfb8e8e-2f1e-4f5b-b03e-308d4dc14860" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/blog-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/checkbox-gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/friends/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/instagram.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/login-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/lorde.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/mask.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ny.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/portfolio/port06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/product.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/product.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/profile-01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/profile-02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/radio-gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-danro.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-sam.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/ui-zac.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/weather.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/img/zoom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter-light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter-long.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/gritter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/images/ie-spacer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/bingo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/fail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.plastic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.round.plastic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/img/jslider.round.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/add_task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/cancel_task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/continue_task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/distributed_lock.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/get_task_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/node_manager.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/pause_task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/monitor/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/mycrawl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/style-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/table-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/to-do.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/css/zabuto_calendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap-switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/calendar-conf-events.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/chart-master/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/chartjs-conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/common-scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/easy-pie-chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fancybox/jquery.fancybox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fancybox/jquery.fancybox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/form-component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fullcalendar/bootstrap-fullcalendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/fullcalendar/fullcalendar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter-conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/css/jquery.gritter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/css/jquery.gritter0.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/gritter/js/jquery.gritter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-easy-pie-chart/jquery.easy-pie-chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery-ui-1.9.2.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.backstretch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.dcjqaccordion.2.7.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.nicescroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.scrollTo.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.sparkline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.tagsinput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/jquery.ui.touch-punch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/morris-conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/sparkline-chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/tasks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/js/zabuto_calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/fonts/linecons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/lte-ie7.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/assets/lineicons/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jquery.slider.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.plastic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.round.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/css/jslider.round.plastic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/draggable-0.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/echarts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.dependClass-0.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.numberformatter-1.2.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jquery.slider.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/jshashtable-2.1_src.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/morris-0.4.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/raphael-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/js/tmpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/static/taskState1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/list_all_eb_data.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web2/templates/list_all_newsblog_data.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/add_task.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/cancel_task.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/continue_task.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/distributed_lock.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/get_task_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/json_example.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/list_task.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/monitor/pause_task.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mycrawler/util/fetch_free_proxyes.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_proxy_middle_ware.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" afterPath="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" afterPath="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/settings.py" afterPath="$PROJECT_DIR$/mycrawler/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" afterPath="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" afterPath="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/get_proxy.py" afterPath="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/jparser/model.py" afterPath="$PROJECT_DIR$/mycrawler/util/jparser/model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/stopWords.txt" afterPath="$PROJECT_DIR$/mycrawler/util/stopWords.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycrawler/util/summary.py" afterPath="$PROJECT_DIR$/mycrawler/util/summary.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web2/monitor/node_manager.py" afterPath="$PROJECT_DIR$/web2/monitor/node_manager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web2/mycrawl.py" afterPath="$PROJECT_DIR$/web2/mycrawl.py" />
     </list>
     <ignored path="Crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -262,21 +114,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mycrawl.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mycrawl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web2/mycrawl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web2/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+            <state relative-caret-position="647">
+              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -295,11 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d</find>
-      <find>done</find>
-      <find>c</find>
-      <find>canc</find>
-      <find>cance</find>
       <find>cancel</find>
       <find>cancele</find>
       <find>canceled</find>
@@ -325,6 +162,11 @@
       <find>'database'</find>
       <find>eb_collection</find>
       <find>MONGODB_DATABASE</find>
+      <find>unique</find>
+      <find>append_timestamp</find>
+      <find>allowed</find>
+      <find>rules</find>
+      <find>.get(&quot;content_content&quot;,'')</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\LuckyGong\Documents\GitHub\Crawler\mycrawler\scrapy_redis_filter</dir>
@@ -371,11 +213,9 @@
         <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_user_agent_middle_ware.py" />
         <option value="$PROJECT_DIR$/mycrawler/util/get_proxy.py" />
         <option value="$PROJECT_DIR$/mycrawler/my_middle_wares/my_phantomjs_middle_ware.py" />
-        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
         <option value="$PROJECT_DIR$/mycrawler/settings.py" />
         <option value="$PROJECT_DIR$/web2/monitor/add_task.py" />
         <option value="$PROJECT_DIR$/web2/templates/base.html" />
-        <option value="$PROJECT_DIR$/web2/monitor/node_manager.py" />
         <option value="$PROJECT_DIR$/web2/templates/list_all_task_data.py" />
         <option value="$PROJECT_DIR$/web2/templates/list_all_task_data.html" />
         <option value="$PROJECT_DIR$/web2/templates/add_task.html" />
@@ -384,14 +224,16 @@
         <option value="$PROJECT_DIR$/web2/templates/list_all_task.html" />
         <option value="$PROJECT_DIR$/web2/monitor/get_task_data.py" />
         <option value="$PROJECT_DIR$/web/monitor/get_task_data.py" />
-        <option value="$PROJECT_DIR$/web2/mycrawl.py" />
         <option value="$PROJECT_DIR$/web2/static/taskState1.html" />
         <option value="$PROJECT_DIR$/web2/templates/list_all_newsblog_data.html" />
         <option value="$PROJECT_DIR$/web2/templates/list_all_eb_data.html" />
         <option value="$PROJECT_DIR$/mycrawler/my_scrapy_redis_filter/queue.py" />
-        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
-        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
         <option value="$PROJECT_DIR$/web2/templates/index.html" />
+        <option value="$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py" />
+        <option value="$PROJECT_DIR$/web2/monitor/node_manager.py" />
+        <option value="$PROJECT_DIR$/mycrawler/spiders/test_spider.py" />
+        <option value="$PROJECT_DIR$/mycrawler/util/get_json_page_content.py" />
+        <option value="$PROJECT_DIR$/web2/mycrawl.py" />
       </list>
     </option>
   </component>
@@ -463,6 +305,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -569,114 +413,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_scrapy_redis_filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="my_pipelines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycrawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1151,7 +889,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1616" height="876" extended-state="1" />
+    <frame x="1358" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6671159" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
@@ -1162,9 +900,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20327869" sideWeight="0.48710167" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2590164" sideWeight="0.48567334" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13303342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13431877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1590164" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25606468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1175,6 +912,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34697217" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1590164" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1217,13 +955,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/jparser/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="102" column="51" lean-forward="false" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/monitor/list_task.py" />
     <entry file="file://$PROJECT_DIR$/web/mycrawl.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1289,24 +1020,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mycrawler/util/get_proxy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="100" column="33" lean-forward="true" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1379,12 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <marker date="1499354697056" expanded="true" signature="8523:8546" ph="..." />
-            <marker date="1499354697056" expanded="true" signature="10539:10577" ph="..." />
-            <marker date="1499354697056" expanded="true" signature="10677:10686" ph="..." />
-            <marker date="1499354697056" expanded="true" signature="10823:10832" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1392,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="34" column="45" lean-forward="false" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-624">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="182" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1447,9 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1457,10 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2626">
           <caret line="101" column="56" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1468,18 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="85" column="43" lean-forward="false" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web2/monitor/node_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1495,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,9 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1513,7 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1529,15 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="110" column="34" lean-forward="true" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1545,38 +1218,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="558" column="47" lean-forward="false" selection-start-line="558" selection-start-column="40" selection-end-line="558" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="246" column="36" lean-forward="false" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="341" column="25" lean-forward="false" selection-start-line="341" selection-start-column="20" selection-end-line="341" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web2/mycrawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web2/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
-          <caret line="97" column="36" lean-forward="true" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+          <caret line="97" column="36" lean-forward="false" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="347" column="16" lean-forward="false" selection-start-line="347" selection-start-column="10" selection-end-line="347" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/url_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/my_pipelines/mongodb_page_content_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="293" column="53" lean-forward="false" selection-start-line="293" selection-start-column="53" selection-end-line="293" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/monitor/node_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/spiders/test_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="91" column="61" lean-forward="true" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mycrawler/util/get_json_page_content.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2/mycrawl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
           <folding />
         </state>
       </provider>

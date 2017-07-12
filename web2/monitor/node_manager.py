@@ -8,7 +8,7 @@ class MyDocker(object):
         self.containers = []
     def start_new_node(self):
         try:
-            new_container = self.client.containers.run(image = "spider:6",detach=True,stdin_open = True,tty = True)
+            new_container = self.client.containers.run(image = "spider:8",command="/root/shell.sh",detach=True,stdin_open = True,tty = True)
             if new_container.status == 'created':
                 return True
             else:

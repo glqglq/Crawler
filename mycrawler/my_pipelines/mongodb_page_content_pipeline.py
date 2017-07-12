@@ -226,75 +226,191 @@ class MongoDBPipeline(BaseItemExporter):
 
         # Set up the collection
         database = self.connection[self.config['database']]
-        if type == 1 and  isinstance(item,list):
-            self.eb_collection = database[self.config['eb_collection'] + '_' + str(item[0]['id']) + '_' + item[0]['this_url_rule']]
-        elif type == 0 and isinstance(item,list):
-            self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item[0]['id'])]
-        elif type == 1 and not isinstance(item,list):
-            self.eb_collection = database[
-                self.config['eb_collection'] + '_' + str(item['id']) + '_' + item['this_url_rule']]
-        elif type == 0 and not isinstance(item,list):
-            self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item['id'])]
 
-        log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
-            self.config['uri'],
-            self.config['database'],
-            self.config['eb_collection'], self.config['newsblog_collection']))
+        if isinstance(item,list):
+            for ite in item:
+                ite = dict(ite)
+                if self.config['append_timestamp']:
+                    ite['scrapy-mongodb'] = {'ts': datetime.datetime.utcnow()}
 
-        # Ensure unique index
-        if self.config['unique_key']:
-            self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
-            self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
-            log.msg(u'Ensuring index for key {0}'.format(
-                self.config['unique_key']))
+                if ite.get('type',-1) == 0:
+                    self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(ite.get('id',''))]
+                    if self.config['unique_key']:
+                        self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
+                    if self.config['unique_key'] is None:
+                        try:
+                            self.newsblog_collection.insert(ite, continue_on_error=True)
+                        except errors.DuplicateKeyError:
+                            if (self.stop_on_duplicate > 0):
+                                self.duplicate_key_count += 1
+                                if (self.duplicate_key_count >= self.stop_on_duplicate):
+                                    self.crawler.engine.close_spider(
+                                        spider,
+                                        'Number of duplicate key insertion exceeded'
+                                    )
+                    else:
+                        key = {}
+                        if isinstance(self.config['unique_key'], list):
+                            for k in dict(self.config['unique_key']).keys():
+                                key[k] = ite[k]
+                        else:
+                            key[self.config['unique_key']] = ite[self.config['unique_key']]
+                        self.newsblog_collection.update(key, ite, upsert=True)
 
-        if not isinstance(item, list):
+                elif ite.get('type',-1) == 1:
+                    self.eb_collection = database[self.config['eb_collection'] + '_' + str(ite.get('id')) + '_' + ite.get('this_url_rule')]
+                    if self.config['unique_key']:
+                        self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+                    if self.config['unique_key'] is None:
+                        try:
+                            self.eb_collection.insert(ite, continue_on_error=True)
+                        except errors.DuplicateKeyError:
+                            if (self.stop_on_duplicate > 0):
+                                self.duplicate_key_count += 1
+                                if (self.duplicate_key_count >= self.stop_on_duplicate):
+                                    self.crawler.engine.close_spider(
+                                        spider,
+                                        'Number of duplicate key insertion exceeded'
+                                    )
+                    else:
+                        key = {}
+                        if isinstance(self.config['unique_key'], list):
+                            for k in dict(self.config['unique_key']).keys():
+                                key[k] = ite[k]
+                        else:
+                            key[self.config['unique_key']] = ite[self.config['unique_key']]
+                        self.eb_collection.update(key, ite, upsert=True)
+
+
+        else:
             item = dict(item)
-
             if self.config['append_timestamp']:
                 item['scrapy-mongodb'] = {'ts': datetime.datetime.utcnow()}
 
-        if self.config['unique_key'] is None:
-            try:
-                if type == 1:
-                    self.eb_collection.insert(item, continue_on_error=True)
-                    self.eb_item_buffer = []
-                    log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'], self.config['eb_collection']),
-                        level=log.DEBUG,spider=spider)
+            if item.get('type', -1) == 0:
+                self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item.get('id', ''))]
+                if self.config['unique_key']:
+                    self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
+                if self.config['unique_key'] is None:
+                    try:
+                        self.newsblog_collection.insert(item, continue_on_error=True)
+                    except errors.DuplicateKeyError:
+                        if (self.stop_on_duplicate > 0):
+                            self.duplicate_key_count += 1
+                            if (self.duplicate_key_count >= self.stop_on_duplicate):
+                                self.crawler.engine.close_spider(
+                                    spider,
+                                    'Number of duplicate key insertion exceeded'
+                                )
                 else:
-                    self.newsblog_collection.insert(item, continue_on_error=True)
-                    self.newsblog_item_buffer = []
-                    log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'],
-                            self.config['newsblog_collection']),level=log.DEBUG, spider=spider)
-                # print '插入成功'
+                    key = {}
+                    if isinstance(self.config['unique_key'], list):
+                        for k in dict(self.config['unique_key']).keys():
+                            key[k] = item[k]
+                    else:
+                        key[self.config['unique_key']] = item[self.config['unique_key']]
+                    self.newsblog_collection.update(key, item, upsert=True)
 
-            except errors.DuplicateKeyError:
-                log.msg(u'Duplicate key found', level=log.DEBUG)
-                if (self.stop_on_duplicate > 0):
-                    self.duplicate_key_count += 1
-                    if (self.duplicate_key_count >= self.stop_on_duplicate):
-                        self.crawler.engine.close_spider(
-                            spider,
-                            'Number of duplicate key insertion exceeded'
-                        )
-                pass
+            else:
+                self.eb_collection = database[
+                    self.config['eb_collection'] + '_' + str(item.get('id')) + '_' + item.get('this_url_rule')]
+                if self.config['unique_key']:
+                    self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+                if self.config['unique_key'] is None:
+                    try:
+                        self.eb_collection.insert(item, continue_on_error=True)
+                    except errors.DuplicateKeyError:
+                        if (self.stop_on_duplicate > 0):
+                            self.duplicate_key_count += 1
+                            if (self.duplicate_key_count >= self.stop_on_duplicate):
+                                self.crawler.engine.close_spider(
+                                    spider,
+                                    'Number of duplicate key insertion exceeded'
+                                )
+                else:
+                    key = {}
+                    if isinstance(self.config['unique_key'], list):
+                        for k in dict(self.config['unique_key']).keys():
+                            key[k] = item[k]
+                    else:
+                        key[self.config['unique_key']] = item[self.config['unique_key']]
+                    self.eb_collection.update(key, item, upsert=True)
 
-        else:
-            key = {}
-            if isinstance(self.config['unique_key'], list):
-                for k in dict(self.config['unique_key']).keys():
-                    key[k] = item[k]
-            else:
-                key[self.config['unique_key']] = item[self.config['unique_key']]
-            if type == 1:#电商类
-                self.eb_collection.update(key, item, upsert=True)
-                log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
-                    self.config['database'], self.config['eb_collection']),
-                level=log.DEBUG,spider=spider)
-            else:
-                self.newsblog_collection.update(key, item, upsert=True)
-                log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
-                    self.config['database'], self.config['newsblog_collection']),
-                    level=log.DEBUG, spider=spider)
+        self.newsblog_collection = []
+        self.eb_collection = []
+
+
+
+
+        # if type == 1 and  isinstance(item,list):
+        #     self.eb_collection = database[self.config['eb_collection'] + '_' + str(item[0]['id']) + '_' + item[0]['this_url_rule']]
+        # elif type == 0 and isinstance(item,list):
+        #     self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item[0]['id'])]
+        # elif type == 1 and not isinstance(item,list):
+        #     self.eb_collection = database[
+        #         self.config['eb_collection'] + '_' + str(item['id']) + '_' + item['this_url_rule']]
+        # elif type == 0 and not isinstance(item,list):
+        #     self.newsblog_collection = database[self.config['newsblog_collection'] + '_' + str(item['id'])]
+        #
+        # log.msg(u'Connected to MongoDB {0}, using "{1}/{2}、{3}"'.format(
+        #     self.config['uri'],
+        #     self.config['database'],
+        #     self.config['eb_collection'], self.config['newsblog_collection']))
+        #
+        # # Ensure unique index
+        # if self.config['unique_key']:
+        #     self.eb_collection.ensure_index(self.config['unique_key'], unique=True)
+        #     self.newsblog_collection.ensure_index(self.config['unique_key'], unique=True)
+        #     log.msg(u'Ensuring index for key {0}'.format(
+        #         self.config['unique_key']))
+        #
+        # if not isinstance(item, list):
+        #     item = dict(item)
+        #
+        # if self.config['append_timestamp']:
+        #     item['scrapy-mongodb'] = {'ts': datetime.datetime.utcnow()}
+        #
+        # if self.config['unique_key'] is None:
+        #     try:
+        #         if type == 1:
+        #             self.eb_collection.insert(item, continue_on_error=True)
+        #             self.eb_item_buffer = []
+        #             log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'], self.config['eb_collection']),
+        #                 level=log.DEBUG,spider=spider)
+        #         else:
+        #             self.newsblog_collection.insert(item, continue_on_error=True)
+        #             self.newsblog_item_buffer = []
+        #             log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(self.config['database'],
+        #                     self.config['newsblog_collection']),level=log.DEBUG, spider=spider)
+        #         # print '插入成功'
+        #
+        #     except errors.DuplicateKeyError:
+        #         log.msg(u'Duplicate key found', level=log.DEBUG)
+        #         if (self.stop_on_duplicate > 0):
+        #             self.duplicate_key_count += 1
+        #             if (self.duplicate_key_count >= self.stop_on_duplicate):
+        #                 self.crawler.engine.close_spider(
+        #                     spider,
+        #                     'Number of duplicate key insertion exceeded'
+        #                 )
+        #
+        #
+        # else:
+        #     key = {}
+        #     if isinstance(self.config['unique_key'], list):
+        #         for k in dict(self.config['unique_key']).keys():
+        #             key[k] = item[k]
+        #     else:
+        #         key[self.config['unique_key']] = item[self.config['unique_key']]
+        #     if type == 1:#电商类
+        #         self.eb_collection.update(key, item, upsert=True)
+        #         log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
+        #             self.config['database'], self.config['eb_collection']),
+        #         level=log.DEBUG,spider=spider)
+        #     else:
+        #         self.newsblog_collection.update(key, item, upsert=True)
+        #         log.msg(u'Stored item(s) in MongoDB {0}/{1}'.format(
+        #             self.config['database'], self.config['newsblog_collection']),
+        #             level=log.DEBUG, spider=spider)
 
         return item

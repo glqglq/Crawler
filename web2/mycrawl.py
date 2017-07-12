@@ -45,7 +45,7 @@ def index():
     for id in task_ids:
         this_task_information = eval(redis_server.hget('%s:task_information' % BOT_NAME,id))
         if this_task_information.get('type',None) == 1:
-            for rule in this_task_information.get('re_rule',''):
+            for rule in this_task_information.get('rules',''):
                 try:
                     stats = db.command('collstats', 'ebpagecontent_' + id + '_' + rule)
                     eb_count += stats.get('count',0)
@@ -79,7 +79,6 @@ def index():
     mem = psutil.virtual_memory()  # 内存信息
     neicun = round(float(mem.used) / mem.total * 100, 2)
 
-    print num_task_r,num_task_p,num_task_s,eb_count,newsblog_count,num_slave_p,num_slave_r,cpu_times,disk,neicun
     return render_template('index.html', num_task_r=num_task_r,num_task_p=num_task_p,num_task_s=num_task_s,eb_count = eb_count,
             newsblog_count = newsblog_count,num_slave_p=num_slave_p,num_slave_r=num_slave_r,cpu_times=cpu_times,disk=disk,neicun=neicun)
 

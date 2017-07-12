@@ -85,11 +85,11 @@ class test_spider(RedisSpider):
 
 
         # DONE 电商类抽取部分结构化好的商品信息
-        elif this_task_information["type"] == 1:
+        elif this_task_information["type"] == 1 and response.meta.get('this_url_rule','') != '':
 
             this_url_rule = response.meta.get("this_url_rule",None)
             if this_task_information.has_key('rules'):
-                rules = this_task_information["rules"][this_url_rule]["itemcontents"]
+                rules = this_task_information["rules"][this_url_rule]
 
             item['type'] = 1
             item['content'] = getitemcontent(response.body, rules)
