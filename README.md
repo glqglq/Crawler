@@ -140,7 +140,9 @@ source /etc/profile
 将mycrawler爬虫代码分发给各个子节点
 
 ## 2.5 在主机安装、开启Flask Web：
-pip install Flask Flask-Script Flask-Bootstrap pymongo redis docker
+pip install Flask Flask-Script Flask-Bootstrap pymongo redis docker  
+
+sudo nohup python mycrawl.py runserver --host 0.0.0.0 --threaded --port 10000
 
 # 3.系统功能：
 ---
